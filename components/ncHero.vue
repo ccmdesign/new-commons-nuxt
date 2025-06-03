@@ -1,6 +1,6 @@
 <template>
   <div class="hero | subgrid">
-    <h1>Hero</h1>
+    <slot></slot>
   </div>
 </template>
 
@@ -10,9 +10,12 @@
 
 <style scoped>
 .hero {
-  background-color: yellow;
-  aspect-ratio: 16/9;
+  grid-column: full-start / full-end; /* Grid template columns are defined by the .subgrid class, and grid-column attr. */
   display: grid;
-  grid-column: full-start / full-end;
+  grid-template-columns: subgrid;
+}
+
+.hero > * {
+  grid-column: content-start / content-end;
 }
 </style>

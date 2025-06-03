@@ -18,24 +18,9 @@ export default {
 .master-grid {
   box-sizing: content-box;
   display: grid;
-  grid-template-columns: [full-start] minmax(auto, var(--space-xs-m)) [content-start] 1fr 1fr 1fr [col1] 1fr 1fr 1fr [col2] 1fr 1fr 1fr [col3] 1fr 1fr 1fr [content-end] minmax(auto, var(--space-xs-m)) [full-end];
+  grid-template-columns: [full-start] minmax(auto, var(--space-xs-m)) [content-start] 1fr [col1] 1fr [col2] 1fr [col3] 1fr [col4] 1fr [col5] 1fr [col6] 1fr [col7] 1fr [col8] 1fr [col9] 1fr [col10] 1fr [col11] 1fr [col12] 1fr [content-end] minmax(auto, var(--space-xs-m)) [full-end];
   grid-auto-rows: auto;
-  gap: var(--base-gutter);
-}
-
-.aux-card {
-  grid-column: span 12;
-}
-
-@media (min-width: 321px) and (max-width: 768px) {
-  .aux-card {
-    grid-column: span 6;
-  }
-}
-
-@media (min-width: 769px) {
-  .aux-card {
-    grid-column: span 3;
-  }
+  gap: 0;
+  min-height: 100svh;
 }
 </style>

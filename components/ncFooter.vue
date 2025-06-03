@@ -1,6 +1,20 @@
 <template>
   <div class="footer | subgrid">
-    <h1>Footer</h1>
+    <div class="footer__logo footer__content">
+      <h1>Footer</h1>
+    </div>
+    <div class="footer__col1 footer__content">
+      <h2>Column 1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="footer__col2 footer__content">
+      <h2>Column 2</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="footer__col3 footer__content">
+      <h2>Column 3</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
   </div>
 </template>
 
@@ -10,9 +24,32 @@
 
 <style scoped>
 .footer {
-  background-color: green;
+  grid-column: full-start / full-end; /* Grid template columns are defined by the .subgrid class, and grid-column attr. */
   display: grid;
-  grid-column: full-start / full-end;
-  z-index: 1;
+}
+
+.footer__content {
+  grid-template-columns: subgrid;
+}
+
+.footer__logo {
+  grid-column: content-start / content-end;
+}
+
+.footer__col1 {
+  grid-column: content-start / col4;
+}
+
+.footer__col2 {
+  grid-column: col5 / col7;
+}
+
+.footer__col3 {
+  grid-column: col8 / content-end;
+}
+
+.footer {
+  /* Aux styles */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 </style>

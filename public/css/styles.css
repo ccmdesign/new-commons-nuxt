@@ -21,7 +21,7 @@
 @import "utils/color-utils-color.css" layer(utils);
 @import "utils/color-utils-border-color.css" layer(utils);
 @import "utils/space-utils.css" layer(utils);
-
+@import "utils/grid-utils.css" layer(utils);
 @import "utils/utils.css" layer(utils);
 
 /* Development Styles */

@@ -1,0 +1,4 @@
+.subgrid {
+  grid-column: inherit;
+  grid-template-columns: subgrid;
+}
