@@ -1,5 +1,5 @@
 <template>
-  <section class="base-section | subgrid" :background-color="backgroundColor">
+  <section class="base-section | subgrid" :background-color="backgroundColor" >
     <slot />
   </section>
 </template>
@@ -8,8 +8,10 @@
 const props = defineProps({
   backgroundColor: {
     type: String,
-    default: ''
-  }
+    default: 'white'
+  },
+
+  
 })
 </script>
 
@@ -43,7 +45,7 @@ const props = defineProps({
 }
 
 [background-color="white"] {
-  background-color: white;
+  background-color: var(--white-color);
 }
 
 [background-color="base"] {

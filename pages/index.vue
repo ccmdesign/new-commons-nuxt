@@ -10,7 +10,9 @@
     </div>
   </nc-hero>
 
-  <nc-video-section id="video-section" />
+  <nc-base-section id="video-section" width="narrow">
+    <h2>Video Section</h2>
+  </nc-base-section>
   
   <nc-timeline id="timeline" />
 
