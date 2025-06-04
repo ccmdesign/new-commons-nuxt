@@ -3,13 +3,13 @@
     <h1 class="h2"><a href="/">New Commons Challenge</a></h1>
     <nav split>
       <ul class="topbar__nav | cluster">
-        <li><a href="/prize" class="button" variant="ghost">The Prize</a></li>
-        <li><a href="#" class="button" variant="ghost" disabled>Event</a></li>
-        <li><a href="#" class="button" variant="ghost" disabled>Winners</a></li>
-        <li><a href="/blog" class="button" variant="ghost">Blog</a></li>
-        <li><a href="/faq" class="button" variant="ghost">FAQ</a></li>
-        <li><a href="#" class="button" variant="ghost" disabled>Rules</a></li>
-        <li><a href="/apply" class="button" variant="primary">Apply Now</a></li>
+        <li><nc-button el="a" href="/prize" color="base" variant="link">The Prize</nc-button></li>
+        <li><nc-button el="span" href="#"   color="base" variant="link" disabled>Event</nc-button></li>
+        <li><nc-button el="span" href="#"   color="base" variant="link" disabled>Winners</nc-button></li>
+        <li><nc-button el="a" href="/blog"  color="base" variant="link">Blog</nc-button></li>
+        <li><nc-button el="a" href="/faq"   color="base" variant="link">FAQ</nc-button></li>
+        <li><nc-button el="span" href="#"   color="base" variant="link" disabled>Rules</nc-button></li>
+        <li><nc-button el="a" href="/apply" color="base" variant="primary">Apply Now</nc-button></li>
       </ul>
     </nav>   
   </div>
@@ -21,6 +21,7 @@
 
 <style scoped>
 .topbar {
+  padding-block: var(--space-xs);
   grid-column: content-start / content-end; /* Grid template columns are defined by the .subgrid class, and grid-column attr. */
 }
 
