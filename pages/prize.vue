@@ -1,9 +1,11 @@
 <template>
   <nc-hero>
-    <h3>A Prize for a Shared Digital Future</h3>
-    <h2>What is the prize?</h2>
-    <p>The New Commons Challenge is an initiative led by Microsoft and the Open Data Policy Lab, in partnership with DirectRelief, the Harvard Institutional Data Initiative, and UNESCO (international observer).</p>
-    <p>The challenge addresses a critical issue: the limited access to diverse and high-quality datasets, which is essential for AI to reach its full potential. By creating and improving data commons, which are collaboratively governed data ecosystems that pool and provide responsible access to diverse, high-quality datasets, the gap in AI development can be filled. The challenge seeks to seed new data commons to ensure that AI benefits all.</p>
+    <div class="hero__content | subgrid">
+      <h3>A Prize for a Shared Digital Future</h3>
+      <h2>What is the prize?</h2>
+      <p>The New Commons Challenge is an initiative led by Microsoft and the Open Data Policy Lab, in partnership with DirectRelief, the Harvard Institutional Data Initiative, and UNESCO (international observer).</p>
+      <p>The challenge addresses a critical issue: the limited access to diverse and high-quality datasets, which is essential for AI to reach its full potential. By creating and improving data commons, which are collaboratively governed data ecosystems that pool and provide responsible access to diverse, high-quality datasets, the gap in AI development can be filled. The challenge seeks to seed new data commons to ensure that AI benefits all.</p>
+    </div>
   </nc-hero>
 
   <nc-base-section width="narrow">
@@ -26,8 +28,8 @@
         <h2>Prizes</h2>
         <p>The New Commons Challenge will select two winning proposals to receive the following support package:</p>
         <div class="cluster">
-          <div class="button" variant="primary">Apply now</div>
-          <div class="button" variant="secondary">View Rules</div>
+          <div class="button" color="base" variant="primary">Apply now</div>
+          <div class="button" color="base" variant="secondary">View Rules</div>
         </div>
       </div>
       <ul>
@@ -58,10 +60,10 @@
       <div>
         <h4>Eligibility</h4>
         <p>We welcome proposals from diverse regions, communities, and organizations working with various data types. Your proposed data commons must aim to serve at least one of our key focus areas (Improve Localized Decision-making or Humanitarian Intervention).</p>
-        <div class="button" variant="ghost">Read here</div>
+        <nc-button color="base" variant="ghost">Read here</nc-button>
         <h4>Evaluation</h4>
         <p>Proposals will be reviewed by an international jury of experts from both focus areas.</p>
-        <div class="button" variant="ghost">Read here</div>
+        <nc-button color="base" variant="ghost">Read here</nc-button>
       </div>
     </div>
   </nc-base-section>
@@ -83,16 +85,10 @@
 
   <nc-base-section>
     <h2 class="h1">Judges</h2>
-    <div class="grid">
-      <div class="card-aux" v-for="i in 23" :key="i">
-        <img src="" alt="Judge 1">
-        <h3>Judge 1</h3>
-        <p>Judge 1 is a judge</p>
-      </div>
-    </div>
+    <nc-judges-grid />
   </nc-base-section>
 
-  <nc-blog />
+  <nc-blog-section />
 </template>
 
 <script setup>

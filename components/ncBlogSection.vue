@@ -30,6 +30,10 @@
   gap: var(--base-gutter);
 }
 
+.blog__content > *:first-child {
+  grid-column: content-start / content-end;
+}
+
 .blog__content-cards {
   display: grid;
   grid-column: content-start / content-end;

@@ -30,7 +30,7 @@
     </div>
   </nc-cta>
 
-  <nc-blog id="blog" />
+  <nc-blog-section id="blog" />
 
 </template>
 
