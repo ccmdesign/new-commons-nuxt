@@ -11,7 +11,7 @@
   </nc-hero>
 
   <nc-base-section id="video-section" width="narrow">
-    <h2>Video Section</h2>
+    <h2 class="video-placeholder">Video Section</h2>
   </nc-base-section>
   
   <nc-timeline id="timeline" />
@@ -55,5 +55,16 @@
 .hero__content img {
   aspect-ratio: 1/1;
   outline: 1px solid red;
+}
+
+.video-placeholder {
+  aspect-ratio: 16/9;
+  background-color: var(--base-color-10-tint);
+  border-radius: var(--border-radius-m);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-l);
+  font-weight: 500;
 }
 </style>

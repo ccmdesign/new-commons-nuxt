@@ -23,7 +23,7 @@ const props = defineProps({
 
 [width="narrow"] .nc-base-section__content {
   @media (min-width: 768px) {
-    grid-column: col1 / col11; /* Grid template columns are defined by the .subgrid class, and grid-column attr. */
+    grid-column: col2 / col11; /* Grid template columns are defined by the .subgrid class, and grid-column attr. */
   }
 }
 

@@ -25,10 +25,7 @@
 }
 
 .timeline__content {
-  display: grid;
   grid-template-columns: subgrid;
-  grid-column: content-start / content-end;
-  gap: var(--base-gutter);
 }
 
 .timeline__content-cards {
