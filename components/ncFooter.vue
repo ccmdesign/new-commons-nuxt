@@ -31,9 +31,18 @@
 }
 
 .footer__content {
-  grid-template-columns: subgrid;
+  grid-template-columns: subgrid;  
 }
 
+.footer__logo,
+.footer__col1,
+.footer__col2,
+.footer__col3 {
+  grid-column: content-start / content-end;
+  grid-template-rows: auto;
+}
+
+@media (min-width: 768px) {
 .footer__logo {
   grid-column: content-start / content-end;
 }
@@ -53,5 +62,6 @@
 .footer {
   /* Aux styles */
   background-color: rgba(0, 0, 0, 0.5);
+}
 }
 </style>
