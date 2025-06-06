@@ -2,6 +2,25 @@
 .text-align\:center { text-align: center;}
 .text-align\:right { text-align: right;}
 
+.justify-content\:center { justify-content: center; }
+.justify-content\:start { justify-content: start; }
+.justify-content\:end { justify-content: end; }
+.justify-content\:between { justify-content: space-between; }
+.justify-content\:around { justify-content: space-around; }
+.justify-content\:evenly { justify-content: space-evenly; }
+
+.align-items\:center { align-items: center; }
+.align-items\:start { align-items: start; }
+.align-items\:end { align-items: end; }
+.align-items\:baseline { align-items: baseline; }
+.align-items\:stretch { align-items: stretch; }
+
+.align-self\:center { align-self: center; }
+.align-self\:start { align-self: start; }
+.align-self\:end { align-self: end; }
+.align-self\:baseline { align-self: baseline; }
+.align-self\:stretch { align-self: stretch; }
+
 .padding-block\:3xs { padding-block: var(--space-3xs); }
 .padding-block\:2xs { padding-block: var(--space-2xs); }
 .padding-block\:xs { padding-block: var(--space-xs); }
