@@ -1,15 +1,20 @@
 <template>
   <div class="grid">
-      <div class="card-aux" v-for="i in 23" :key="i">
-        <img src="" alt="Judge 1">
-        <h3>Judge 1</h3>
-        <p>Judge 1 is a judge</p>
-      </div>
-    </div>
+    <ncBioCard
+      v-for="(judge, i) in judges"
+      :key="judge.name"
+      :img="judge.img"
+      :name="judge.name"
+      :description="judge.description"
+    />
+  </div>
 </template>
 
 <script setup>
+import useJudges from '../composables/useJudges'
+import ncBioCard from './ncBioCard.vue'
 
+const judges = useJudges()
 </script>
 
 <style lang="scss" scoped>
