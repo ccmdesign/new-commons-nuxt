@@ -1,6 +1,8 @@
 <template>
   <div class="topbar | subgrid | cluster">
-    <h1 class="h2"><nuxt-link to="/">New Commons Challenge</nuxt-link></h1>
+    <h1 class="h2"><nuxt-link to="/">
+      <nc-logo-header />
+    </nuxt-link></h1>
     <nav split>
       <ul class="topbar__nav | cluster">
         <li><nc-button el="a" href="prize" color="base" variant="link">The Prize</nc-button></li>
@@ -8,8 +10,8 @@
         <li><nc-button el="a" href="winners"   color="base" variant="link">Winners</nc-button></li>
         <li><nc-button el="a" href="blog"  color="base" variant="link">Blog</nc-button></li>
         <li><nc-button el="a" href="faq"   color="base" variant="link">FAQ</nc-button></li>
-        <li><nc-button el="span" href="#"   color="base" variant="link" disabled>Rules</nc-button></li>
-        <li><nc-button el="a" href="apply" color="base" variant="primary">Apply Now</nc-button></li>
+        <li><nc-button el="a" href="#"   color="base" variant="link">Rules <nc-arrow-link-up /></nc-button></li>
+        <li><nc-button el="a" href="apply" color="primary" variant="primary">Apply Now</nc-button></li>
       </ul>
     </nav>   
   </div>
@@ -27,5 +29,9 @@
 
 .topbar {
   /* Aux styles */
+}
+
+.topbar__nav li:not(:last-child) a {
+  font-weight: 300;
 }
 </style>
