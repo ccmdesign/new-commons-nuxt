@@ -28,11 +28,13 @@
     </template>
   </nc-cta>
 
-  <nc-blog-section id="blog" />
+  <nc-blog-section id="blog" :posts="blogposts"/>
 
 </template>
 
 <script setup>
+
+const { data: blogposts } = await useAsyncData('blogposts', () => queryCollection('blogposts').all())
 
 </script>
 

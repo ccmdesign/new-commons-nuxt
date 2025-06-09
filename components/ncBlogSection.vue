@@ -3,8 +3,8 @@
     <div class="blog__content">
       <h1>Blog</h1>
       <div class="blog__content-cards">
-        <div class="card-aux" v-for="i in 3" :key="i">
-          <h3>Blog Card</h3>
+        <div class="card-aux" v-for="i in posts" :key="i.id">
+          <h3>{{ i.heading }}</h3>
         </div>
       </div>
     </div>
@@ -12,6 +12,12 @@
 </template>
 
 <script setup>
+defineProps({
+  posts: {
+    type: Array,
+    default: () => []
+  }
+})
 
 </script>
 
