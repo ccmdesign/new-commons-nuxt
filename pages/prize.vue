@@ -105,6 +105,9 @@
 <style scoped lang="scss">
 .hero__content {
   margin-bottom: 0;
+  .panel {
+    margin-bottom: var(--space-xl);
+  }
 }
 
 .hero__image-div {
