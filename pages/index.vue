@@ -12,9 +12,12 @@
           variant="primary">Join the Challenge Today</nc-button>
         <span>Applications open until <strong>June 2nd.</strong></span>
       </div>
-      <img split-left
-        src="assets/images/hero.jpg"
-        alt="Hero Image">
+      <div class="hero__image-div" split-left>
+        <img 
+          src="assets/images/hero.jpg"
+          alt="Hero Image" />
+          <nc-minimal-logo></nc-minimal-logo>
+      </div>
     </div>
   </nc-hero>
 
@@ -25,7 +28,7 @@
       <p>This video explains what the Challenge is and why data commons are key to developing responsible and effective
         AI systems.</p>
     </div>
-    <div class="video-placeholder">Video Section</div>
+    <iframe class="video-frame" src="https://www.youtube.com/embed/Sd6F2pfKJmk?si=c6pdTYlzSJAYV1KD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </nc-base-section>
 
   <nc-timeline id="timeline" />
@@ -49,7 +52,6 @@
       </div>
     </div>
   </nc-cta>
-
   <nc-blog-section id="blog"
     :posts="blogposts" />
 
@@ -57,49 +59,29 @@
 
 <script setup>
 
-const { data: blogposts } = await useAsyncData('blogposts', () => queryCollection('blogposts').all())
+const { data: blogposts } = await useAsyncData('blogposts', () => queryCollection('blogposts').limit(3).all())
 
 </script>
 
-<style scoped>
-.hero__content {
-  display: grid;
-  grid-template-columns: subgrid;
-  margin-bottom: var(--space-2xl-3xl);
-}
+<style scoped lang="scss">
 
-.hero__content>*:first-child {
-  grid-column: content-start / col6;
-}
-
-.hero__content .panel {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  justify-content: center;
-  max-width: 39.5rem;
-}
-
-.hero__content .panel span {
-  font-weight: 300;
-  font-size: var(--size-0);
-}
-
-.hero__content .panel h1 {
-  margin-bottom: var(--space-xs-s);
-}
-
-.hero__content .panel a {
-  margin: var(--space-l-xl) 0;
-  font-weight: 400;
-}
-
-.hero__content>*:last-child {
-  grid-column: col7 / content-end;
-}
-
-.hero__content img {
-  aspect-ratio: 1/1;
+.hero__image-div {
+  overflow: hidden;
+  position: relative;
+  :deep(.minimal-logo) {
+    position: absolute;
+    top: -28%;
+    left: 15%;
+    width: 133%;
+    animation-duration: 10s;
+    animation-name: horizontal;
+    animation-iteration-count: infinite;
+    path {
+      backdrop-filter: blur(32px);
+      fill: var(--white-color);
+      fill-opacity: 0.4;
+    }
+  }
 }
 
 #video-section {
@@ -113,15 +95,9 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
 }
 
 
-.video-placeholder {
+.video-frame {
+  width: 100%;
   aspect-ratio: 16/9;
-  background-color: var(--primary-color);
-  border-radius: var(--border-radius-m);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--text-l);
-  font-weight: 500;
 }
 
 #cta .cta-panel {
@@ -158,5 +134,27 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
 
 #cta .cta-panel .panel-header > * {
   flex: 1;
+}
+
+@keyframes horizontal{
+  0% {
+    translate: 0%;
+  }
+  
+  25%{
+    translate: 2%;
+  }
+  
+  50%{
+    translate: 0%;
+  }
+  
+  75%{
+    translate: -2%;
+  }
+
+  100% {
+    translate: 0%;
+  }
 }
 </style>
