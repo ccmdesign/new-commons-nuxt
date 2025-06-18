@@ -1,7 +1,7 @@
 <template>
   <nc-hero id="hero">
-    <div class="hero__content | cluster | subgrid">
-      <div class="panel">
+    <div class="hero__content">
+      <div class="panel | stack">
         <h1>New Commons Challenge</h1>
         <p>The <b>Open Data Policy Lab</b> invites global changemakers to propose innovative data commons for generative
           AI that serves the public interest. By enhancing data diversity, quality, and provenance, we can unlock AI’s
@@ -10,9 +10,9 @@
           href="apply"
           color="base"
           variant="primary">Join the Challenge Today</nc-button>
-        <span>Applications open until <strong>June 2nd.</strong></span>
+        <span class="hero__announcement">Applications open until <strong>June 2nd.</strong></span>
       </div>
-      <div class="hero__image-div" split-left>
+      <div class="hero__image-div">
         <img 
           src="assets/images/hero.jpg"
           alt="Hero Image" />
@@ -66,6 +66,10 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
 <style scoped lang="scss">
 
 .hero__image-div {
+  @media (max-width: 1120px) {
+    display: none;
+  }
+
   overflow: hidden;
   position: relative;
   :deep(.minimal-logo) {

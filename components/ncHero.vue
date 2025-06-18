@@ -15,7 +15,23 @@
   grid-template-columns: subgrid;
 }
 
-.hero > * {
-  grid-column: content-start / content-end;
+.hero > * { grid-column: content-start / content-end; }
+
+.hero { padding-bottom: var(--space-2xl-3xl); }
+
+:deep(.hero__content) {
+  display: flex;
+  gap: var(--space-2xl-3xl);
+  align-items: center;
+
+  > * { flex: 1; }
 }
+
+:deep(.hero__announcement) {
+  font-weight: 300;
+  font-size: var(--size-0);
+}
+
+:deep(.hero__content img) { aspect-ratio: 1/1; }
+
 </style>
