@@ -3,22 +3,24 @@
     <slot>
       <div class="main-content">
         <div class="card-aux">
-          <h3>Lorem ipsum dolor sit</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+          <div class="stack">
+              <img :src="getImage(firstPost)" alt="" class="card-aux__image">
+              <p class="card-aux__brow">{{formatDate(firstPost.date)}}</p>
+              <nuxt-link class="base-link" :to="`/blog/${firstPost.slug}`"><h3>{{ firstPost.heading }}</h3></nuxt-link>
+              <p class="card-aux__excerpt">{{ firstPost.tagline }}</p>
+            </div>
         </div>
       </div>
-      <aside class="stack">
-        <div class="card-aux">
-          <h3>Lorem ipsum dolor sit</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-        </div>
-        <div class="card-aux">
-          <h3>Lorem ipsum dolor sit</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-        </div>
-        <div class="card-aux">
-          <h3>Lorem ipsum dolor sit</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+      <aside>
+        <div class="card-aux aside-card" v-for="post in restPosts" :key="post.slug">
+          <div class="image-subgrid">
+            <img  :src="getImage(post)" alt="">
+          </div>
+          <div class="">
+            <span>{{formatDate(post.date)}}</span>
+            <nuxt-link class="base-link" :to="`/blog/${post.slug}`"><h3>{{ post.heading }}</h3></nuxt-link>
+            <p class="tagline">{{ post.tagline }}</p>
+          </div>
         </div>
       </aside>
     </slot>
@@ -26,7 +28,15 @@
 </template>
 
 <script setup>
+const props = defineProps({
+  posts: {
+    type: Array
+  }
+})
 
+const { getImage, formatDate } = usePost()
+
+const [firstPost, ...restPosts] = props.posts
 </script>
 
 <style lang="scss" scoped>
@@ -48,6 +58,35 @@ aside {
 }
 
 aside .card-aux {
-  aspect-ratio: 12 / 4
+  max-width: 31.25rem;
+}
+
+.aside-card {
+  display: flex;
+  gap: var(--space-xs-s);
+}
+
+.aside-card .image-subgrid {
+  border-radius: var(--size--1);
+  width: 100%;
+  height: 100%;
+  max-width: 133px;
+  max-height: 133px;
+}
+
+.aside-card .image-subgrid img {
+  border-radius: var(--size--1);
+}
+
+.base-link, tagline {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-aux {
+  aspect-ratio: 0;
+  margin-bottom: var(--space-xs-s);
 }
 </style>

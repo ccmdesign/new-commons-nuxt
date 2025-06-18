@@ -2,8 +2,10 @@
   <ccm-base-section class="blog | subgrid" background-color="gray-white">
     <div class="blog__content">
       <div class="stack">
-        <h2>Blog</h2>
-        <p>News and updates on the New Commons Challenge and its partners</p>
+        <template v-if="showTitles">
+          <h2>Blog</h2>
+          <p>News and updates on the New Commons Challenge and its partners</p>
+        </template>
         <div class="blog__content-cards">
           <div class="card-aux" v-for="i in posts" :key="i.id">
             <div class="stack">
@@ -24,6 +26,10 @@ defineProps({
   posts: {
     type: Array,
     default: () => []
+  },
+  showTitles: {
+    type: Boolean,
+    default: true
   }
 })
 

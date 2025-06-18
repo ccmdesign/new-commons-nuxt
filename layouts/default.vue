@@ -1,5 +1,5 @@
 <template>
-  <master-grid>
+  <master-grid id="master-grid">
     <nc-topbar id="topbar" />
     <slot />
     <nc-footer id="footer" />
@@ -20,5 +20,10 @@
 #footer {
   grid-row: -1 / 0; /*  Positioning the footer at the last row in the master grid */
   z-index: 1;
+}
+
+#master-grid {
+  background: url('./assets/patterns/squares-full.svg') 97% var(--space-2xl-3xl) no-repeat;
+  background-size: auto;
 }
 </style> 

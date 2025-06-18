@@ -60,6 +60,7 @@ const props = defineProps({
   background-color: var(--secondary-color);
 }
 
-
-
+[background-color="transparent"] {
+  background-color: transparent;
+}
 </style>
