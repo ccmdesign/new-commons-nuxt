@@ -1,13 +1,13 @@
 <template>
   <nc-hero>
-    <div class="hero__content | cluster | subgrid">
+    <div class="hero__content">
       <div class="panel">
         <p class="hero__brow">A Prize for a Shared Digital Future</p>
         <h1>What is the prize?</h1>
         <p>The New Commons Challenge is an initiative led by Microsoft and the Open Data Policy Lab, in partnership with DirectRelief, the Harvard Institutional Data Initiative, and UNESCO (international observer).</p>
         <p>The challenge addresses a critical issue: the limited access to diverse and high-quality datasets, which is essential for AI to reach its full potential. By creating and improving data commons, which are collaboratively governed data ecosystems that pool and provide responsible access to diverse, high-quality datasets, the gap in AI development can be filled. The challenge seeks to seed new data commons to ensure that AI benefits all.</p>
       </div>
-      <div class="hero__image-div" split-left>
+      <div class="hero__image-div">
         <nc-minimal-logo></nc-minimal-logo>
       </div>
     </div>

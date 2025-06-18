@@ -1,10 +1,12 @@
 <template>
   <nc-hero>
-    <div class="hero__content | subgrid">
-      <h3>Where Innovation Meets Collaboration</h3>
-      <h2 class="h1">Event</h2>
-      <p>A ac aliquet interdum aenean cursus. Neque sit faucibus arcu sed nec at ut risus sagittis. Viverra arcu quis tincidunt duis phasellus. Lacus sagittis at neque neque ut id eu pretium. Nisl arcu eu pellentesque fusce quisque dui. Quis pharetra nulla odio fusce pellentesque duis leo.</p>
-      <p>Aliquam id eget volutpat massa parturient tristique faucibus elementum malesuada. Cursus montes sit sed amet morbi malesuada id. Mauris at ultrices dignissim bibendum cursus aliquam id. Vulputate semper id etiam amet orci. Ante cursus viverra purus semper nullam consequat commodo odio malesuada.</p>
+    <div class="hero__content">
+      <div class="panel">
+        <h3>Where Innovation Meets Collaboration</h3>
+        <h2 class="h1">Event</h2>
+        <p>A ac aliquet interdum aenean cursus. Neque sit faucibus arcu sed nec at ut risus sagittis. Viverra arcu quis tincidunt duis phasellus. Lacus sagittis at neque neque ut id eu pretium. Nisl arcu eu pellentesque fusce quisque dui. Quis pharetra nulla odio fusce pellentesque duis leo.</p>
+        <p>Aliquam id eget volutpat massa parturient tristique faucibus elementum malesuada. Cursus montes sit sed amet morbi malesuada id. Mauris at ultrices dignissim bibendum cursus aliquam id. Vulputate semper id etiam amet orci. Ante cursus viverra purus semper nullam consequat commodo odio malesuada.</p>
+      </div>
     </div>
   </nc-hero>
 

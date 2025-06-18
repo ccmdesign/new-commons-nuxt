@@ -1,9 +1,11 @@
 <template>
   <nc-hero>
-    <div class="hero__content | subgrid">
-      <h3>Winners of the New Commons Challenge</h3>
-      <h2 class="h1">Winners</h2>
-      <p>Auctor adipiscing lectus aliquam elementum molestie nec. Sit netus varius eget enim nunc morbi venenatis quam velit. Vel augue dictum et mauris eget lobortis posuere amet. Tempor vitae in fermentum sit sit risus. Faucibus suscipit aliquam dolor iaculis.</p>
+    <div class="hero__content">
+      <div class="panel">
+        <h3>Winners of the New Commons Challenge</h3>
+        <h2 class="h1">Winners</h2>
+        <p>Auctor adipiscing lectus aliquam elementum molestie nec. Sit netus varius eget enim nunc morbi venenatis quam velit. Vel augue dictum et mauris eget lobortis posuere amet. Tempor vitae in fermentum sit sit risus. Faucibus suscipit aliquam dolor iaculis.</p>
+      </div>
     </div>
   </nc-hero>
 
