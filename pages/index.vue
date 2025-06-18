@@ -28,7 +28,7 @@
       <p>This video explains what the Challenge is and why data commons are key to developing responsible and effective
         AI systems.</p>
     </div>
-    <iframe class="video-frame" src="https://www.youtube.com/embed/Sd6F2pfKJmk?si=c6pdTYlzSJAYV1KD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe class="video-frame" src="https://www.youtube.com/embed/vXLMo2UXqHI?si=Mk2sTRO2qKHuOJ1U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </nc-base-section>
 
   <nc-timeline id="timeline" />

@@ -4,10 +4,9 @@
       <h2>Timeline</h2>
       <p>Key dates for The New Commons Challenge:</p>
       <div class="timeline__content-cards">
-        <div class="card" :class="{'active': i === 1}" v-for="i in 4" :key="i">
-          <h3>April 14, 2025</h3>
-          <span>12:00 a.m. PT</span>
-          <span>Start date of accepting concept notes</span>
+        <div class="card" :class="{'active': i === 2}" v-for="i in 4" :key="i">
+          <h3>{{ new Date(timeline[i-1].date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) }}</h3>
+          <span>{{ new Date(timeline[i-1].date).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZoneName: 'short' }) }}</span>
         </div>
       </div>
     </div>
@@ -16,7 +15,25 @@
 
 
 <script setup>
-
+// @TODO: Add this to the CMS
+const timeline = [
+  {
+    "date": "2025-04-14T00:00:00-07:00",
+    "event": "Start date of accepting concept notes"
+  },
+  {
+    "date": "2025-06-10T23:59:00-07:00",
+    "event": "End date of accepting concept notes"
+  },
+  {
+    "date": "2025-06-16T00:00:00-07:00",
+    "event": "Invitations to submit full proposal"
+  },
+  {
+    "date": "2025-07-14T23:59:00-07:00",
+    "event": "Full proposal submission closes"
+  }
+]
 </script>
 
 <style scoped>
