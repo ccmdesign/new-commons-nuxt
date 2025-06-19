@@ -20,6 +20,7 @@
 #footer {
   grid-row: -1 / 0; /*  Positioning the footer at the last row in the master grid */
   z-index: 1;
+  background: url('./assets/patterns/squares-full.svg') 104% var(--space-xs-s) no-repeat, #0E2F40;
 }
 
 #master-grid {
