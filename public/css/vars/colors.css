@@ -13,6 +13,7 @@
   --blue-hsl: 208, 50%, 38%;
   --navy-hsl: 201, 100%, 18%;
   --green-hsl: 188, 97%, 28%;
+  --gray-hsl: 0, 0%, 82%, 1;
 
   --success-hsl: var(--blue-hsl);
   --error-hsl: var(--red-hsl);
@@ -39,6 +40,8 @@
   --yellow-color: hsl(var(--yellow-hsl));
   --blue-color: hsl(var(--blue-hsl));
   --navy-color: hsl(var(--navy-hsl));
+
+  --gray-color: hsl(var(--gray-hsl));
 }
 
 /* Color Aliases  */
