@@ -1,7 +1,7 @@
 <template>
   <div class="by-line | subgrid">
     <div class="by-line__content | cluster">
-      <span>© {{ new Date().getFullYear() }} GovLab</span>
+      <span>© {{ new Date().getFullYear() }}. Open Data Policy Lab. All Rights Reserved.</span>
       <a href="#" split-left>by ccm.design</a>
     </div>
   </div>
@@ -25,5 +25,6 @@
 .by-line__content {
   grid-column: content-start / content-end;
   --_cluster-space: var(--space-xs);
+  color: var(--white-color);
 }
 </style>
