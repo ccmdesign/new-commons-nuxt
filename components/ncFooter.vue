@@ -105,16 +105,16 @@
   }
 
   .footer__col1 {
-    grid-column: content-start / col4;
+    grid-column: content-start / col5;
   }
 
   .footer__col2 {
-    grid-column: col5 / col7;
+    grid-column: col6 / col8;
     margin-top: 0;
   }
 
   .footer__col3 {
-    grid-column: col8 / content-end;
+    grid-column: col9 / content-end;
     margin-top: 0;
   }
 
