@@ -1,5 +1,5 @@
 <template>
-  <ccm-base-section class="cta | subgrid" :single-column="singleColumn">
+  <ccm-base-section class="cta | subgrid" :single-column="singleColumn"  size="l">
     <div class="cta__content">
       <slot />
     </div>
@@ -20,15 +20,15 @@ const props = defineProps({
 
 <style scoped>
 .cta {
-  display: grid;
-  grid-template-columns: subgrid;
   grid-column: full-start / full-end; /* Grid template columns are defined by the .subgrid class, and grid-column attr. */
   gap: var(--base-gutter);
-  background: linear-gradient(to bottom, var(--white-color) 50%, #f7f7f7 50%);
+
+  display: grid;
+  grid-template-columns: subgrid;
 }
 
 .cta {
-  /* Aux styles */
+  color: var(--base-color);
 }
 
 .cta__content:first-child {

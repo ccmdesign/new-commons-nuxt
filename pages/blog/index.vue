@@ -34,7 +34,7 @@ const {getImage, formatDate} = usePost()
 
 <style scoped>
 .blog-grid {
-  grid-template-columns: repeat(3, minmax(416px, 1fr));
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
 }
 
 .subtitle {
@@ -53,5 +53,15 @@ const {getImage, formatDate} = usePost()
 
 #blog-header {
   margin: var(--space-2xl-3xl) 0;
+}
+
+ul {
+  li {
+
+  }
+
+  span {
+    
+  }
 }
 </style>

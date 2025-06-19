@@ -82,7 +82,7 @@
 .switcher {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--s1);
+  gap: var(--_switcher-space, 1rem);
 }
 
 .switcher > * {

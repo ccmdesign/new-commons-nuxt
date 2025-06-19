@@ -319,11 +319,13 @@ const componentEl = computed(() => el.value || defaultEl.value)
 
 .button[data-variant="link"],
 .button[variant="link"] { 
-  color: hsla(var(--_button-hsl), 1); 
+  color: hsla(var(--_button-hsl), .75); 
   border-width: var(--_button-border-width, 0);
   border-style: var(--_button-border-style, solid);
   border-color: transparent;
-  padding-inline: var(--space-xs);
+  padding-inline: 0;
+  text-decoration: underline;
+  font-weight: 200;
 }
 
 @media (max-width: 36em) {

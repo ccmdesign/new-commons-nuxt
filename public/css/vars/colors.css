@@ -5,7 +5,7 @@
 
   --base-hsl: 200, 64%, 15%; /* black */
   --primary-hsl: 195, 100%, 33%; /* Blue */
-  --secondary-hsl: 0, 84%, 34%; /* red */
+  --secondary-hsl: 268, 54%, 36%; /* purple */
   --accent-hsl: var(--black-hsl); /* black */
 
   --red-hsl: 352, 59%, 55%;

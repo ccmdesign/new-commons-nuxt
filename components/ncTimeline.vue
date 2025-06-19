@@ -4,7 +4,7 @@
       <h2>Timeline</h2>
       <p>Key dates for The New Commons Challenge:</p>
       <div class="timeline__content-cards">
-        <div class="card" :class="{'active': i === 2}" v-for="i in 4" :key="i">
+        <div class="card" :class="{'active': i <= 2}" v-for="i in 4" :key="i">
           <h3>{{ new Date(timeline[i-1].date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) }}</h3>
           <span>{{ new Date(timeline[i-1].date).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZoneName: 'short' }) }}</span>
         </div>

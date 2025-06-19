@@ -17,6 +17,8 @@ const props = defineProps({
 
 <style scoped>
 .base-section {
+  --_section-padding-block: var(--space-s-m);
+
   grid-column: full-start / full-end; /* Grid template columns are defined by the .subgrid class, and grid-column attr. */
   display: grid;
   grid-template-columns: subgrid;
@@ -27,8 +29,25 @@ const props = defineProps({
 }
 
 .base-section {
-  padding-block: var(--base-padding-block);
+  padding-block: var(--_section-padding-block);
 }
+
+.base-section[size="s"] {
+  --_section-padding-block: var(--space-s-m);
+}
+
+.base-section[size="m"] {
+  --_section-padding-block: var(--space-m-l);
+}
+
+.base-section[size="l"] {
+  --_section-padding-block: var(--space-l-xl);
+}
+
+.base-section[size="xl"] {
+  --_section-padding-block: var(--space-xl-2xl);
+}
+
 
 
 

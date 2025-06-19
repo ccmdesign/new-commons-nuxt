@@ -140,3 +140,12 @@
 .margin-bottom\:xl { margin-bottom: var(--space-xl); }
 .margin-bottom\:2xl { margin-bottom: var(--space-2xl); }
 .margin-bottom\:3xl { margin-bottom: var(--space-3xl); }
+
+/* Start Generation Here */
+.margin\:auto { margin: auto; }
+.margin-inline\:auto { margin-inline: auto; }
+.margin-left\:auto { margin-left: auto; }
+.margin-right\:auto { margin-right: auto; }
+.margin-top\:auto { margin-top: auto; }
+.margin-bottom\:auto { margin-bottom: auto; }
+/* End Generation Here */

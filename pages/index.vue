@@ -21,8 +21,7 @@
     </div>
   </nc-hero>
 
-  <nc-base-section id="video-section"
-    width="narrow">
+  <nc-base-section id="video-section" width="narrow">
     <div class="panel">
       <h2>The Challenge</h2>
       <p>This video explains what the Challenge is and why data commons are key to developing responsible and effective
@@ -33,22 +32,20 @@
 
   <nc-timeline id="timeline" />
 
-  <nc-cta id="cta"
-    :single-column="true">
+  <nc-cta id="cta" :single-column="true">
     <div class="cta-panel"
       width="narrow">
       <div class="panel-header">
-        <h2>FAQs</h2>
-        <div>
-          <p>Have questions about the challenge? <br />Check out our FAQ page for all the answers you need to get
-            started!</p>
-          <NuxtLink href="faq">Read More </NuxtLink>
+        <h2 class="padding-bottom:s">FAQs</h2>
+        <div class="stack">
+          <p>Have questions about the challenge? Check out our FAQ page for all the answers you need to get started!</p>
+          <NuxtLink href="faq" class="button" color="white" variant="link">Read More </NuxtLink>
         </div>
       </div>
       <div class="panel-footer">
         <h2>Watch the New Commons Challenge webinar</h2>
         <p>Missed the live session? Catch up on our 5 May 2025 webinar to learn key details about the New Commons Challenge, including what we’re looking for and how to strengthen your concept note. We also answered live questions from prospective applicants.</p>
-        <nc-button el="a" color="white" variant="secondary">Watch now!</nc-button>
+        <nc-button el="a" >Watch now!</nc-button>
       </div>
     </div>
   </nc-cta>
@@ -114,8 +111,13 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
 
 #cta .cta-panel .panel-header {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  @media (min-width: 1120px) {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  
   text-align: left;
   color: var(--white-color);
   background: url('./assets/patterns/squares.svg') left top no-repeat, #0E2F40;
