@@ -10,15 +10,15 @@
           href="apply"
           color="base"
           variant="primary">Join the Challenge Today</nc-button>
-        <span class="hero__announcement">Applications open until <strong>June 2nd.</strong></span>
       </div>
       <div class="hero__image-div">
         <img 
-          src="assets/images/hero.jpg"
+          src="/assets/patterns/hero.jpg"
           alt="Hero Image" />
           <nc-minimal-logo />
       </div>
     </div>
+    <nc-announcement content="Applications closed June 11th." color="primary" />
   </nc-hero>
 
   <nc-base-section id="video-section" width="narrow">
@@ -110,27 +110,26 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
 
 #cta .cta-panel .panel-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
+  text-align: left;
+  color: var(--white-color);
+  background: url('/assets/patterns/squares.svg') left top no-repeat, #0E2F40;
+  background-size: contain;
+  border-radius: 8px 8px 0 0;
+  padding: var(--space-2xl-3xl);
+
   @media (min-width: 1120px) {
     flex-direction: row;
     align-items: center;
   }
-  
-  
-  text-align: left;
-  color: var(--white-color);
-  background: url('./assets/patterns/squares.svg') left top no-repeat, #0E2F40;
-  background-size: contain;
-  border-radius: 8px 8px 0 0;
-  padding: var(--space-2xl-3xl);
 }
 
 #cta .cta-panel .panel-footer {
   color: var(--white-color);
   border-radius: 0 0 8px 8px;
   padding: var(--space-2xl-3xl);
-  background: url('./assets/patterns/waves.png') center center no-repeat, rgba(88, 42, 142, 1);
-  background-blend-mode: darken;
+  background: url('/assets/patterns/waves.png') center center no-repeat, rgba(88, 42, 142, 1);
+  background-blend-mode: soft-light;
 }
 
 #cta .cta-panel .panel-footer > *:last-child {

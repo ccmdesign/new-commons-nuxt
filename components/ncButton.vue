@@ -323,10 +323,17 @@ const componentEl = computed(() => el.value || defaultEl.value)
   border-width: var(--_button-border-width, 0);
   border-style: var(--_button-border-style, solid);
   border-color: transparent;
+  
   padding-inline: 0;
   text-decoration: underline;
   font-weight: 200;
 }
+
+.button[data-variant="link"]:hover,
+.button[variant="link"]:hover { 
+  background: transparent !important;
+  color: hsla(var(--accent-hsl), 1);
+ }
 
 @media (max-width: 36em) {
   .button[data-mobile="wide"],

@@ -26,7 +26,7 @@
         <h3>Partners</h3>
         <div class="logos">
           <nc-direct-relief-logo />
-          <img src="assets/images/i-data.png" />
+          <img src="/assets/i-data.png" />
         </div>
       </div>
       <div class="international-observer">
