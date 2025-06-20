@@ -48,26 +48,6 @@
   background-color: rgba(255, 0, 0, 0.1);
 }
 
-.card-aux {
-  outline: 1px solid var(--black-color-10-tint);
-  background-color: white;
-  padding: 1rem;
-  border-radius: 1rem;
-  aspect-ratio: 16 / 9;
-}
-
-  .card-aux__image {
-    border-radius: 0.5rem;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-  }
-
-  .card-aux__brow {
-    font-weight: 600;
-    line-height: 1.2em;
-  }
-
 
 .panel-aux {
   outline: 2px solid black;

@@ -2,14 +2,7 @@
   <div class="with-sidebar">
     <slot>
       <div class="main-content">
-        <div class="card-aux">
-          <div class="stack">
-              <img :src="getImage(firstPost)" alt="" class="card-aux__image">
-              <p class="card-aux__brow">{{formatDate(firstPost.date)}}</p>
-              <nuxt-link class="base-link" :to="`/blog/${firstPost.slug}`"><h3>{{ firstPost.heading }}</h3></nuxt-link>
-              <p class="card-aux__excerpt">{{ firstPost.tagline }}</p>
-            </div>
-        </div>
+        <nc-blog-card :content="firstPost" />
       </div>
       <aside>
         <div class="card-aux aside-card" v-for="post in restPosts" :key="post.slug">
@@ -64,14 +57,17 @@ aside .card-aux {
 .aside-card {
   display: flex;
   gap: var(--space-xs-s);
+  outline: 1px solid var(--black-color-10-tint);
+  padding: var(--space-xs);
+  border-radius: var(--border-radius-l);
 }
 
 .aside-card .image-subgrid {
-  border-radius: var(--size--1);
   width: 100%;
   height: 100%;
   max-width: 133px;
-  max-height: 133px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--border-radius-s);
 }
 
 .aside-card .image-subgrid img {

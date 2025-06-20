@@ -3,9 +3,7 @@
     <ncBioCard
       v-for="(judge, i) in judges"
       :key="judge.name"
-      :img="judge.img"
-      :name="judge.name"
-      :description="judge.description"
+      :judge="judge"
     />
   </div>
 </template>
@@ -18,5 +16,7 @@ const judges = useJudges()
 </script>
 
 <style lang="scss" scoped>
-
+.grid {
+  --_grid-min-width: 200px;
+}
 </style>

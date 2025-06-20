@@ -16,7 +16,7 @@
         <img 
           src="assets/images/hero.jpg"
           alt="Hero Image" />
-          <nc-minimal-logo></nc-minimal-logo>
+          <nc-minimal-logo />
       </div>
     </div>
   </nc-hero>
@@ -49,8 +49,7 @@
       </div>
     </div>
   </nc-cta>
-  <nc-blog-section id="blog"
-    :posts="blogposts" />
+  <nc-blog-section id="blog" :posts="blogposts" />
 
 </template>
 

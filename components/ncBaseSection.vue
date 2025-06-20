@@ -1,5 +1,5 @@
 <template>
-  <ccm-base-section class="nc-base-section | subgrid" :width="width" :color="color">
+  <ccm-base-section class="nc-base-section | subgrid" :width="width" :color="color" :subgrid="subgrid">
     <div class="nc-base-section__content">
       <slot></slot>  
     </div>
@@ -19,6 +19,10 @@ const props = defineProps({
   backgroundImage: {
     type: String,
     default: ''
+  },
+  subgrid: {
+    type: Boolean,
+    default: false
   }
 })
 </script>
@@ -28,7 +32,7 @@ const props = defineProps({
   --_section-color: transparent;
 
   background-color: var(--_section-background-color);
-  color: var(--_section-color);
+  color: inherit;
 }
 
 .nc-base-section[color="base"] {
@@ -46,6 +50,11 @@ const props = defineProps({
   --_section-color: var(--white-color);
 }
 
+.nc-base-section[color="faded"] {
+  --_section-background-color: var(--base-color-07-tint);
+  --_section-color: var(--base-color);
+}
+
 
 [width="narrow"] .nc-base-section__content {
   @media (min-width: 768px) {
@@ -55,5 +64,10 @@ const props = defineProps({
 
 .nc-base-section__content {
   grid-column: content-start / content-end; /* Grid template columns are defined by the .subgrid class, and grid-column attr. */
+}
+
+.nc-base-section[subgrid="true"] .nc-base-section__content {
+  display: grid;
+  grid-template-columns: subgrid;
 }
 </style>

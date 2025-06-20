@@ -11,16 +11,9 @@
     </nc-base-section>
 
     <nc-base-section>
-        <div class="grid blog-grid">
-          <div class="card-aux" v-for="post in blogposts" :key="post.slug">
-            <div class="stack">
-              <img :src="getImage(post)" alt="" class="card-aux__image">
-              <p class="card-aux__brow">{{formatDate(post.date)}}</p>
-              <nuxt-link class="base-link" :to="`/blog/${post.slug}`"><h3>{{ post.heading }}</h3></nuxt-link>
-              <p class="card-aux__excerpt">{{ post.tagline }}</p>
-            </div>
-          </div>
-        </div>
+      <div class="grid blog-grid">
+        <nc-blog-card v-for="post in blogposts" :key="post.slug" :content="post" />
+      </div>
     </nc-base-section>
    
 </template>

@@ -26,7 +26,7 @@
     </div>
   </nc-base-section>
 
-  <nc-base-section class="prize-cta" id="cta">
+  <nc-base-section class="prize-cta" id="cta" color="faded">
     <div class="cta-panel | switcher">
       <div class="stack" style="--_stack-space: var(--space-2xs)">
         <h2 class="h3">Prizes</h2>
@@ -72,19 +72,33 @@
         <p>Proposals will be reviewed by an international jury of experts from both focus areas.</p>
         <nc-button color="white" variant="link">Read here</nc-button>
       </div>
+      
     </div>
   </nc-base-section>
 
-  <nc-base-section>
+  <nc-base-section class="prize-tips" subgrid color="faded">
+    <h2 class="h3 margin-bottom:s">Helpful Tips</h2>
+    <div class="stack">
+      <h3>Our Blueprint</h3>
+      <p>This Challenge aims to implement our recently published Blueprint to Unlock New Data Commons for Artificial Intelligence, which shows how organizations can launch data commons in the public interest. Organizations may find it useful to refer to this report as they develop their concept notes and proposals.</p>
+
+      <h3 class="margin-top:l">Inspiration</h3>
+      <p>As this is an emerging area of practice, we understand that few organizations have developed data commons for AI. To help applicants think about how they may use data commons to support their work, we have assembled a list of instructive examples of data commons in action here.</p>
+      
+      <p>Please note that these data commons cover a range of topics beyond the areas of focus for this challenge.</p>
+    </div>
+  </nc-base-section>
+
+  <nc-base-section color="faded" size="l">
     <h2 class="h2 color:base-color margin-bottom:l">Judges</h2>
     <nc-judges-grid />
   </nc-base-section>
 
-  <nc-blog-section />
+  <nc-blog-section id="blog" :posts="blogposts" />
 </template>
 
 <script setup>
-
+const { data: blogposts } = await useAsyncData('blogposts', () => queryCollection('blogposts').limit(3).all())
 </script>
 
 <style scoped>
@@ -102,7 +116,13 @@
   padding-bottom: calc(var(--overlap) + var(--space-2xl));  
 }
 
-.prize-cta { margin-top: calc(var(--overlap) * -1); }
+.prize-cta { margin-bottom: calc(var(--overlap) * -1); }
+
+.prize-cta > :first-child {
+  position: relative;
+  top: calc(var(--overlap) * -1);
+  z-index: 1;
+}
 
 .switcher {
   --_switcher-space: var(--space-s);
@@ -176,6 +196,26 @@
       font-size: 150%;
       color: var(--primary-color);
     }
+  }
+}
+
+.prize-tips {
+  color: var(--base-color);
+  h2 { grid-column: content-start / 5; }
+  .stack { 
+    grid-column: 5 / content-end; 
+    --_stack-space: var(--space-xs);
+  }
+
+  h3 {
+    font-size: var(--size-0);
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+  }
+
+  h4 {
+    font-size: var(--size-0);
   }
 }
 
