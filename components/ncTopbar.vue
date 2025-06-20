@@ -32,6 +32,8 @@
   /* Aux styles */
 }
 
+.topbar__nav a svg { position: absolute; /* quick fix on the arrow link up. Not really a good solution. */ }
+
 .topbar__nav li:not(:last-child) a {
   font-weight: 300;
 }
