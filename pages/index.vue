@@ -6,10 +6,10 @@
         <p>The <b>Open Data Policy Lab</b> invites global changemakers to propose innovative data commons for generative
           AI that serves the public interest. By enhancing data diversity, quality, and provenance, we can unlock AI’s
           potential to innovate and solve complex challenges.</p>
-        <nc-button el="a"
+        <!--<nc-button el="a"
           href="apply"
           color="base"
-          variant="primary">Join the Challenge Today</nc-button>
+          variant="primary">Join the Challenge Today</nc-button>-->
       </div>
       <div class="hero__image-div">
         <img 
@@ -27,7 +27,7 @@
       <p>This video explains what the Challenge is and why data commons are key to developing responsible and effective
         AI systems.</p>
     </div>
-    <iframe class="video-frame" src="https://www.youtube.com/embed/vXLMo2UXqHI?si=Mk2sTRO2qKHuOJ1U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe class="video-frame" src="https://www.youtube.com/embed/gKqNJam8iEI?si=PGI4s_Zgns_JqSg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </nc-base-section>
 
   <nc-timeline id="timeline" />
@@ -38,14 +38,17 @@
       <div class="panel-header">
         <h2 class="padding-bottom:s">FAQs</h2>
         <div class="stack">
-          <p>Have questions about the challenge? Check out our FAQ page for all the answers you need to get started!</p>
-          <NuxtLink href="faq" class="button" color="white" variant="link">Read More </NuxtLink>
+          <div>
+            <p>Have questions about the challenge?</p>
+            <p>Check out our FAQ page for all the answers you need to get started!</p>
+          </div>
+          <NuxtLink href="faq" class="button" color="white" variant="link">Read More <nc-arrow-link-up /></NuxtLink>
         </div>
       </div>
       <div class="panel-footer">
         <h2>Watch the New Commons Challenge webinar</h2>
         <p>Missed the live session? Catch up on our 5 May 2025 webinar to learn key details about the New Commons Challenge, including what we’re looking for and how to strengthen your concept note. We also answered live questions from prospective applicants.</p>
-        <nc-button el="a" >Watch now!</nc-button>
+        <nc-button el="a" color="wt" variant="primary2">Watch now!</nc-button>
       </div>
     </div>
   </nc-cta>
@@ -117,7 +120,9 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
   background-size: contain;
   border-radius: 8px 8px 0 0;
   padding: var(--space-2xl-3xl);
-
+  :deep(svg path) {
+    stroke: var(--white-color);
+  }
   @media (min-width: 1120px) {
     flex-direction: row;
     align-items: center;

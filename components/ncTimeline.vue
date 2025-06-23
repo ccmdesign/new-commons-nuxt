@@ -5,8 +5,9 @@
       <p>Key dates for The New Commons Challenge:</p>
       <div class="timeline__content-cards">
         <div class="card" :class="{'active': i <= 2}" v-for="i in 4" :key="i">
-          <h3>{{ new Date(timeline[i-1].date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) }}</h3>
-          <span>{{ new Date(timeline[i-1].date).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZoneName: 'short' }) }}</span>
+          <h3>{{ new Date(timeline[i-1].date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Los_Angeles' }) }}</h3>
+          <span>{{ new Date(timeline[i-1].date).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZoneName: 'short', timeZone: 'America/Los_Angeles' }) }}</span>
+          <p>{{timeline[i-1].event}}</p>
         </div>
       </div>
     </div>
@@ -18,7 +19,7 @@
 // @TODO: Add this to the CMS
 const timeline = [
   {
-    "date": "2025-04-14T00:00:00-07:00",
+    "date": "2025-04-14T12:00:00-07:00",
     "event": "Start date of accepting concept notes"
   },
   {
@@ -26,7 +27,7 @@ const timeline = [
     "event": "End date of accepting concept notes"
   },
   {
-    "date": "2025-06-16T00:00:00-07:00",
+    "date": "2025-06-16T12:00:00-07:00",
     "event": "Invitations to submit full proposal"
   },
   {

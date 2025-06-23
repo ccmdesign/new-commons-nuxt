@@ -210,6 +210,12 @@ const componentEl = computed(() => el.value || defaultEl.value)
   --_button-text-color: var(--white-color);
 }
 
+.button[data-color="wt"], 
+.button[color="wt"] { 
+  --_button-hsl: var(--white-hsl);
+  --_button-text-color: var(--base-color);
+}
+
 .button[data-color="success"],
 .button[color="success"] { 
   --_button-hsl: var(--green-hsl); 
@@ -282,6 +288,14 @@ const componentEl = computed(() => el.value || defaultEl.value)
 .button[data-variant="primary"],
 .button[variant="primary"] {
     color: white;
+    border-width: var(--_button-border-width, 0);
+    border-style: var(--_button-border-style, solid);
+    border-color: hsla(var(--_button-hsl), 1);
+    background-color: hsla(var(--_button-hsl), 1);
+}
+.button[data-variant="primary2"],
+.button[variant="primary2"] {
+    color: var(--_button-text-color);
     border-width: var(--_button-border-width, 0);
     border-style: var(--_button-border-style, solid);
     border-color: hsla(var(--_button-hsl), 1);
