@@ -67,3 +67,7 @@
   color: var(--base-color);
   text-decoration: none;
 }
+
+.white-color {
+  color: var(--white-color);
+}

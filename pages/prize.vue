@@ -11,7 +11,7 @@
   </nc-hero>
 
   <nc-base-section class="fancy-bg" width="narrow" color="primary">
-    <h2 class="text-align:center padding-block:m">What are we looking for?</h2>
+    <h2 class="text-align:center padding-block:m white-color">What are we looking for?</h2>
     <div class="switcher">
       <div class="prize-card">
         <img src="/assets/icon-globe.svg" alt="Improve Localized Decision-making">
@@ -29,10 +29,10 @@
   <nc-base-section class="prize-cta" id="cta" color="faded">
     <div class="cta-panel | switcher">
       <div class="stack" style="--_stack-space: var(--space-2xs)">
-        <h2 class="h3">Prizes</h2>
+        <h2>Prizes</h2>
         <p>The New Commons Challenge will select two winning proposals to receive the following support package:</p>
         <div class="cluster margin-top:auto padding-top:s">
-          <div class="button" color="primary" variant="primary">Apply now</div>
+          <!--<div class="button" color="primary" variant="primary">Apply now</div>-->
           <div class="button | color:white-color" color="primary" variant="secondary">View Rules</div>
         </div>
       </div>
@@ -62,27 +62,27 @@
 
     <div class="cta-panel | switcher">
       <div>
-        <h2 class="h3">Who can apply?</h2>
+        <h2>Who can apply?</h2>
       </div>
       <div class="stack" style="--_stack-space: var(--space-2xs)">
-        <h4>Eligibility</h4>
+        <h3>Eligibility</h3>
         <p>We welcome proposals from diverse regions, communities, and organizations working with various data types. Your proposed data commons must aim to serve at least one of our key focus areas (Improve Localized Decision-making or Humanitarian Intervention).</p>
-        <nc-button color="white" variant="link">Read here</nc-button>
-        <h4 class="margin-top:s">Evaluation</h4>
+        <nc-button color="white" variant="link">Read here <nc-arrow-link-up /></nc-button>
+        <h3 class="margin-top:s">Evaluation</h3>
         <p>Proposals will be reviewed by an international jury of experts from both focus areas.</p>
-        <nc-button color="white" variant="link">Read here</nc-button>
+        <nc-button color="white" variant="link">Read here <nc-arrow-link-up /></nc-button>
       </div>
       
     </div>
   </nc-base-section>
 
   <nc-base-section class="prize-tips" subgrid color="faded">
-    <h2 class="h3 margin-bottom:s">Helpful Tips</h2>
+    <h2 class="margin-bottom:s">Helpful Tips</h2>
     <div class="stack">
       <h3>Our Blueprint</h3>
       <p>This Challenge aims to implement our recently published Blueprint to Unlock New Data Commons for Artificial Intelligence, which shows how organizations can launch data commons in the public interest. Organizations may find it useful to refer to this report as they develop their concept notes and proposals.</p>
 
-      <h3 class="margin-top:l">Inspiration</h3>
+      <h3 class="margin-top:l">Inspirational Examples</h3>
       <p>As this is an emerging area of practice, we understand that few organizations have developed data commons for AI. To help applicants think about how they may use data commons to support their work, we have assembled a list of instructive examples of data commons in action here.</p>
       
       <p>Please note that these data commons cover a range of topics beyond the areas of focus for this challenge.</p>
@@ -171,6 +171,10 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
   &:last-child {
     background-color: var(--secondary-color);
     border-radius: 0 0 var(--border-radius-m) var(--border-radius-m);
+  }
+
+  :deep(svg path) {
+    stroke: var(--white-color);
   }
 }
 
