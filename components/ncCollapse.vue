@@ -1,7 +1,7 @@
 <template>
   <details class="accordeon" :name>
     <summary><h4>{{ data.summary }}</h4></summary>
-    <slot><p>{{ data.content }}</p></slot>
+    <div v-html="data.content"></div>
   </details>
 </template>
 
@@ -30,6 +30,11 @@ const props = defineProps({
   &[open] summary ~ * {
   animation: sweep .5s ease-in-out;
 }
+
+  :deep(a) {
+    font-weight: 500;
+    text-decoration: underline;
+  }
 
 
   summary {
@@ -60,8 +65,9 @@ const props = defineProps({
     
   }
 
-  p {
+  :deep(p), :deep(li) {
     text-wrap: balance;
+    font-weight: 300;
   }
 }
 
