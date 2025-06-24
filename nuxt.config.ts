@@ -29,7 +29,7 @@ export default defineNuxtConfig({
   vite: {
   },
   plugins: [
-    
+
   ],
   ssr: false,
   experimental: {
@@ -38,4 +38,7 @@ export default defineNuxtConfig({
   components: [
     { path: '~/components', pathPrefix: false }
   ],
+  dir: {
+    public: './public'
+  }
 })

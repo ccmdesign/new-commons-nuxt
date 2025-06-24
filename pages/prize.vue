@@ -11,7 +11,7 @@
   </nc-hero>
 
   <nc-base-section class="fancy-bg" width="narrow" color="primary">
-    <h2 class="text-align:center padding-block:m white-color">What are we looking for?</h2>
+    <h2 class="text-align:center padding-block:l white-color h2">What are we looking for?</h2>
     <div class="switcher">
       <div class="prize-card">
         <img src="/assets/icon-globe.svg" alt="Improve Localized Decision-making">
@@ -101,9 +101,20 @@
 const { data: blogposts } = await useAsyncData('blogposts', () => queryCollection('blogposts').limit(3).all())
 </script>
 
-<style scoped>
+<style scoped lang="scss"> 
 .panel {
   max-width: 80ch;
+
+  p {
+    font-size: calc(var(--size-0) + 1px);
+  }
+
+  .hero__brow {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: var(--size-0);
+  }
 }
 
 .fancy-bg, .prize-cta { --overlap: 12rem; }
@@ -130,7 +141,7 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
 
 .prize-card {
   background-color: var(--white-color);
-  padding: var(--space-m);
+  padding: 2.5rem;
   border-radius: var(--border-radius-m);
   color: var(--base-color);
 
@@ -169,8 +180,8 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
   }
 
   &:last-child {
-    background-color: var(--secondary-color);
     border-radius: 0 0 var(--border-radius-m) var(--border-radius-m);
+    background: url('/assets/patterns/squares-left.svg') left bottom no-repeat, var(--secondary-color);
   }
 
   :deep(svg path) {

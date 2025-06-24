@@ -13,7 +13,7 @@ defineProps({
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .nc-bio-card {
   background-color: var(--white-color);
   border-radius: var(--border-radius-l);
@@ -37,8 +37,9 @@ defineProps({
   h4 { font-weight: 600; }
   
   p { 
-    line-height: 1.45em; 
-    margin-bottom: var(--space-2xs);
+    line-height: 120%;
+    font-style: italic;
+    margin-bottom: var(--size-0);
   }
 
   .button {

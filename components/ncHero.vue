@@ -8,11 +8,24 @@
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .hero {
   grid-column: full-start / full-end; /* Grid template columns are defined by the .subgrid class, and grid-column attr. */
   display: grid;
   grid-template-columns: subgrid;
+
+  &:deep(.panel) {
+    h1 {
+      font-size: var(--size-4);
+      font-weight: 800;
+      letter-spacing: 0%;
+      line-height: 110%;
+    }
+
+    p {
+      font-size: calc(var(--size-0) + 1px);
+    }
+  }
 }
 
 .hero > * { grid-column: content-start / content-end; }

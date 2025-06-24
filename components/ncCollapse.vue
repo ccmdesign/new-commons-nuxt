@@ -57,7 +57,7 @@ const props = defineProps({
       content: '';
       width: 18px;
       height: 10px;
-      background: url('./assets/arrow.svg') no-repeat;
+      background: url('/assets/arrow.svg') no-repeat;
       background-size: cover;
       margin-left: .75em;
       transition: 0.5s;

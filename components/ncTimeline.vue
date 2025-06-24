@@ -4,9 +4,9 @@
       <h2>Timeline</h2>
       <p>Key dates for The New Commons Challenge:</p>
       <div class="timeline__content-cards">
-        <div class="card" :class="{'active': i <= 2}" v-for="i in 4" :key="i">
-          <h3>{{ new Date(timeline[i-1].date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Los_Angeles' }) }}</h3>
-          <span>{{ new Date(timeline[i-1].date).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZoneName: 'short', timeZone: 'America/Los_Angeles' }) }}</span>
+        <div class="card" :class="{'active': i <= 3, 'full': i<=2}" v-for="i in 4" :key="i">
+          <h3>{{ new Date(timeline[i-1].date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'Canada/Pacific' }) }}</h3>
+          <span>{{ new Date(timeline[i-1].date).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZoneName: 'shortGeneric', timeZone: 'Canada/Pacific' }) }}</span>
           <p>{{timeline[i-1].event}}</p>
         </div>
       </div>
@@ -37,7 +37,7 @@ const timeline = [
 ]
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .timeline {
   grid-column: full-start / full-end; /* Grid template columns are defined by the .subgrid class, and grid-column attr. */
 }
@@ -107,6 +107,9 @@ content: '';
 
 .timeline__content-cards .card.active::after {
   background:  linear-gradient(90deg, #1E99FF 0%, #1E99FF 33.33%, #EAEAEA 66.67%, #EAEAEA 100%);
-  
 } 
+
+.timeline__content-cards .card.active.full::after {
+  background: linear-gradient(90deg, #1E99FF 0%, #1E99FF 33.33%, #1E99FF 66.67%, #1e99ff 100%);
+}
 </style>
