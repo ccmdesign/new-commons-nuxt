@@ -3,13 +3,14 @@
     <img :src="`/assets/judges/${judge.img}`" :alt="judge.name">
     <h4 class="h4 margin-top:s">{{ judge.name }}</h4>
     <p>{{ judge.description }}</p>
-    <nuxt-link :to="`/judges#${judge.slug}`" class="button" color="primary" variant="ghost">Read More</nuxt-link>
+    <nuxt-link :to="url" class="button" color="primary" variant="ghost">Read More</nuxt-link>
   </div>
 </template>
 
 <script setup>
 defineProps({
-  judge: { type: Object, required: true }
+  judge: { type: Object, required: true },
+  url: { type: String, required: true },
 })
 </script>
 

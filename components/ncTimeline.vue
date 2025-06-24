@@ -25,7 +25,7 @@
 // @TODO: Add this to the CMS
 const timeline = [
   {
-    "date": "2025-04-14T12:00:00-07:00",
+    "date": "2025-04-14T00:00:00-07:00",
     "event": "Start date of accepting concept notes"
   },
   {
@@ -33,7 +33,7 @@ const timeline = [
     "event": "End date of accepting concept notes"
   },
   {
-    "date": "2025-06-16T12:00:00-07:00",
+    "date": "2025-06-16T00:00:00-07:00",
     "event": "Invitations to submit full proposal"
   },
   {

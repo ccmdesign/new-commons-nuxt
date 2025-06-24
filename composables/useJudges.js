@@ -154,6 +154,13 @@ export const judges = [
     bio: "Dr. Takahiro Yabe is an Assistant Professor at the Department of Technology Management and Innovation (TMI) and the Center for Urban Science + Progress (CUSP). His research focuses on computational social science and network science approaches to model the resilience of cities to disasters, pandemics, and disruptive mobility technology, and has been published in journals including Nature Human Behaviour, PNAS, Nature Communications, and Nature Machine Intelligence. Previously, he was a Postdoctoral Associate at the MIT Institute of Data, Systems and Society (IDSS) and the MIT Media Lab with Alex 'Sandy' Pentland and Esteban Moro. He obtained his Ph.D. from Purdue University in 2021, and his MS and BS from the University of Tokyo in 2017 and 2015, respectively."
   },
   {
+    name: "Victor Alegana",
+    slug: "victor-alegana",
+    description: "Early Career Research Fellow at the KEMRI; PhD in Geography, University of Southampton, UK",
+    img: "victor.jpg",
+    bio: "Dr Victor Alegana is an Early Career Research Fellow at the KEMRI- Wellcome Trust Research Programme. He has a PhD in Geography and Masters degree in applied Geographic Information Systems and Remote Sensing both from the University of Southampton, UK. He has a keen interest in use of routine health data and application of spatial-statistical data science to public health problems in low- and middle-income countries. This include broad areas of population health particularly on spatial epidemiology (disease burden estimation), health care access, delivery of health interventions, and monitoring Sustainable Development Goals related to vulnerable populations."
+  },
+  {
     name: "Zineb Bhaby",
     slug: "zineb-bhaby",
     description: "AI Lead, Norwegian Refugee Council (NRC)",

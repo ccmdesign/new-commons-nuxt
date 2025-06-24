@@ -92,6 +92,8 @@
   <nc-base-section color="faded" size="l">
     <h2 class="h2 color:base-color margin-bottom:l">Judges</h2>
     <nc-judges-grid />
+    <h2 class="h2 color:base-color margin-block:l">International Observer</h2>
+    <nc-observers-grid />
   </nc-base-section>
 
   <nc-blog-section id="blog" :posts="blogposts" />
