@@ -6,7 +6,13 @@
       <div class="timeline__content-cards">
         <div class="card" :class="{'active': i <= 3, 'full': i<=2}" v-for="i in 4" :key="i">
           <h3>{{ new Date(timeline[i-1].date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'Canada/Pacific' }) }}</h3>
-          <span>{{ new Date(timeline[i-1].date).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZoneName: 'shortGeneric', timeZone: 'Canada/Pacific' }) }}</span>
+          <span>
+            {{
+              new Date(timeline[i-1].date)
+                .toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZoneName: 'shortGeneric', timeZone: 'Canada/Pacific' })
+                .replace(/AM/, 'a.m.').replace(/PM/, 'p.m.')
+            }}
+          </span>
           <p>{{timeline[i-1].event}}</p>
         </div>
       </div>
