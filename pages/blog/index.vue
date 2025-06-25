@@ -19,8 +19,13 @@
 </template>
 
 <script setup lang="ts">
-const { data: blogposts } = await useAsyncData('blogposts', () => queryCollection('blogposts').all())
-const { data: featured } = await useAsyncData('blogposts', () => queryCollection('blogposts').limit(4).all())
+const { data: blogposts } = await useAsyncData('blogposts', () => queryCollection('blogposts')
+  .order('date', 'DESC')
+  .all())
+const { data: featured } = await useAsyncData('blogposts', () => queryCollection('blogposts')
+  .order('date', 'DESC')
+  .limit(4)
+  .all())
 
 const {getImage, formatDate} = usePost()
 </script>

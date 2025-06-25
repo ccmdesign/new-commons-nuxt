@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-card | stack" :content="content" :aside-card="asideCard">
+  <div class="blog-card | stack" :content="content" :aside-card="asideCard" v-if="content">
     <img :src="getImage(content)" alt="" class="blog-card__image">
     <p class="blog-card__brow">{{formatDate(content.date)}}</p>
     <nuxt-link class="base-link" :to="`/blog/${content.slug}`"><h3>{{ content.heading }}</h3></nuxt-link>

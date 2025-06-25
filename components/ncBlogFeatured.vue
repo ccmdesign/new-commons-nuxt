@@ -5,7 +5,7 @@
         <nc-blog-card :content="firstPost" />
       </div>
       <aside>
-        <div class="card-aux aside-card" v-for="post in restPosts" :key="post.slug">
+        <div class="card-aux aside-card" v-for="post in remainingPosts" :key="post.slug">
           <div class="image-subgrid">
             <img  :src="getImage(post)" alt="">
           </div>
@@ -28,8 +28,8 @@ const props = defineProps({
 })
 
 const { getImage, formatDate } = usePost()
-
-const [firstPost, ...restPosts] = props.posts
+const firstPost = props.posts[0]
+const remainingPosts = props.posts.slice(1,4)
 </script>
 
 <style lang="scss" scoped>
@@ -60,6 +60,7 @@ aside .card-aux {
   outline: 1px solid var(--black-color-10-tint);
   padding: var(--space-xs);
   border-radius: var(--border-radius-l);
+  background-color: var(--white-color);
 }
 
 .aside-card .image-subgrid {
@@ -74,7 +75,7 @@ aside .card-aux {
   border-radius: var(--size--1);
 }
 
-.base-link, tagline {
+.base-link, .tagline {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -83,6 +84,9 @@ aside .card-aux {
 
 .card-aux {
   aspect-ratio: 0;
-  margin-bottom: var(--space-xs-s);
+  &:not(:last-child) {
+    margin-bottom: var(--space-xs-s);
+  }
 }
+
 </style>
