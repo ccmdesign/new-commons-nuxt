@@ -14,7 +14,7 @@ export default defineContentConfig({
         brow: z.string(),
         tagline: z.string(),
         excerpt: z.string(),
-        main_content: z.string(),
+        main_content: z.any(), // Allow any type for main_content
         cover_image: z.string(),
       })
     }),
