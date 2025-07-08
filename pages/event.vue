@@ -1,8 +1,8 @@
 <template>
   <nc-hero>
-    <div class="hero__content">
+    <div class="hero__content stack">
       <div class="panel">
-        <h3>Where Innovation Meets Collaboration</h3>
+        <p class="h4 subtitle">Where Innovation Meets Collaboration</p>
         <h2 class="h1">Event</h2>
         <p>A ac aliquet interdum aenean cursus. Neque sit faucibus arcu sed nec at ut risus sagittis. Viverra arcu quis tincidunt duis phasellus. Lacus sagittis at neque neque ut id eu pretium. Nisl arcu eu pellentesque fusce quisque dui. Quis pharetra nulla odio fusce pellentesque duis leo.</p>
         <p>Aliquam id eget volutpat massa parturient tristique faucibus elementum malesuada. Cursus montes sit sed amet morbi malesuada id. Mauris at ultrices dignissim bibendum cursus aliquam id. Vulputate semper id etiam amet orci. Ante cursus viverra purus semper nullam consequat commodo odio malesuada.</p>
@@ -24,16 +24,7 @@
 
   <nc-base-section>
     <h2 class="h1">Winners</h2>
-    <div class="switcher">
-      <div class="card-aux">
-        <h3>Winner 1</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-      </div>
-      <div class="card-aux">
-        <h3>Winner 1</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-      </div>
-    </div>
+    <nc-winners :winners="winners" />
   </nc-base-section>
 
   <nc-base-section>
@@ -60,6 +51,8 @@
 </template>
 
 <script setup>
+const { data: winners } = await useAsyncData('winners', () => queryCollection('winners')
+  .all())
 
 </script>
 
