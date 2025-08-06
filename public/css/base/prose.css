@@ -9,6 +9,7 @@
   font-weight: var(--prose-p-font-weight, 400);
   color: var(--prose-p-color, var(--base-color));
   text-transform: var(--prose-p-text-transform, none);
+  padding-block-end: 2rem;
 }
 
 .prose p + p {
