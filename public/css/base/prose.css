@@ -15,6 +15,16 @@
   margin-top: var(--prose-stack-spacing, .65rem);
 }
 
+/* resets p in lists */
+.prose li p { margin: 0; }
+
+.prose ul {
+  margin-block: 1.25em;
+  list-style: disc;
+}
+
+.prose li + li { margin-block: 0; }
+
 .prose img { 
   max-width: 100%;
   width: 100%; 
@@ -25,7 +35,6 @@
 .prose *:has( > img) {
   padding-bottom: var(--prose-image-spacing, 1.5rem);
 }
-
 
 /* Headings */
 
