@@ -15,6 +15,7 @@
 
 @import "base/typography.css" layer(defaults);
 @import 'base/everylayout.css' layer(defaults);
+@import 'base/prose.css' layer(defaults);
 
 /* Utils Layer */
 @import "utils/color-utils-background-color.css" layer(utils);

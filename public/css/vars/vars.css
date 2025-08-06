@@ -75,3 +75,48 @@
   --_multiselect-color: var(--_input-color);
   --_multiselect-shadow: var(--box-shadow-l);
 }
+
+/* Prose Variables*/
+:root {
+  --prose-line-height: 1.45;
+  --prose-stack-spacing: .65rem;
+  --prose-heading-spacing: .65em;
+
+  --prose-image-border-radius: var(--border-radius-m);
+  --prose-image-spacing: 1.5rem;
+  /* --prose-image-box-shadow: var(--box-shadow-m); */
+
+  --prose-tagline-font-size: var(--size-1);
+  --prose-tagline-font-weight: 400;
+  --prose-tagline-color: var(--base-color-40-tint);
+
+  --prose-h1-font-size: var(--size-2);
+  --prose-h1-font-weight: 700;
+  --prose-h1-color: var(--base-color);
+  --prose-h1-text-transform: none;
+
+  --prose-h2-font-size: var(--size-1);
+  --prose-h2-font-weight: 700;
+  --prose-h2-color: var(--base-color);
+  --prose-h2-text-transform: uppercase;
+
+  --prose-h3-font-size: var(--size-1);
+  --prose-h3-font-weight: 700;
+  --prose-h3-color: var(--base-color);
+  --prose-h3-text-transform: none;
+
+  --prose-h4-font-size: var(--size-0);
+  --prose-h4-font-weight: 700;
+  --prose-h4-color: var(--base-color);
+  --prose-h4-text-transform: none;
+
+  --prose-brow-font-size: var(--size-1);
+  --prose-brow-font-weight: 700;
+  --prose-brow-color: var(--primary-color);
+  --prose-brow-text-transform: uppercase;
+
+  --prose-p-font-size: var(--size-0);
+  --prose-p-font-weight: 400;
+  --prose-p-color: var(--base-color);
+  --prose-p-text-transform: none;
+}

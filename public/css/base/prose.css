@@ -1,0 +1,79 @@
+/* Prose Variables in vars.css */
+
+/* Base Prose Styles */
+
+.prose {
+  font-variant-numeric: lining-nums;
+  line-height: var(--prose-line-height, 1.45);
+  font-size: var(--prose-p-font-size, 1rem);
+  font-weight: var(--prose-p-font-weight, 400);
+  color: var(--prose-p-color, var(--base-color));
+  text-transform: var(--prose-p-text-transform, none);
+}
+
+.prose p + p {
+  margin-top: var(--prose-stack-spacing, .65rem);
+}
+
+.prose img { 
+  max-width: 100%;
+  width: 100%; 
+  border-radius: var(--prose-image-border-radius, 0);
+  box-shadow: var(--prose-image-box-shadow, none);
+}
+
+.prose *:has( > img) {
+  padding-bottom: var(--prose-image-spacing, 1.5rem);
+}
+
+
+/* Headings */
+
+/* .prose h1, */
+.prose h2,
+.prose h3,
+.prose h4 {
+  margin-top: var(--prose-heading-spacing, 1.5rem);
+}
+
+.prose h1 {
+  font-size: var(--prose-h1-font-size, 2rem);
+  font-weight: var(--prose-h1-font-weight, 700);
+  color: var(--prose-h1-color, var(--base-color));
+  text-transform: var(--prose-h1-text-transform, none);
+}
+
+.prose h2 {
+  font-size: var(--prose-h2-font-size, 1.5rem);
+  font-weight: var(--prose-h2-font-weight, 700);
+  color: var(--prose-h2-color, var(--base-color));
+  text-transform: var(--prose-h2-text-transform, none);
+}
+
+.prose h3 {
+  font-size: var(--prose-h3-font-size, 1.25rem);
+  font-weight: var(--prose-h3-font-weight, 700);
+  color: var(--prose-h3-color, var(--base-color));
+  text-transform: var(--prose-h3-text-transform, none);
+}
+
+.prose h4 {
+  font-size: var(--prose-h4-font-size, 1rem);
+  font-weight: var(--prose-h4-font-weight, 700);
+  color: var(--prose-h4-color, var(--base-color));
+  text-transform: var(--prose-h4-text-transform, none);
+}
+
+.prose .tagline {
+  font-size: var(--prose-tagline-font-size, 1.25rem);
+  font-weight: var(--prose-tagline-font-weight, 400);
+  color: var(--prose-tagline-color, var(--base-color));
+}
+
+.prose .brow {
+  font-size: var(--prose-brow-font-size, 1.25rem);
+  font-weight: var(--prose-brow-font-weight, 700);
+  color: var(--prose-brow-color, var(--base-color));
+  text-transform: var(--prose-brow-text-transform, none);
+  
+}
