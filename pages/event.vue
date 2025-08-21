@@ -56,7 +56,7 @@
     <nc-judges-grid />
   </nc-base-section>
 
-  <nc-blog-section />
+  <!--<nc-blog-section id="blog" :posts="blogposts" />-->
 </template>
 
 <script setup>

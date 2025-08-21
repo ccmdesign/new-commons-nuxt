@@ -96,7 +96,7 @@
     <nc-observers-grid />
   </nc-base-section>
 
-  <nc-blog-section id="blog" :posts="blogposts" />
+  <!--<nc-blog-section id="blog" :posts="blogposts" />-->
 </template>
 
 <script setup>

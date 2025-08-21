@@ -52,7 +52,7 @@
       </div>
     </div>
   </nc-cta>
-  <nc-blog-section id="blog" :posts="blogposts" />
+  <!--<nc-blog-section id="blog" :posts="blogposts" />-->
 
 </template>
 
