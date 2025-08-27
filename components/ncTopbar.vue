@@ -7,6 +7,8 @@
       <ul class="topbar__nav | cluster">
         <!-- @TODO: Por algum motivo os NuxtLink não estão funcionando aqui. Só consegui fazer as rotas funcionar com o el="a" -->
         <li><nc-button el="a" href="/prize" color="base" variant="link">The Prize</nc-button></li>
+        <li><nc-button el="a" href="/prize#judges" color="base" variant="link">Judges</nc-button></li>
+        <li><nc-button el="a" href="/#video" color="base" variant="link">Webinars</nc-button></li>
         <!--<li class="hide-on-mobile"><nc-button el="span" disabled   color="base" variant="link">Event</nc-button></li>
         <li class="hide-on-mobile"><nc-button el="span" disabled   color="base" variant="link">Winners</nc-button></li>
         <li><nc-button el="a" href="/blog"  color="base" variant="link">Blog</nc-button></li>-->

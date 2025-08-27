@@ -22,7 +22,7 @@
   </nc-hero>
 
   <nc-base-section id="video-section" width="narrow">
-    <div class="panel">
+    <div class="panel" id="video">
       <h2>The Challenge</h2>
       <p>This video explains what the Challenge is and why data commons are key to developing responsible and effective
         AI systems.</p>
@@ -48,7 +48,7 @@
       <div class="panel-footer">
         <h2>Watch the New Commons Challenge webinar</h2>
         <p>Missed the live session? Catch up on our 5 May 2025 webinar to learn key details about the New Commons Challenge, including what we’re looking for and how to strengthen your concept note. We also answered live questions from prospective applicants.</p>
-        <nc-button el="a" color="wt" variant="primary2">Watch now!</nc-button>
+        <nc-button el="a" href="#video" color="wt" variant="primary2">Watch now!</nc-button>
       </div>
     </div>
   </nc-cta>
