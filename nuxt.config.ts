@@ -6,7 +6,10 @@ const description = 'How can AI reflect diverse knowledge, tackle global challen
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/robots'],
+  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/robots', 'nuxt-gtag'],
+  gtag: {
+    id: 'G-DDSZL43JDX'
+  },
   runtimeConfig: {
     public: {
       contentfulSpace: process.env.CONTENTFUL_SPACE_ID || '',
