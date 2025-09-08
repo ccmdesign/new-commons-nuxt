@@ -52,7 +52,7 @@ export default defineNuxtConfig({
   vite: {
   },
   plugins: [
-
+    { src: '~/plugins/clarity.client.js' }
   ],
   site: { 
     url: 'https://newcommons.ai/', 
