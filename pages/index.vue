@@ -18,7 +18,16 @@
           <nc-minimal-logo />
       </div>
     </div>
-    <nc-announcement content="Applications closed June 11th." color="primary" />
+    <nc-announcement color="primary" class="hero__announcement">
+      <div class="switcher" style="">
+        <div style="flex: 3;">
+          <h3>2025 New Commons Challenge</h3>
+            <h2>Meet the Awardees</h2>
+            <p>Explore the groundbreaking data commons recognized at the 2025 New Commons Showcase.</p>
+        </div>
+        <nc-button class="hero__announcement-button" el="a" href="/winners" color="primary" variant="primary" style="align-self: center;">View Awardees</nc-button>
+      </div>
+    </nc-announcement>
   </nc-hero>
 
   <nc-base-section id="video-section" width="narrow">
@@ -95,6 +104,41 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
   text-align: center;
   max-width: 39.5rem;
   margin: 0 auto var(--space-l-xl);
+}
+
+.hero__announcement {
+  text-align: left !important;
+  padding: var(--space-m) var(--space-l);
+
+  * {
+    margin-block: 0;
+  }
+
+  .hero__announcement-button {
+  }
+
+  h3 {
+    font-size: var(--size-0);
+    font-weight: 800;
+    color: var(--base-color);
+    text-transform: uppercase;
+  }
+  
+  h2 {
+    font-size: var(--size-2);
+    font-weight: 300;
+    color: var(--base-color);
+  }
+
+  p {
+    font-size: var(--size-0);
+    font-weight: 300;
+    color: var(--base-color);
+    margin-block: var(--space-xs);
+  }
+  
+
+  
 }
 
 
