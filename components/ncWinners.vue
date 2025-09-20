@@ -1,9 +1,10 @@
 <template>
     <div class="winners-grid">
-      <div
+      <NuxtLink
         v-for="winner in winners"
         :key="winner.slug"
         class="winner-card"
+        :to="`/winners/${winner.slug}`"
       >
         <img
           :src="winner.image || '/images/blog-fallback.webp'"
@@ -11,16 +12,24 @@
           class="winner-card__image"
         />
         <span class="winner-card__country">{{ winner.country }}</span>
-        <h3 class="h2">{{ winner.title }}</h3>
-        <p class="h3">{{ winner.applicant }}</p>
-        <p class="winner-card__description">{{ winner.description || 'No description available.' }}</p>
-        <nuxt-link
-          v-if="winner.project_url"
-          :to="`/winners/${winner.slug}`"
-          target="_blank"
-          class="winner-card__link"
-        >View details</nuxt-link>
-      </div>
+        <h4 class="h5">{{ winner.prize }}</h4>
+        <h3 class="h3">{{ winner.title }}</h3>
+
+        <p
+          v-if="winner.short_description"
+          class="winner-card__description"
+        >{{ winner.short_description }}</p>
+        <div
+          v-else-if="winner.description"
+          class="winner-card__description"
+          v-html="winner.description"
+        />
+        <p v-else class="winner-card__description">No description available.</p>
+
+        <div class="winner-card__actions | padding-top:m">
+          <span class="winner-card__cta">View details</span>
+        </div>
+      </NuxtLink>
     </div>
 </template>
 <script setup>
@@ -30,6 +39,7 @@ const props = defineProps({
         required: true
     }
 })
+
 </script>
 <style scoped lang="scss">
 
@@ -50,13 +60,17 @@ const props = defineProps({
 .winner-card {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid var(--base-color-05-tint);
+  // box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   height: 100%;
   position: relative;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 150ms ease, transform 150ms ease;
 }
 
 .winner-card__image {
@@ -89,11 +103,14 @@ const props = defineProps({
   right: 1.5rem;
 }
 
-.winner-card__link {
+.winner-card__cta {
   margin-top: auto;
-  color: var(--primary-color);
   font-weight: 600;
-  text-align: center;
-  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.winner-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
 }
 </style>

@@ -13,13 +13,14 @@
     :label="label"
     :value="value"
     :fullWidth="fullWidth"
+    v-bind="attrs"
   >
     <slot>{{label}}</slot>
   </component>
 </template>
 
 <script setup>
-  import { toRefs, computed, defineProps } from 'vue';
+  import { toRefs, computed, defineProps, useAttrs } from 'vue';
   
   const props = defineProps({
     label: {
@@ -73,6 +74,8 @@
   });
 
   const { el, value, label, hidden, unstyled, mobile, size, color, visual, iconBefore, iconAfter, fullWidth } = toRefs(props)
+
+const attrs = useAttrs()
 
 const defaultEl = computed(() => {
   if (attrs.href) return 'a'
@@ -238,9 +241,9 @@ const componentEl = computed(() => el.value || defaultEl.value)
 
 .button[data-size="s"],
 .button[size="s"] {
-  --_button-padding-block: var(--s-2);
-  --_button-padding-inline: var(--s0);
-  --_button-font-size: 75%; 
+  --_button-padding-block: var(--space-2xs);
+  --_button-padding-inline: var(--space-s);
+  --_button-font-size: 100%; 
 }
 
 .button[data-size="l"],

@@ -33,6 +33,19 @@ export default defineContentConfig({
         project_url: z.string().url(),
         alt_url: z.string().url(),
         description: z.string(),
+        short_description: z.string().optional(),
+        winner_images: z.array(z.object({
+          src: z.string(),
+          alt: z.string().optional(),
+        })).optional(),
+        files: z.array(z.object({
+          src: z.string(),
+          alt: z.string().optional(),
+        })).optional(),
+        gallery: z.array(z.object({
+          src: z.string(),
+          alt: z.string().optional(),
+        })).optional(),
         image: z.string().url(),
         slug: z.string(),
       })

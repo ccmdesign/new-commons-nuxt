@@ -1,11 +1,17 @@
 <template>
-  <div class="blog-card | stack" :content="content" :aside-card="asideCard" v-if="content">
+  <NuxtLink
+    v-if="content"
+    class="blog-card | stack"
+    :content="content"
+    :aside-card="asideCard"
+    :to="`/blog/${content.slug}`"
+  >
     <img :src="getImage(content)" alt="" class="blog-card__image">
     <p class="blog-card__brow">{{formatDate(content.date)}}</p>
-    <nuxt-link class="base-link" :to="`/blog/${content.slug}`"><h3>{{ content.heading }}</h3></nuxt-link>
+    <h3 class="blog-card__heading">{{ content.heading }}</h3>
     <p class="blog-card__excerpt">{{ content.excerpt }}</p>
-    <nc-button class="margin-top:auto" color="primary" variant="link">Read More</nc-button>
-  </div>
+    <span class="blog-card__cta">Read more</span>
+  </NuxtLink>
 </template>
 
 <script setup>
@@ -40,6 +46,10 @@ const formatDate = (dateString) => {
   padding: var(--space-xs);
   border-radius: var(--border-radius-l);
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
 
   --_stack-space: var(--space-xs);
 
@@ -58,4 +68,14 @@ const formatDate = (dateString) => {
   }
 
   h3 { line-height: 1.35;}
+
+  .blog-card__cta {
+    margin-top: auto;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+
+  .blog-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  }
 </style>
