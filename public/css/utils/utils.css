@@ -46,8 +46,6 @@
 .float\:right { float: right; }
 
 .aux {
-  outline: 2px solid red;
-  background-color: rgba(255, 0, 0, 0.1);
 }
 
 
@@ -72,4 +70,12 @@
 
 .white-color {
   color: var(--white-color);
+}
+
+.subtitle {
+  font-size: var(--size-0);
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs-s);
 }
