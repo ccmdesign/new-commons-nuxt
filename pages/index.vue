@@ -12,6 +12,7 @@
           variant="primary">Join the Challenge Today</nc-button>-->
       </div>
       <div class="hero__image-div">
+        
         <img 
           src="/assets/patterns/hero.jpg"
           alt="Hero Image" />
