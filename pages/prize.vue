@@ -1,5 +1,14 @@
 <template>
   <nc-hero>
+    <nc-announcement color="primary" class="hero__announcement">
+      <div class="switcher" style="">
+        <div style="flex: 3;">
+            <h2>Applications for the New Commons Challenge are now closed</h2>
+            <p>Learn more about the winners and honorary distinctions.</p>
+        </div>
+        <nc-button class="hero__announcement-button" el="a" href="/winners" color="primary" variant="primary" style="align-self: center;">Meet the Winners</nc-button>
+      </div>
+    </nc-announcement>
     <div class="hero__content">
       <div class="panel">
         <p class="hero__brow">A Prize for a Shared Digital Future</p>
@@ -234,6 +243,40 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
   h4 {
     font-size: var(--size-0);
   }
+}
+.hero__announcement {
+  text-align: left !important;
+  padding: var(--space-m) var(--space-l);
+
+  * {
+    margin-block: 0;
+  }
+
+  .hero__announcement-button {
+  }
+
+  h3 {
+    font-size: var(--size-0);
+    font-weight: 800;
+    color: var(--base-color);
+    text-transform: uppercase;
+  }
+  
+  h2 {
+    font-size: var(--size-2);
+    font-weight: 300;
+    color: var(--base-color);
+  }
+
+  p {
+    font-size: var(--size-0);
+    font-weight: 300;
+    color: var(--base-color);
+    margin-block: var(--space-xs);
+  }
+  
+
+  
 }
 
 </style>
