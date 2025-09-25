@@ -49,9 +49,6 @@ const {getImage, formatDate} = usePost()
   font-size: var(--size-4);
 }
 
-#blog-header {
-  margin: var(--space-2xl-3xl) 0;
-}
 
 ul {
   li {

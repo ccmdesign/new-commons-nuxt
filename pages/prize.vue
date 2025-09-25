@@ -8,6 +8,15 @@
         <p>The challenge addresses a critical issue: the limited access to diverse and high-quality datasets, which is essential for AI to reach its full potential. By creating and improving data commons, which are collaboratively governed data ecosystems that pool and provide responsible access to diverse, high-quality datasets, the gap in AI development can be filled. The challenge seeks to seed new data commons to ensure that AI benefits all.</p>
       </div>
     </div>
+    <nc-announcement color="primary" class="hero__announcement">
+      <div class="switcher" style="">
+        <div style="flex: 3;">
+            <h2>Applications for the New Commons Challenge are now closed</h2>
+            <p>Learn more about the winners and honorary distinctions.</p>
+        </div>
+        <nc-button class="hero__announcement-button" el="a" href="/winners" color="primary" variant="primary" style="align-self: center;">Meet the Winners</nc-button>
+      </div>
+    </nc-announcement>
   </nc-hero>
 
   <nc-base-section class="fancy-bg" width="narrow" color="primary">
@@ -234,6 +243,40 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
   h4 {
     font-size: var(--size-0);
   }
+}
+.hero__announcement {
+  text-align: left !important;
+  padding: var(--space-m) var(--space-l);
+
+  * {
+    margin-block: 0;
+  }
+
+  .hero__announcement-button {
+  }
+
+  h3 {
+    font-size: var(--size-0);
+    font-weight: 800;
+    color: var(--base-color);
+    text-transform: uppercase;
+  }
+  
+  h2 {
+    font-size: var(--size-2);
+    font-weight: 300;
+    color: var(--base-color);
+  }
+
+  p {
+    font-size: var(--size-0);
+    font-weight: 300;
+    color: var(--base-color);
+    margin-block: var(--space-xs);
+  }
+  
+
+  
 }
 
 </style>

@@ -40,7 +40,7 @@
     <iframe class="video-frame" src="https://www.youtube.com/embed/gKqNJam8iEI?si=PGI4s_Zgns_JqSg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </nc-base-section>
 
-  <nc-timeline id="timeline" />
+  <!--<nc-timeline id="timeline" />-->
 
   <nc-cta id="cta" :single-column="true">
     <div class="cta-panel"
@@ -62,7 +62,7 @@
       </div>
     </div>
   </nc-cta>
-  <!--<nc-blog-section id="blog" :posts="blogposts" />-->
+  <nc-blog-section id="blog" :posts="blogposts" />
 
 </template>
 

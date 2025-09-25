@@ -7,11 +7,23 @@
           <div>
             <p>On September 25, 2025, the New Commons Challenge awarded two $100,000 prizes to foster data commons for responsible AI development. 
               The first of these awards went to the <strong>Malawi Voice Data Commons Project</strong>—developed by the New York University Peace Research and Education Program and Ushahidi—for the development of a data commons. 
-              The second award went to the <strong>BI de Floresta Project</strong>, developed by CERTI Amazonia, for the enhancement of an existing data commons.</p>
+              The second award went to the <strong>Amazon Rainforest Evolution Index</strong>, developed by CERTI Amazonia, for the enhancement of an existing data commons.</p>
               <p>The event took place as part of the broader 80<sup><small>th</small></sup> UN General Assembly events and was an affiliate session of the Digital@UNGA program. We thank our partners DirectRelief and the Harvard Institutional Data Initiative, as well as our observer UNESCO, for their support.</p>
               <p>Information on each grantee and special distinction can be found below. For each grantee, we provide a brief description of their projects taken from their proposals and then information about how they can be contacted, should you be interested in learning more about their work or offering support.</p>
             </div>
             <div class="honors">
+              <p class="honors__heading">Awardees:</p>
+              <ul class="honors__cards">
+                <li v-for="card in awardees" :key="card.title">
+                    <NuxtLink
+                      :to="`/winners/${card.slug}`"
+                      class="honors-card honors-card--link"
+                    >
+                      <span class="honors-card__title">{{ card.title }}</span>
+                      <span class="honors-card__meta">{{ card.applicant }}</span>
+                    </NuxtLink>
+                </li>
+              </ul>
               <p class="honors__heading">Honorary distinctions were given to:</p>
               <ul class="honors__cards">
                 <li v-for="card in honorsCards" :key="card.title">
@@ -46,7 +58,9 @@
   </nc-base-section>
 
   <nc-base-section color="faded">
-    <section class="winners-gallery stack">
+    <h2>The New Commons Challenge Showcase</h2>
+    <p>The winners were announced on September 25, 2025 at the New Commons Challenge Showcase. The Showcase was held in New York City during the 80th United Nations General Assembly. The event brought together leading voices in AI and data governance for an evening filled with learning and meaningful connections to shape the future of public-interest AI.</p>
+    <!--<section class="winners-gallery stack">
       <h2 class="text-align:center">Celebration Highlights</h2>
       <p class="text-align:center">Scenes from the New Commons Challenge ceremony and community gatherings.</p>
       <div class="winners-gallery__grid">
@@ -62,7 +76,7 @@
           />
         </div>
       </div>
-    </section>
+    </section>-->
   </nc-base-section>
 
   <nc-blog-section :posts="blogposts" />
@@ -141,9 +155,8 @@ const { data: blogposts } = await useAsyncData('blogposts', () =>
 .honors-card {
   border: 1px solid var(--base-color-10-tint);
   border-radius: var(--border-radius-l);
-  padding: var(--space-s) var(--space-m);
+  padding: var(--space-2xs) var(--space-s);
   display: grid;
-  gap: var(--space-3xs);
   background: rgba(255, 255, 255, 0.65);
   text-decoration: none;
   color: inherit;
