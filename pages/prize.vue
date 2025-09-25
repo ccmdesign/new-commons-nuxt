@@ -1,5 +1,13 @@
 <template>
   <nc-hero>
+    <div class="hero__content">
+      <div class="panel">
+        <p class="hero__brow">A Prize for a Shared Digital Future</p>
+        <h1>What is the prize?</h1>
+        <p>The New Commons Challenge is an initiative led by Microsoft and the Open Data Policy Lab, in partnership with DirectRelief, the Harvard Institutional Data Initiative, and UNESCO (international observer).</p>
+        <p>The challenge addresses a critical issue: the limited access to diverse and high-quality datasets, which is essential for AI to reach its full potential. By creating and improving data commons, which are collaboratively governed data ecosystems that pool and provide responsible access to diverse, high-quality datasets, the gap in AI development can be filled. The challenge seeks to seed new data commons to ensure that AI benefits all.</p>
+      </div>
+    </div>
     <nc-announcement color="primary" class="hero__announcement">
       <div class="switcher" style="">
         <div style="flex: 3;">
@@ -9,14 +17,6 @@
         <nc-button class="hero__announcement-button" el="a" href="/winners" color="primary" variant="primary" style="align-self: center;">Meet the Winners</nc-button>
       </div>
     </nc-announcement>
-    <div class="hero__content">
-      <div class="panel">
-        <p class="hero__brow">A Prize for a Shared Digital Future</p>
-        <h1>What is the prize?</h1>
-        <p>The New Commons Challenge is an initiative led by Microsoft and the Open Data Policy Lab, in partnership with DirectRelief, the Harvard Institutional Data Initiative, and UNESCO (international observer).</p>
-        <p>The challenge addresses a critical issue: the limited access to diverse and high-quality datasets, which is essential for AI to reach its full potential. By creating and improving data commons, which are collaboratively governed data ecosystems that pool and provide responsible access to diverse, high-quality datasets, the gap in AI development can be filled. The challenge seeks to seed new data commons to ensure that AI benefits all.</p>
-      </div>
-    </div>
   </nc-hero>
 
   <nc-base-section class="fancy-bg" width="narrow" color="primary">
