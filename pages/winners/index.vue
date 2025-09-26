@@ -60,23 +60,26 @@
   <nc-base-section color="faded">
     <h2>The New Commons Challenge Showcase</h2>
     <p>The winners were announced on September 25, 2025 at the New Commons Challenge Showcase. The Showcase was held in New York City during the 80th United Nations General Assembly. The event brought together leading voices in AI and data governance for an evening filled with learning and meaningful connections to shape the future of public-interest AI.</p>
-    <!--<section class="winners-gallery stack">
+  </nc-base-section>
+
+  <nc-base-section>
+    <section class="winners-gallery stack">
       <h2 class="text-align:center">Celebration Highlights</h2>
       <p class="text-align:center">Scenes from the New Commons Challenge ceremony and community gatherings.</p>
       <div class="winners-gallery__grid">
         <div
-          v-for="index in 8"
+          v-for="(i, index) in highlights"
           :key="`gallery-image-${index}`"
           class="winners-gallery__item"
         >
           <img
-            src="/images/blog-fallback.webp"
-            alt="New Commons celebration placeholder"
+            :src="i.src"
+            :alt="i.alt"
             loading="lazy"
           />
         </div>
       </div>
-    </section>-->
+    </section>
   </nc-base-section>
 
   <nc-blog-section :posts="blogposts" />
@@ -135,6 +138,29 @@ const { data: blogposts } = await useAsyncData('blogposts', () =>
   queryCollection('blogposts')
   .order('date', 'DESC').limit(3).all()
 );
+
+const highlights = [
+  {
+    src: '/images/092525_HL011_New-Commons_Microsoft_Malawi Voice Data Commons.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/092525_HL014_New-Commons_Microsoft_Amazon Rainforest Evolution Index Award Winner.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/092525_HL018_New-Commons_Microsoft_Malawi Award Presentation.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/092525_HL023_New-Commons_Microsoft_Malawi Award Presentation 1.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/092525_HL026_New-Commons_Microsoft_Amazon Rainforest Presentation.webp',
+    alt: 'Replace alt text'
+  },
+]
 </script>
 
 <style scoped>
@@ -190,7 +216,7 @@ const { data: blogposts } = await useAsyncData('blogposts', () =>
 
 .winners-gallery__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--space-m);
 }
 
