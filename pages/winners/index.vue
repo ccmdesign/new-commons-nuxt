@@ -71,6 +71,7 @@
           v-for="(i, index) in highlights"
           :key="`gallery-image-${index}`"
           class="winners-gallery__item"
+          @click="data.activeImage = i"
         >
           <img
             :src="i.src"
@@ -78,6 +79,10 @@
             loading="lazy"
           />
         </div>
+      </div>
+      <div class="winners-gallery__hl" v-if="data.activeImage">
+        <button class="winners-gallery__close" @click="data.activeImage = null">X</button>
+        <img :src="data.activeImage.src" :alt="data.activeImage.alt" />
       </div>
     </section>
   </nc-base-section>
@@ -161,6 +166,10 @@ const highlights = [
     alt: 'Replace alt text'
   },
 ]
+
+const data = reactive({
+  activeImage: null
+})
 </script>
 
 <style scoped>
@@ -231,6 +240,40 @@ const highlights = [
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
+}
+
+.winners-gallery__hl {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80vw;
+  transform: translate(-50%, -50%);
+  padding: var(--space-xl);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--base-color);
+  @media (max-width: 36em) {
+    display: none;
+  }
+  img {
+      max-width: 100%;
+      max-height: 80vh;
+      width: auto;
+  }
+  .winners-gallery__close {
+    position: absolute;
+    top: var(--space-s);
+    right: var(--space-s);
+    font-weight: 700;
+    font-size: var(--size-1);
+    background: none;
+    border: none;
+    color: var(--white-color);
+    cursor: pointer;
+  }
 }
 
 .switcher {
