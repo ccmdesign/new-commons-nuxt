@@ -165,6 +165,82 @@ const highlights = [
     src: '/images/092525_HL026_New-Commons_Microsoft_Amazon Rainforest Presentation.webp',
     alt: 'Replace alt text'
   },
+  {
+    src: '/images/hl/Copy of 092525_HL053_New-Commons_Microsoft.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Copy of IMG_0802.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Copy of IMG_0804.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Copy of 092525_HL041_New-Commons_Microsoft.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Copy of 092525_HL039_New-Commons_Microsoft.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Copy of IMG_0800.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Copy of IMG_0811.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Copy of 092525_HL033_New-Commons_Microsoft.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Copy of IMG_0812.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Copy of 092525_HL047_New-Commons_Microsoft.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Copy of 092525_HL003_New-Commons_Microsoft.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Copy of 092525_HL007_New-Commons_Microsoft.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Copy of 092525_HL023_New-Commons_Microsoft.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Copy of 092525_HL004_New-Commons_Microsoft.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Copy of 092525_HL002_New-Commons_Microsoft.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Certi Amazonia-New Commons_1.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/Certi Amazonia-New Commons2.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/MalawiVoice1.webp',
+    alt: 'Replace alt text'
+  },
+  {
+    src: '/images/hl/MalawiVoice2.webp',
+    alt: 'Replace alt text'
+  },
 ]
 
 const data = reactive({
