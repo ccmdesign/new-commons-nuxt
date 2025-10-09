@@ -63,17 +63,17 @@
           />
           <figcaption v-if="heroImage.caption">{{ heroImage.caption }}</figcaption>
         </figure>
-        <div v-if="video.src && video.src.startsWith('https://player.vimeo')" style="padding:56.25% 0 0 0;position:relative;"><iframe :src="video.src" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" :title="winner.title"></iframe></div>
-        <video v-else-if="video.src" controls >
-          <source :src="video.src" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
          <div
           v-if="winner.description"
           class="winner-description"
           v-html="winner.description"
         />
         <p v-else>No description available.</p>
+        <div v-if="video.src && video.src.startsWith('https://player.vimeo')" style="padding:56.25% 0 0 0;position:relative;"><iframe :src="video.src" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" :title="winner.title"></iframe></div>
+        <video v-else-if="video.src" controls :class="{'video-portrait': winner.slug === 'querido-diario'}">
+          <source :src="video.src" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </article>
 
       
@@ -234,4 +234,8 @@ video {
   object-fit: cover;
   border-radius: var(--border-radius-l);
 }
+
+  .video-portrait {
+    aspect-ratio: 9/16;
+  }
 </style>
