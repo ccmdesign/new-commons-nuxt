@@ -231,11 +231,10 @@ const projectLinks = computed(() => {
 video {
   width: 100%;
   aspect-ratio: 16/9;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: var(--border-radius-l);
 }
 
   .video-portrait {
-    aspect-ratio: 9/16;
   }
 </style>
