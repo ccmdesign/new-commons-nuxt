@@ -43,7 +43,9 @@ export default defineNuxtConfig({
         // google icons
         { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" },
       ],
-      script: [],
+      script: [
+        { src: 'https://player.vimeo.com/api/player.js', async: true },
+      ],
     }
   },
   css: [

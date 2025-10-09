@@ -63,13 +63,12 @@
           />
           <figcaption v-if="heroImage.caption">{{ heroImage.caption }}</figcaption>
         </figure>
-        
-        <video v-if="video.src" controls >
+        <div v-if="video.src && video.src.startsWith('https://player.vimeo')" style="padding:56.25% 0 0 0;position:relative;"><iframe :src="video.src" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" :title="winner.title"></iframe></div>
+        <video v-else-if="video.src" controls >
           <source :src="video.src" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div v-if="videos.src" style="padding:56.25% 0 0 0;position:relative;"><iframe :src="videos.src" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" :title="winner.title"></iframe></div>
-        <div
+         <div
           v-if="winner.description"
           class="winner-description"
           v-html="winner.description"
