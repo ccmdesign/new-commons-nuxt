@@ -63,6 +63,12 @@
           />
           <figcaption v-if="heroImage.caption">{{ heroImage.caption }}</figcaption>
         </figure>
+        
+        <video v-if="video.src" controls >
+          <source :src="video.src" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div v-if="videos.src" style="padding:56.25% 0 0 0;position:relative;"><iframe :src="videos.src" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" :title="winner.title"></iframe></div>
         <div
           v-if="winner.description"
           class="winner-description"
@@ -81,6 +87,9 @@
 import { computed } from 'vue'
 
 const route = useRoute()
+import { videos } from '~/composables/useVideos'
+const video = videos.find(video => video.slug === route.params?.slug)
+
 const { data: winner } = await useAsyncData('winner', () => queryCollection('winners')
   .where('slug', '=', route.params?.slug)
   .first())
@@ -220,4 +229,10 @@ const projectLinks = computed(() => {
   gap: var(--space-3xs);
 }
 
+video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: var(--border-radius-l);
+}
 </style>
