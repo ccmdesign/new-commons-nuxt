@@ -5,7 +5,7 @@
 <script setup>
 const route = useRoute()
 const { data: blogpost } = await useAsyncData('blogpost', () => queryCollection('blogposts')
-  .where('slug', '=', 'building-the-future-of-public-interest-ai-certi-amazonia-institute-and-nyu-peace-research-announced-as-winners-of-the-new-commons-challenge')
+  .where('slug', '=', route.params.slug)
   .first())
 </script>
 
