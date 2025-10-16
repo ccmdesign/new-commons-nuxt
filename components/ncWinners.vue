@@ -77,7 +77,7 @@ const props = defineProps({
   border-radius: var(--border-radius-s, 8px);
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: contain;
   margin-bottom: 1rem;
 }
 
