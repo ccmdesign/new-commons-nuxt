@@ -12,26 +12,25 @@
           This site uses cookies to keep features working smoothly and provide tailored experiences.
           Help us balance what’s required for basic navigation and what can be stored for insights and personalization.
         </p>
-        <p class="cookie-consent__detail">
+        <!-- <p class="cookie-consent__detail">
           Toggle the optional categories below while necessary cookies remain active for core functionality.
-        </p>
+        </p> -->
       </div>
-      <div class="cookie-consent__grid">
+      <!-- <div class="cookie-consent__grid">
         <label
-          v-for="category in categories"
-          :key="category.key"
           class="cookie-consent__category"
         >
           <input type="checkbox" v-model="pending[category.key]" :aria-label="category.title" />
-          <div>
+          <div v-for="category in categories"
+          :key="category.key">
             <span class="cookie-consent__category-title">{{ category.title }}</span>
             <span class="cookie-consent__category-description">{{ category.description }}</span>
           </div>
         </label>
-      </div>
+      </div> -->
       <div class="cookie-consent__actions">
-        <button type="button" class="cookie-consent__link" @click="handleReject">
-          Only necessary cookies
+        <button type="button" class="cookie-consent__secondary" @click="handleReject">
+          Necessary cookies
         </button>
         <div class="cookie-consent__cta">
           <button type="button" class="cookie-consent__secondary" @click="handleSavePreferences">
@@ -254,25 +253,20 @@ onMounted(() => {
 
 .cookie-consent__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
   gap: var(--space-s);
 }
 
 .cookie-consent__category {
   display: flex;
-  gap: var(--space-s);
+  flex-direction: column;
+  gap: var(--space-l);
   padding: var(--space-s);
   align-items: flex-start;
-  cursor: pointer;
   background-color: hsla(var(--white-hsl), 0.08);
   border-radius: var(--border-radius-m);
   border: 1px solid hsla(var(--white-hsl), 0.15);
   transition: border-color 0.2s ease, background-color 0.2s ease;
-}
-
-.cookie-consent__category:hover {
-  background-color: hsla(var(--white-hsl), 0.12);
-  border-color: hsla(var(--white-hsl), 0.3);
 }
 
 .cookie-consent__category input {
@@ -299,7 +293,7 @@ onMounted(() => {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
   gap: var(--space-s);
 }
 
