@@ -4,6 +4,7 @@
     <slot />
     <nc-footer id="footer" />
   </master-grid>
+  <nc-cookie-consent />
 </template>
 
 <style>
