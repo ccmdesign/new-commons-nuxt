@@ -2,12 +2,14 @@
   <div class="by-line | subgrid">
     <div class="by-line__content | cluster">
       <span>© {{ new Date().getFullYear() }}. Open Data Policy Lab. All Rights Reserved.</span>
+      <a href="#" @click.prevent="openCookieModal">Cookies</a>
       <a href="#" split-left>by ccm.design</a>
     </div>
   </div>
 </template>
 
 <script setup>
+const { openCookieModal } = useCookieControl();
 </script>
 
 <style scoped>
