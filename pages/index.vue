@@ -26,7 +26,7 @@
             <h2>Meet the Awardees</h2>
             <p>Explore the groundbreaking data commons recognized at the 2025 New Commons Showcase.</p>
         </div>
-        <nc-button class="hero__announcement-button" el="a" href="/winners" color="primary" variant="primary" style="align-self: center;">View Awardees</nc-button>
+        <nc-button class="hero__announcement-button" to="/winners" color="primary" variant="primary" style="align-self: center;">View Awardees</nc-button>
       </div>
     </nc-announcement>
   </nc-hero>

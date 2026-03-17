@@ -14,7 +14,7 @@
             <h2>Applications for the New Commons Challenge are now closed</h2>
             <p>Learn more about the winners and honorary distinctions.</p>
         </div>
-        <nc-button class="hero__announcement-button" el="a" href="/winners" color="primary" variant="primary" style="align-self: center;">Meet the Winners</nc-button>
+        <nc-button class="hero__announcement-button" to="/winners" color="primary" variant="primary" style="align-self: center;">Meet the Winners</nc-button>
       </div>
     </nc-announcement>
   </nc-hero>

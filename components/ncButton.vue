@@ -69,7 +69,7 @@
     },
     el: {
       type: String,
-      default: 'button'
+      default: ''
     },
   });
 
