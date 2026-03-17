@@ -11,12 +11,6 @@ export default defineNuxtConfig({
   gtag: {
     id: 'G-DDSZL43JDX'
   },
-  runtimeConfig: {
-    public: {
-      contentfulSpace: process.env.CONTENTFUL_SPACE_ID || '',
-      contentfulToken: process.env.CONTENTFUL_ACCESS_TOKEN || ''
-    }
-  },
   app: {
     head: {
       htmlAttrs: {
