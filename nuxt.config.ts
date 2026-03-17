@@ -69,6 +69,13 @@ export default defineNuxtConfig({
     name: title 
   }, 
   ssr: false,
+  routeRules: {
+    '/prize': { redirect: '/incubator/2026' },
+    '/the-prize': { redirect: '/incubator/2026' },
+    '/the-incubator': { redirect: '/incubator/2026' },
+    '/incubator': { redirect: '/incubator/2026' },
+    '/winners': { redirect: '/the-2025-challenge' },
+  },
   experimental: {
     clientFallback: true
   },
