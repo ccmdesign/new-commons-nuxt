@@ -3,7 +3,7 @@
     <div class="hero__content">
       <div class="panel">
         <p class="hero__brow">A Prize for a Shared Digital Future</p>
-        <h1>What is the prize?</h1>
+        <h1>The Incubator — 2026 Cohort</h1>
         <p>The New Commons Challenge is an initiative led by Microsoft and the Open Data Policy Lab, in partnership with DirectRelief, the Harvard Institutional Data Initiative, and UNESCO (international observer).</p>
         <p>The challenge addresses a critical issue: the limited access to diverse and high-quality datasets, which is essential for AI to reach its full potential. By creating and improving data commons, which are collaboratively governed data ecosystems that pool and provide responsible access to diverse, high-quality datasets, the gap in AI development can be filled. The challenge seeks to seed new data commons to ensure that AI benefits all.</p>
       </div>
@@ -11,10 +11,10 @@
     <nc-announcement color="primary" class="hero__announcement">
       <div class="switcher" style="">
         <div style="flex: 3;">
-            <h2>Applications for the New Commons Challenge are now closed</h2>
-            <p>Learn more about the winners and honorary distinctions.</p>
+            <h2>Learn about the 2025 Challenge winners and honorary distinctions</h2>
+            <p>See the groundbreaking data commons recognised at the 2025 New Commons Showcase.</p>
         </div>
-        <nc-button class="hero__announcement-button" to="/the-2025-challenge" color="primary" variant="primary" style="align-self: center;">Meet the Winners</nc-button>
+        <nc-button class="hero__announcement-button" to="/the-2025-challenge" color="primary" variant="primary" style="align-self: center;">The 2025 Challenge</nc-button>
       </div>
     </nc-announcement>
   </nc-hero>
@@ -64,7 +64,7 @@
         </li>
         <li class="prize-item">
           <img src="/assets/globe.svg" alt="Network">
-          <p>Access to the Open Data Policy Lab’s global network of experts</p>
+          <p>Access to the Open Data Policy Lab's global network of experts</p>
         </li>
       </ul>
     </div>
@@ -81,7 +81,7 @@
         <p>Proposals will be reviewed by an international jury of experts from both focus areas.</p>
         <nc-button color="white" variant="link">Read here <nc-arrow-link-up /></nc-button>
       </div>
-      
+
     </div>
   </nc-base-section>
 
@@ -89,11 +89,11 @@
     <h2 class="margin-bottom:s">Helpful Tips</h2>
     <div class="stack">
       <h3>Our Blueprint</h3>
-      <p>This Challenge aims to implement our recently published Blueprint to Unlock New Data Commons for Artificial Intelligence, which shows how organizations can launch data commons in the public interest. Organizations may find it useful to refer to this report as they develop their concept notes and proposals.</p>
+      <p>This Challenge aims to implement our recently published Blueprint to Unlock New Data Commons for Artificial Intelligence, which shows how organizations can launch data commons in the public interest. Organizations may find it useful to refer to this report as they develop their concept notes and proposals.</p>
 
       <h3 class="margin-top:l">Inspirational Examples</h3>
-      <p>As this is an emerging area of practice, we understand that few organizations have developed data commons for AI. To help applicants think about how they may use data commons to support their work, we have assembled a list of instructive examples of data commons in action here.</p>
-      
+      <p>As this is an emerging area of practice, we understand that few organizations have developed data commons for AI. To help applicants think about how they may use data commons to support their work, we have assembled a list of instructive examples of data commons in action here.</p>
+
       <p>Please note that these data commons cover a range of topics beyond the areas of focus for this challenge.</p>
     </div>
   </nc-base-section>
@@ -112,7 +112,7 @@
 const { data: blogposts } = await useAsyncData('blogposts', () => queryCollection('blogposts').limit(3).all())
 </script>
 
-<style scoped lang="scss"> 
+<style scoped lang="scss">
 .panel {
   max-width: 80ch;
 
@@ -135,7 +135,7 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: calc(var(--overlap) + var(--space-2xl));  
+  padding-bottom: calc(var(--overlap) + var(--space-2xl));
 }
 
 .prize-cta { margin-bottom: calc(var(--overlap) * -1); }
@@ -202,7 +202,7 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
 
 .prize-list {
   li {
-    display: flex;  
+    display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: var(--space-s);
@@ -228,8 +228,8 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
 .prize-tips {
   color: var(--base-color);
   h2 { grid-column: content-start / 5; }
-  .stack { 
-    grid-column: 5 / content-end; 
+  .stack {
+    grid-column: 5 / content-end;
     --_stack-space: var(--space-xs);
   }
 
@@ -261,7 +261,7 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
     color: var(--base-color);
     text-transform: uppercase;
   }
-  
+
   h2 {
     font-size: var(--size-2);
     font-weight: 300;
@@ -274,9 +274,9 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
     color: var(--base-color);
     margin-block: var(--space-xs);
   }
-  
 
-  
+
+
 }
 
 </style>
