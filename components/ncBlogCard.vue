@@ -6,7 +6,7 @@
     :aside-card="asideCard"
     :to="`/blog/${content.slug}`"
   >
-    <img :src="getImage(content)" alt="" class="blog-card__image">
+    <img :src="getImage(content)" :alt="content.heading || 'Blog post image'" class="blog-card__image">
     <p class="blog-card__brow">{{formatDate(content.date)}}</p>
     <h3 class="blog-card__heading">{{ content.heading }}</h3>
     <p class="blog-card__excerpt">{{ content.excerpt }}</p>
@@ -27,7 +27,7 @@ defineProps({
 })
 
 const getImage = (post) => {
-  return post?.meta && post?.meta.body && post?.meta.body.cover_image ? post?.meta.body.cover_image : '/images/blog-fallback.webp'
+  return post?.cover_image ? post.cover_image : '/images/blog-fallback.webp'
 }
 
 const formatDate = (dateString) => {

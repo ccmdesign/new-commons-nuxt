@@ -147,99 +147,99 @@ const { data: blogposts } = await useAsyncData('blogposts', () =>
 const highlights = [
   {
     src: '/images/092525_HL011_New-Commons_Microsoft_Malawi Voice Data Commons.webp',
-    alt: 'Replace alt text'
+    alt: 'Malawi Voice Data Commons team at the New Commons Challenge ceremony'
   },
   {
     src: '/images/092525_HL014_New-Commons_Microsoft_Amazon Rainforest Evolution Index Award Winner.webp',
-    alt: 'Replace alt text'
+    alt: 'Amazon Rainforest Evolution Index team receiving their award'
   },
   {
     src: '/images/092525_HL018_New-Commons_Microsoft_Malawi Award Presentation.webp',
-    alt: 'Replace alt text'
+    alt: 'Malawi Voice Data Commons award presentation on stage'
   },
   {
     src: '/images/092525_HL023_New-Commons_Microsoft_Malawi Award Presentation 1.webp',
-    alt: 'Replace alt text'
+    alt: 'Malawi Voice Data Commons award presentation'
   },
   {
     src: '/images/092525_HL026_New-Commons_Microsoft_Amazon Rainforest Presentation.webp',
-    alt: 'Replace alt text'
+    alt: 'Amazon Rainforest Evolution Index team presenting their project'
   },
   {
     src: '/images/hl/Copy of 092525_HL053_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'Speakers at the New Commons Challenge Showcase'
   },
   {
     src: '/images/hl/Copy of IMG_0802.webp',
-    alt: 'Replace alt text'
+    alt: 'Attendees networking at the New Commons Challenge Showcase'
   },
   {
     src: '/images/hl/Copy of IMG_0804.webp',
-    alt: 'Replace alt text'
+    alt: 'Guests at the New Commons Challenge Showcase event'
   },
   {
     src: '/images/hl/Copy of 092525_HL041_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'New Commons Challenge Showcase panel discussion'
   },
   {
     src: '/images/hl/Copy of 092525_HL039_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'New Commons Challenge Showcase presentation'
   },
   {
     src: '/images/hl/Copy of IMG_0800.webp',
-    alt: 'Replace alt text'
+    alt: 'Attendees at the New Commons Challenge Showcase during the 80th UN General Assembly'
   },
   {
     src: '/images/hl/Copy of IMG_0811.webp',
-    alt: 'Replace alt text'
+    alt: 'Guests mingling at the New Commons Challenge Showcase'
   },
   {
     src: '/images/hl/Copy of 092525_HL033_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'Stage view at the New Commons Challenge Showcase'
   },
   {
     src: '/images/hl/Copy of IMG_0812.webp',
-    alt: 'Replace alt text'
+    alt: 'Audience at the New Commons Challenge Showcase event'
   },
   {
     src: '/images/hl/Copy of 092525_HL047_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'New Commons Challenge Showcase highlight moment'
   },
   {
     src: '/images/hl/Copy of 092525_HL003_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'Opening of the New Commons Challenge Showcase'
   },
   {
     src: '/images/hl/Copy of 092525_HL007_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'Early moments at the New Commons Challenge Showcase'
   },
   {
     src: '/images/hl/Copy of 092525_HL023_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'Award ceremony at the New Commons Challenge Showcase'
   },
   {
     src: '/images/hl/Copy of 092525_HL004_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'New Commons Challenge Showcase venue setup'
   },
   {
     src: '/images/hl/Copy of 092525_HL002_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'New Commons Challenge Showcase event beginning'
   },
   {
     src: '/images/hl/Certi Amazonia-New Commons_1.webp',
-    alt: 'Replace alt text'
+    alt: 'CERTI Amazonia team at the New Commons Challenge event'
   },
   {
     src: '/images/hl/Certi Amazonia-New Commons2.webp',
-    alt: 'Replace alt text'
+    alt: 'CERTI Amazonia representatives at the New Commons Showcase'
   },
   {
     src: '/images/hl/MalawiVoice1.webp',
-    alt: 'Replace alt text'
+    alt: 'Malawi Voice Data Commons team members'
   },
   {
     src: '/images/hl/MalawiVoice2.webp',
-    alt: 'Replace alt text'
+    alt: 'Malawi Voice Data Commons team celebrating their award'
   },
 ]
 

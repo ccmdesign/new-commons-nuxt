@@ -9,11 +9,11 @@ export const videos = [
   },
   {
     src: "/assets/videos/New Commons Challenge video pitch - Global Strategic Litigation Council (720p, h264, youtube).mp4",
-    slug: "advancing-climate-justice-the-climate-mobility-case-database",
+    slug: "climate-mobility-case-database",
   },
   {
     src: "/assets/videos/PLACE 3 min video - PLACE (360p, h264, youtube).mp4",
-    slug: "place-hub-in-nigeria",
+    slug: "the-place-trust-in-nigeria",
   },
   {
     src: "https://player.vimeo.com/video/1101399375?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",

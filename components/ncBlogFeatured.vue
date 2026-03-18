@@ -7,7 +7,7 @@
       <aside>
         <div class="card-aux aside-card" v-for="post in remainingPosts" :key="post.slug">
           <div class="image-subgrid">
-            <img  :src="getImage(post)" alt="">
+            <img  :src="getImage(post)" :alt="post.heading || 'Blog post image'">
           </div>
           <div class="">
             <span>{{formatDate(post.date)}}</span>

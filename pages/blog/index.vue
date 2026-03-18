@@ -22,7 +22,7 @@
 const { data: blogposts } = await useAsyncData('blogposts', () => queryCollection('blogposts')
   .order('date', 'DESC')
   .all())
-const { data: featured } = await useAsyncData('blogposts', () => queryCollection('blogposts')
+const { data: featured } = await useAsyncData('blogposts-featured', () => queryCollection('blogposts')
   .order('date', 'DESC')
   .limit(4)
   .all())
