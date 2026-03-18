@@ -23,4 +23,4 @@ Either hide cards with no valid link, or conditionally apply `target="_blank"` o
 Expose `isExternalLink` from the composable call in the component.
 
 ## Status
-- [ ] Pending
+- [x] Resolved

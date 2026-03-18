@@ -1,10 +1,10 @@
 <template>
   <a
-    v-if="content"
+    v-if="content && getResourceLink(content) !== '#'"
     class="resource-card | stack"
     :href="getResourceLink(content)"
-    target="_blank"
-    rel="noopener noreferrer"
+    :target="isExternalLink(content) ? '_blank' : undefined"
+    :rel="isExternalLink(content) ? 'noopener noreferrer' : undefined"
   >
     <img
       :src="getImage(content)"
@@ -26,7 +26,7 @@ defineProps({
   }
 })
 
-const { getImage, getResourceLink } = useResources()
+const { getImage, getResourceLink, isExternalLink } = useResources()
 </script>
 
 <style lang="scss" scoped>
@@ -59,7 +59,7 @@ const { getImage, getResourceLink } = useResources()
   letter-spacing: 0.05em;
 }
 
-h3 { line-height: 1.35; }
+.resource-card__title { line-height: 1.35; }
 
 .resource-card__description {
   font-size: var(--size--1);

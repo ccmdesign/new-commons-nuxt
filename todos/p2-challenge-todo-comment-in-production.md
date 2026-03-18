@@ -10,4 +10,4 @@ The new "About the Challenge" section added to `pages/the-2025-challenge.vue` co
 Either confirm the copy and remove the TODO, or move the reminder to a code comment (`// TODO: ...`) in the `<script>` block so it does not appear in shipped HTML.
 
 ## Status
-- [ ] Pending
+- [x] Resolved

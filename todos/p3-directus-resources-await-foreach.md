@@ -12,4 +12,4 @@ This is not flagged as a bug because the code inside the callback is synchronous
 No change required for this PR since it matches the existing pattern. A future cleanup could convert to `for...of` with `fs.promises.writeFile`.
 
 ## Status
-- [ ] Pending
+- [x] Resolved

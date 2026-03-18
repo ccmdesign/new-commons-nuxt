@@ -68,10 +68,10 @@ export default defineContentConfig({
         title: z.string(),
         slug: z.string(),
         description: z.string(),
-        category: z.string(),
-        url: z.string(),
-        file: z.string(),
-        cover_image: z.string(),
+        category: z.string().optional(),
+        url: z.string().optional(),
+        file: z.string().optional(),
+        cover_image: z.string().optional(),
       })
     }),
   }

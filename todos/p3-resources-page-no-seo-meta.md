@@ -17,4 +17,4 @@ useSeoMeta({
 ```
 
 ## Status
-- [ ] Pending
+- [x] Resolved

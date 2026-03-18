@@ -26,4 +26,4 @@ resources: defineCollection({
 ```
 
 ## Status
-- [ ] Pending
+- [x] Resolved

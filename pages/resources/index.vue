@@ -38,6 +38,13 @@
 </template>
 
 <script setup>
+useHead({
+  title: 'Resources | New Commons',
+})
+useSeoMeta({
+  description: 'Explore reports, toolkits, and resources from the New Commons initiative.',
+})
+
 const { data: resources } = await useAsyncData('resources', () =>
   queryCollection('resources').all()
 )

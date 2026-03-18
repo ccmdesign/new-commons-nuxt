@@ -10,4 +10,4 @@ The diff shows `contentImporter.js` ends without a trailing newline (`\ No newli
 Add a trailing newline after `getResources();`.
 
 ## Status
-- [ ] Pending
+- [x] Resolved

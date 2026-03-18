@@ -7,7 +7,7 @@ const objectContructor = async (dir, fs) => {
 
   const items = await common.getDirectusData("new_commons_resources");
 
-  await items.data.forEach((item) => {
+  items.data.forEach((item) => {
     let i = {};
     i.title = item.title;
     i.slug = common.slugify(item.title);

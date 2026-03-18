@@ -15,4 +15,4 @@ Target the heading by class:
 ```
 
 ## Status
-- [ ] Pending
+- [x] Resolved
