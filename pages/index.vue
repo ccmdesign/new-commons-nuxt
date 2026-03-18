@@ -2,40 +2,41 @@
   <nc-hero id="hero">
     <div class="hero__content">
       <div class="panel | stack">
-        <h1>New Commons Challenge</h1>
-        <p>The <b>Open Data Policy Lab</b> invites global changemakers to propose innovative data commons for generative
-          AI that serves the public interest. By enhancing data diversity, quality, and provenance, we can unlock AI’s
-          potential to innovate and solve complex challenges.</p>
-        <!--<nc-button el="a"
-          href="apply"
-          color="base"
-          variant="primary">Join the Challenge Today</nc-button>-->
+        <!-- TODO(CCM-108): Replace with client copy — hero headline and description -->
+        <h1>New Commons Incubator</h1>
+        <p>[PLACEHOLDER] The New Commons Incubator supports teams building data commons
+           for responsible AI. Through funding, mentorship, and technical resources, we help
+           turn promising ideas into sustainable shared data ecosystems.</p>
+        <nc-button el="a" to="/incubator/2026" color="base" variant="primary">Apply to the Incubator</nc-button>
       </div>
       <div class="hero__image-div">
-        
-        <img 
+
+        <img
           src="/assets/patterns/hero.jpg"
           alt="Hero Image" />
           <nc-minimal-logo />
       </div>
     </div>
     <nc-announcement color="primary" class="hero__announcement">
+      <!-- TODO(CCM-108): Replace with client copy — announcement bar -->
       <div class="switcher" style="">
         <div style="flex: 3;">
-          <h3>2025 New Commons Challenge</h3>
-            <h2>Meet the Awardees</h2>
-            <p>Explore the groundbreaking data commons recognized at the 2025 New Commons Showcase.</p>
+          <h3>Now Accepting Applications</h3>
+          <h2>2026 Incubator Cohort</h2>
+          <p>[PLACEHOLDER] Apply by [DATE TBD] to join the next cohort of teams building data commons for responsible AI.</p>
+          <NuxtLink to="/the-2025-challenge" style="font-size: var(--size-0); font-weight: 300; text-decoration: underline;">View the 2025 Challenge &rarr;</NuxtLink>
         </div>
-        <nc-button class="hero__announcement-button" to="/the-2025-challenge" color="primary" variant="primary" style="align-self: center;">View Awardees</nc-button>
+        <nc-button class="hero__announcement-button" to="/incubator/2026" color="primary" variant="primary" style="align-self: center;">Apply Now</nc-button>
       </div>
     </nc-announcement>
   </nc-hero>
 
   <nc-base-section id="video-section" width="narrow">
     <div class="panel" id="video">
-      <h2>The Challenge</h2>
-      <p>This video explains what the Challenge is and why data commons are key to developing responsible and effective
-        AI systems.</p>
+      <!-- TODO(CCM-108): Replace with client copy — video section heading and description -->
+      <h2>About the Incubator</h2>
+      <p>[PLACEHOLDER] Learn how the New Commons Incubator helps teams build sustainable data commons
+         for responsible AI development.</p>
     </div>
     <iframe class="video-frame" src="https://www.youtube.com/embed/gKqNJam8iEI?si=PGI4s_Zgns_JqSg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </nc-base-section>
@@ -49,15 +50,18 @@
         <h2 class="padding-bottom:s">FAQs</h2>
         <div class="stack">
           <div>
-            <p>Have questions about the challenge?</p>
+            <!-- TODO(CCM-108): Replace with client copy — FAQ CTA text -->
+            <p>Have questions about the Incubator?</p>
             <p>Check out our FAQ page for all the answers you need to get started!</p>
           </div>
           <NuxtLink href="faq" class="button" color="white" variant="link">Read More <nc-arrow-link-up /></NuxtLink>
         </div>
       </div>
       <div class="panel-footer">
-        <h2>Watch the New Commons Challenge webinar</h2>
-        <p>Missed the live session? Catch up on our 5 May 2025 webinar to learn key details about the New Commons Challenge, including what we’re looking for and how to strengthen your concept note. We also answered live questions from prospective applicants.</p>
+        <!-- TODO(CCM-108): Replace with client copy — webinar section -->
+        <h2>Watch the Incubator Info Session</h2>
+        <p>[PLACEHOLDER] Missed the live session? Watch our webinar to learn about the 2026 Incubator,
+           including programme details, eligibility, and how to strengthen your application.</p>
         <nc-button href="#video" color="wt" variant="primary2">Watch now!</nc-button>
       </div>
     </div>
@@ -121,7 +125,7 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
     color: var(--base-color);
     text-transform: uppercase;
   }
-  
+
   h2 {
     font-size: var(--size-2);
     font-weight: 300;
@@ -134,9 +138,9 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
     color: var(--base-color);
     margin-block: var(--space-xs);
   }
-  
 
-  
+
+
 }
 
 
@@ -155,7 +159,7 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
 
 #cta .cta-panel .panel-header {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   text-align: left;
   color: var(--white-color);
   background: url('/assets/patterns/squares.svg') left top no-repeat, #0E2F40;
@@ -191,15 +195,15 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
   0% {
     translate: 0%;
   }
-  
+
   25%{
     translate: 2%;
   }
-  
+
   50%{
     translate: 0%;
   }
-  
+
   75%{
     translate: -2%;
   }
