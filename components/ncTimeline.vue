@@ -1,19 +1,15 @@
 <template>
   <ccm-base-section class="timeline | subgrid" background-color="gray">
     <div class="timeline__content">
-      <h2>Timeline</h2>
-      <p>Key dates for The New Commons Challenge:</p>
+      <h2>{{ title }}</h2>
+      <p>{{ subtitle }}</p>
       <div class="timeline__content-cards">
-        <div class="card" :class="{'active': i <= 4, 'full': i<=3}" v-for="i in 4" :key="i">
-          <h3>{{ new Date(timeline[i-1].date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'Canada/Pacific' }) }}</h3>
+        <div class="card" :class="{'active': isActive(item), 'full': isFull(item, i)}" v-for="(item, i) in timeline" :key="item.date">
+          <h3>{{ formatDate(item.date) }}</h3>
           <span>
-            {{
-              new Date(timeline[i-1].date)
-                .toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZoneName: 'shortGeneric', timeZone: 'Canada/Pacific' })
-                .replace(/AM/, 'a.m.').replace(/PM/, 'p.m.')
-            }}
+            {{ formatTime(item.date) }}
           </span>
-          <p>{{timeline[i-1].event}}</p>
+          <p>{{ item.event }}</p>
         </div>
       </div>
     </div>
@@ -22,33 +18,58 @@
 
 
 <script setup>
-// @TODO: Add this to the CMS
-const timeline = [
-  {
-    "date": "2025-04-14T00:00:00-07:00",
-    "event": "Start date of accepting concept notes"
+import { ref, onMounted } from 'vue'
+
+const props = defineProps({
+  timeline: {
+    type: Array,
+    default: () => [],
+    validator: (val) => val.every(item => 'date' in item && 'event' in item)
   },
-  {
-    "date": "2025-06-10T23:59:00-07:00",
-    "event": "End date of accepting concept notes"
-  },
-  {
-    "date": "2025-06-16T00:00:00-07:00",
-    "event": "Invitations to submit full proposal"
-  },
-  {
-    "date": "2025-07-14T23:59:00-07:00",
-    "event": "Full proposal submission closes"
-  }
-]
+  title: { type: String, default: 'Timeline' },
+  subtitle: { type: String, default: '' }
+})
+
+const now = ref(new Date())
+onMounted(() => {
+  now.value = new Date()
+})
+
+function isActive(item) {
+  return now.value >= new Date(item.date)
+}
+
+function isFull(item, index) {
+  // A card is "full" (connecting line filled) if the next card is also active
+  const nextItem = props.timeline[index + 1]
+  return nextItem ? now.value >= new Date(nextItem.date) : false
+}
+
+function formatDate(dateStr) {
+  return new Date(dateStr).toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'Canada/Pacific'
+  })
+}
+
+function formatTime(dateStr) {
+  return new Date(dateStr)
+    .toLocaleTimeString('en-US', {
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZoneName: 'shortGeneric',
+      timeZone: 'Canada/Pacific'
+    })
+    .replace(/AM/, 'a.m.')
+    .replace(/PM/, 'p.m.')
+}
 </script>
 
 <style scoped lang="scss">
 .timeline {
   grid-column: full-start / full-end; /* Grid template columns are defined by the .subgrid class, and grid-column attr. */
-}
-
-.timeline {
 }
 
 .timeline__content {
@@ -112,10 +133,10 @@ content: '';
 }
 
 .timeline__content-cards .card.active::after {
-  background:  linear-gradient(90deg, #1E99FF 0%, #1E99FF 33.33%, #EAEAEA 66.67%, #EAEAEA 100%);
-} 
+  background: #eaeaea;
+}
 
 .timeline__content-cards .card.active.full::after {
-  background: linear-gradient(90deg, #1E99FF 0%, #1E99FF 33.33%, #1E99FF 66.67%, #1e99ff 100%);
+  background: var(--primary-color);
 }
 </style>
