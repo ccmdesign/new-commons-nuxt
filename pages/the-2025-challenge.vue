@@ -96,7 +96,7 @@
         el="a"
         color="primary"
         variant="ghost"
-        href="https://docs.google.com/document/d/1fYmUkwTqOngtpbVT8BezgmWs14IkvGEO6q5a53jqHhA/edit?tab=t.0"
+        :href="rulesUrl"
         target="_blank"
       >Read the Challenge Rules <nc-arrow-link-up /></nc-button>
     </p>
@@ -117,6 +117,8 @@
 </template>
 
 <script setup>
+const { rulesUrl } = useSiteLinks()
+
 const { data: winners } = await useAsyncData('winners', () => queryCollection('winners')
   .all())
 

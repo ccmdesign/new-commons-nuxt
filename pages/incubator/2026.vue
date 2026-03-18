@@ -48,7 +48,7 @@
         <p>The New Commons Challenge will select two winning proposals to receive the following support package:</p>
         <div class="cluster margin-top:auto padding-top:s">
           <!--<div class="button" color="primary" variant="primary">Apply now</div>-->
-          <a href="https://docs.google.com/document/d/1fYmUkwTqOngtpbVT8BezgmWs14IkvGEO6q5a53jqHhA/edit?tab=t.0" target="_blank" class="button | color:white-color" color="primary" variant="secondary">View Rules</a>
+          <a :href="rulesUrl" target="_blank" class="button | color:white-color" color="primary" variant="secondary">View Rules</a>
         </div>
       </div>
       <ul class="prize-list | stack">
@@ -115,6 +115,7 @@
 </template>
 
 <script setup>
+const { rulesUrl } = useSiteLinks()
 </script>
 
 <style scoped lang="scss">
