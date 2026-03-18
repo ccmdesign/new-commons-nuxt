@@ -14,3 +14,10 @@
 </svg>
 
 </template>
+
+<style scoped>
+svg {
+  max-width: 100%;
+  height: auto;
+}
+</style>

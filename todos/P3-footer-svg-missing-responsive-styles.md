@@ -20,4 +20,4 @@ svg {
 ```
 
 ## Status
-- [ ] Pending
+- [x] Resolved

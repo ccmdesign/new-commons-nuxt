@@ -18,4 +18,4 @@ export default function useSiteLinks() {
 ```
 
 ## Status
-- [ ] Pending
+- [x] Resolved
