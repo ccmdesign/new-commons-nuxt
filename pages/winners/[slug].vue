@@ -87,7 +87,7 @@ import { computed } from 'vue'
 
 const route = useRoute()
 import { videos } from '~/composables/useVideos'
-const video = videos.find(video => video.slug === route.params?.slug)
+const video = videos.find(video => video.slug === route.params?.slug) || { src: '' }
 
 const { data: winner } = await useAsyncData('winner', () => queryCollection('winners')
   .where('slug', '=', route.params?.slug)

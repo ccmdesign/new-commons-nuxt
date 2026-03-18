@@ -58,7 +58,7 @@
       <div class="panel-footer">
         <h2>Watch the New Commons Challenge webinar</h2>
         <p>Missed the live session? Catch up on our 5 May 2025 webinar to learn key details about the New Commons Challenge, including what we’re looking for and how to strengthen your concept note. We also answered live questions from prospective applicants.</p>
-        <nc-button el="a" href="#video" color="wt" variant="primary2">Watch now!</nc-button>
+        <nc-button href="#video" color="wt" variant="primary2">Watch now!</nc-button>
       </div>
     </div>
   </nc-cta>
@@ -113,9 +113,6 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
 
   * {
     margin-block: 0;
-  }
-
-  .hero__announcement-button {
   }
 
   h3 {

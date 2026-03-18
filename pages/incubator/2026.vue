@@ -1,4 +1,10 @@
 <template>
+  <!-- PLACEHOLDER: This page contains content carried over from the 2025 Challenge prize page.
+       It will be replaced with 2026 Incubator-specific content in CCM-108 (Content Refresh). -->
+  <nc-base-section class="placeholder-banner" color="primary">
+    <p><strong>Coming Soon:</strong> The 2026 Incubator programme details are being finalised. The content below is a placeholder from the previous Challenge cycle.</p>
+  </nc-base-section>
+
   <nc-hero>
     <div class="hero__content">
       <div class="panel">
@@ -109,7 +115,6 @@
 </template>
 
 <script setup>
-const { data: blogposts } = await useAsyncData('blogposts', () => queryCollection('blogposts').limit(3).all())
 </script>
 
 <style scoped lang="scss">
@@ -250,9 +255,6 @@ const { data: blogposts } = await useAsyncData('blogposts', () => queryCollectio
 
   * {
     margin-block: 0;
-  }
-
-  .hero__announcement-button {
   }
 
   h3 {

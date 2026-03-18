@@ -69,6 +69,8 @@
     },
     el: {
       type: String,
+      // Default is '' (empty) so the defaultEl computed can auto-detect the
+      // element: NuxtLink (from `to`), anchor (from `href`), or fallback to 'button'.
       default: ''
     },
   });
