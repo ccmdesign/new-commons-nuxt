@@ -8,6 +8,7 @@
         <li><nc-button to="/incubator/2026" color="base" variant="link">The Incubator</nc-button></li>
         <li><nc-button to="/the-2025-challenge" color="base" variant="link">The 2025 Challenge</nc-button></li>
         <li><nc-button to="/blog"  color="base" variant="link">Blog</nc-button></li>
+        <li><nc-button to="/resources" color="base" variant="link">Resources</nc-button></li>
         <li><nc-button to="/faq"   color="base" variant="link">FAQ</nc-button></li>
         <li><nc-button el="a"               color="base" variant="link" href="https://docs.google.com/document/d/1fYmUkwTqOngtpbVT8BezgmWs14IkvGEO6q5a53jqHhA/edit?tab=t.0" target="_blank">Rules <nc-arrow-link-up /></nc-button></li>
       </ul>

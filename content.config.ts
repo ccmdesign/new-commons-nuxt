@@ -61,5 +61,18 @@ export default defineContentConfig({
         image: z.string().url(),
       })
     }),
+    resources: defineCollection({
+      source: 'resources/*.json',
+      type: 'data',
+      schema: z.object({
+        title: z.string(),
+        slug: z.string(),
+        description: z.string(),
+        category: z.string(),
+        url: z.string(),
+        file: z.string(),
+        cover_image: z.string(),
+      })
+    }),
   }
 })
