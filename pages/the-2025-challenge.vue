@@ -87,6 +87,32 @@
     </section>
   </nc-base-section>
 
+  <nc-base-section>
+    <h2 class="text-align:center">About the Challenge</h2>
+    <!-- TODO: confirm copy with client -->
+    <p>The New Commons Challenge is an initiative to foster data commons for responsible AI development. It seeks to support projects that create, enhance, or sustain shared data resources for the public good.</p>
+    <p>
+      <nc-button
+        el="a"
+        color="primary"
+        variant="ghost"
+        href="https://docs.google.com/document/d/1fYmUkwTqOngtpbVT8BezgmWs14IkvGEO6q5a53jqHhA/edit?tab=t.0"
+        target="_blank"
+      >Read the Challenge Rules <nc-arrow-link-up /></nc-button>
+    </p>
+  </nc-base-section>
+
+  <nc-base-section color="faded">
+    <h2 class="text-align:center">Jury</h2>
+    <p class="text-align:center">The panel of experts who evaluated the New Commons Challenge submissions.</p>
+    <nc-judges-grid />
+  </nc-base-section>
+
+  <nc-base-section>
+    <h2 class="text-align:center">International Observer</h2>
+    <nc-observers-grid />
+  </nc-base-section>
+
   <nc-blog-section :posts="blogposts" />
 </template>
 
