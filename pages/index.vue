@@ -7,7 +7,7 @@
         <p>[PLACEHOLDER] The New Commons Incubator supports teams building data commons
            for responsible AI. Through funding, mentorship, and technical resources, we help
            turn promising ideas into sustainable shared data ecosystems.</p>
-        <nc-button el="a" to="/incubator/2026" color="base" variant="primary">Apply to the Incubator</nc-button>
+        <nc-button to="/incubator/2026" color="base" variant="primary">Apply to the Incubator</nc-button>
       </div>
       <div class="hero__image-div">
 
@@ -41,7 +41,6 @@
     <iframe class="video-frame" src="https://www.youtube.com/embed/gKqNJam8iEI?si=PGI4s_Zgns_JqSg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </nc-base-section>
 
-  <!--<nc-timeline id="timeline" />-->
 
   <nc-cta id="cta" :single-column="true">
     <div class="cta-panel"

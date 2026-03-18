@@ -21,4 +21,4 @@ Either:
 3. At minimum, hide the empty div with `v-if="false"` or remove it
 
 ## Status
-- [ ] Pending
+- [x] Resolved

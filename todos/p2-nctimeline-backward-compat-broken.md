@@ -32,4 +32,4 @@ Either:
 Option 3 is recommended since the old data is gone anyway.
 
 ## Status
-- [ ] Pending
+- [x] Resolved

@@ -33,4 +33,4 @@ Move the TODO comments outside the `content` strings, as JS comments above each 
 This keeps the TODO markers grep-able but keeps them out of the rendered HTML.
 
 ## Status
-- [ ] Pending
+- [x] Resolved

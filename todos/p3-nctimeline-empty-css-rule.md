@@ -17,4 +17,4 @@ There is an empty `.timeline {}` rule block at line 70-71 of `ncTimeline.vue`. T
 Remove the empty rule block.
 
 ## Status
-- [ ] Pending
+- [x] Resolved

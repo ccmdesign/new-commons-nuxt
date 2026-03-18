@@ -19,4 +19,4 @@ The "What We Offer" section in `incubator/2026.vue` reuses the `.fancy-bg` CSS c
 Rename the class to `.offer-bg` or `.section-bg` and consider renaming or replacing the background image asset if it carries prize-specific branding.
 
 ## Status
-- [ ] Pending
+- [x] Resolved

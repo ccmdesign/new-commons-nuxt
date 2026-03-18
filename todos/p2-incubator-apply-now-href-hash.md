@@ -19,4 +19,4 @@ Either:
 3. If this is expected to be replaced before production, add a visible "(Coming Soon)" label
 
 ## Status
-- [ ] Pending
+- [x] Resolved

@@ -18,4 +18,4 @@ The `v-for` loop in `ncTimeline.vue` uses `:key="i"` (the array index). If the t
 ```
 
 ## Status
-- [ ] Pending
+- [x] Resolved

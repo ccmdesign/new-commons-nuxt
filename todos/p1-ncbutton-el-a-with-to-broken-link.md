@@ -22,4 +22,4 @@ The fix is either:
 ```
 
 ## Status
-- [ ] Pending
+- [x] Resolved

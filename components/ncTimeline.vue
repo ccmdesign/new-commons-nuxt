@@ -4,7 +4,7 @@
       <h2>{{ title }}</h2>
       <p>{{ subtitle }}</p>
       <div class="timeline__content-cards">
-        <div class="card" :class="{'active': isActive(item), 'full': isFull(item, i)}" v-for="(item, i) in timeline" :key="i">
+        <div class="card" :class="{'active': isActive(item), 'full': isFull(item, i)}" v-for="(item, i) in timeline" :key="item.date">
           <h3>{{ formatDate(item.date) }}</h3>
           <span>
             {{ formatTime(item.date) }}
@@ -18,26 +18,31 @@
 
 
 <script setup>
+import { ref, onMounted } from 'vue'
+
 const props = defineProps({
   timeline: {
     type: Array,
-    required: true,
+    default: () => [],
     validator: (val) => val.every(item => 'date' in item && 'event' in item)
   },
   title: { type: String, default: 'Timeline' },
   subtitle: { type: String, default: '' }
 })
 
-const now = new Date()
+const now = ref(new Date())
+onMounted(() => {
+  now.value = new Date()
+})
 
 function isActive(item) {
-  return now >= new Date(item.date)
+  return now.value >= new Date(item.date)
 }
 
 function isFull(item, index) {
   // A card is "full" (connecting line filled) if the next card is also active
   const nextItem = props.timeline[index + 1]
-  return nextItem ? now >= new Date(nextItem.date) : false
+  return nextItem ? now.value >= new Date(nextItem.date) : false
 }
 
 function formatDate(dateStr) {
@@ -65,9 +70,6 @@ function formatTime(dateStr) {
 <style scoped lang="scss">
 .timeline {
   grid-column: full-start / full-end; /* Grid template columns are defined by the .subgrid class, and grid-column attr. */
-}
-
-.timeline {
 }
 
 .timeline__content {

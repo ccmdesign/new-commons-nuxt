@@ -31,4 +31,4 @@ const now = useState('timeline-now', () => new Date())
 ```
 
 ## Status
-- [ ] Pending
+- [x] Resolved

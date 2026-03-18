@@ -35,14 +35,11 @@
            takes a deeper, hands-on approach — working closely with selected teams to
            address technical, governance, and sustainability challenges.</p>
       </div>
-      <div>
-        <!-- Optional: image or illustration. Could reuse /assets/patterns/hero.jpg or a new asset -->
-      </div>
     </div>
   </nc-base-section>
 
   <!-- TODO(CCM-108): Replace with client copy — what we offer cards -->
-  <nc-base-section class="fancy-bg" color="primary">
+  <nc-base-section class="section-bg" color="primary">
     <h2 class="text-align:center padding-block:l white-color h2">What We Offer</h2>
     <div class="offer-cards">
       <div class="offer-card">
@@ -98,7 +95,7 @@
         <h2>Ready to Apply?</h2>
         <p>[PLACEHOLDER] Submit your application by [DATE TBD]. Selected teams will be
            notified by [DATE TBD] and the programme begins in [MONTH TBD] 2026.</p>
-        <nc-button href="#" color="primary" variant="primary">Apply Now</nc-button>
+        <nc-button disabled color="primary" variant="primary">Apply Now (Coming Soon)</nc-button>
       </div>
     </div>
   </nc-base-section>
@@ -139,7 +136,7 @@ const incubatorTimeline = [
   }
 }
 
-.fancy-bg {
+.section-bg {
   background-image: url('/assets/bg-prize.png');
   background-size: cover;
   background-position: center;
