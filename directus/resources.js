@@ -53,7 +53,7 @@ const getResources = async () => {
       if (err) {
         console.log(err);
       } else {
-        objectContructor(dir, fs);
+        await objectContructor(dir, fs);
       }
     });
   }

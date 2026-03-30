@@ -81,7 +81,12 @@
 </template>
 
 <script setup>
-
+useHead({
+  title: 'New Commons Incubator 2026 | New Commons',
+})
+useSeoMeta({
+  description: 'The New Commons Incubator supports teams building data commons for responsible AI through funding, mentorship, and technical resources.',
+})
 </script>
 
 <style scoped lang="scss">

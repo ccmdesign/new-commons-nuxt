@@ -25,7 +25,6 @@
         <h3>Partners</h3>
         <div class="logos">
           <nc-unesco-logo />
-          <nc-ms-logo />
         </div>
       </div>
     </div>

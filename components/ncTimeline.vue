@@ -1,3 +1,4 @@
+<!-- TODO: [CCM-127] This component is currently unused. Re-integrate when timeline data is available. -->
 <template>
   <ccm-base-section class="timeline | subgrid" background-color="gray">
     <div class="timeline__content">

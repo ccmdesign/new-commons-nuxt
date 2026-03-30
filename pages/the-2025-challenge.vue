@@ -91,7 +91,6 @@
     <p>The New Commons Challenge is an initiative to foster data commons for responsible AI development. It seeks to support projects that create, enhance, or sustain shared data resources for the public good.</p>
     <p>
       <nc-button
-        el="a"
         color="primary"
         variant="ghost"
         :href="rulesUrl"

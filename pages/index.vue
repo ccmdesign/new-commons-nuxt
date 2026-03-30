@@ -13,7 +13,7 @@
 
         <img
           src="/assets/patterns/hero.jpg"
-          alt="Hero Image" />
+          alt="Abstract geometric pattern representing collaborative data commons" />
           <nc-minimal-logo />
       </div>
     </div>
@@ -43,7 +43,7 @@
             <p>Have questions about the New Commons Incubator?</p>
             <p>Check out our FAQ page for answers about the programme, eligibility, and how to apply.</p>
           </div>
-          <NuxtLink href="faq" class="button" color="white" variant="link">Read More <nc-arrow-link-up /></NuxtLink>
+          <NuxtLink to="/faq" class="button" color="white" variant="link">Read More <nc-arrow-link-up /></NuxtLink>
         </div>
       </div>
     </div>
@@ -58,10 +58,11 @@
         <p>The inaugural New Commons Challenge awarded two $100,000 prizes to teams building data commons for responsible AI development.</p>
       </NuxtLink>
       <!-- TODO: [CCM-127] Add Indigenous Languages initiative URL and image when available -->
-      <div class="initiative-card">
+      <div class="initiative-card initiative-card--placeholder">
         <img src="/assets/patterns/hero.jpg" alt="Indigenous Languages" class="initiative-card__image" />
         <h3>Indigenous Languages</h3>
         <p>Supporting the development of data commons that preserve and promote indigenous languages in the age of AI.</p>
+        <span class="initiative-card__coming-soon">Coming Soon</span>
       </div>
     </div>
   </nc-base-section>
@@ -191,8 +192,22 @@ const { data: resources } = await useAsyncData('homepage-resources', () =>
   transition: box-shadow 150ms ease;
 }
 
-.initiative-card:hover {
+.initiative-card:hover:not(.initiative-card--placeholder) {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.initiative-card--placeholder {
+  cursor: default;
+  opacity: 0.85;
+}
+
+.initiative-card__coming-soon {
+  display: inline-block;
+  font-size: var(--size--1);
+  font-weight: 600;
+  color: var(--base-color-70-tint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .initiative-card__image {
