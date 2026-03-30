@@ -102,18 +102,23 @@
   <nc-base-section color="faded">
     <h2 class="text-align:center">Jury</h2>
     <p class="text-align:center">The panel of experts who evaluated the New Commons Challenge submissions.</p>
-    <nc-judges-grid />
+    <nc-people-grid :collection="judges" base-path="/judges" />
   </nc-base-section>
 
   <nc-base-section>
     <h2 class="text-align:center">International Observer</h2>
-    <nc-observers-grid />
+    <nc-people-grid :collection="observers" base-path="/observers" />
   </nc-base-section>
 
   <nc-blog-section :posts="blogposts" />
 </template>
 
 <script setup>
+import useJudges from '../composables/useJudges'
+import useObservers from '../composables/useObservers'
+
+const judges = useJudges()
+const observers = useObservers()
 const { rulesUrl } = useSiteLinks()
 
 const { data: winners } = await useAsyncData('winners', () => queryCollection('winners')
