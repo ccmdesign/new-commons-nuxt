@@ -5,7 +5,14 @@ const common = require("./common");
 
 const objectContructor = async (dir, fs) => {
 
-  const items = await common.getDirectusData("new_commons_resources");
+  let items;
+  try {
+    items = await common.getDirectusData("new_commons_resources");
+  } catch (err) {
+    console.log("Warning: Could not fetch resources from Directus:", err.message || err);
+    console.log("Skipping resources import. Existing content files will be used if available.");
+    return;
+  }
 
   items.data.forEach((item) => {
     let i = {};

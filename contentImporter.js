@@ -10,7 +10,12 @@ console.log(chalk.green('Starting importing data from Directus...'));
 console.log('');
 console.log(chalk.green('[ NEW COMMONS: BLOGPOSTS - WINNERS - JUDGES - RESOURCES ]'));
 
-getBlogposts();
-getWinners();
-getJudges();
-getResources();
+Promise.all([
+  getBlogposts(),
+  getWinners(),
+  getJudges(),
+  getResources(),
+]).catch((err) => {
+  console.error('Content import error:', err.message || err);
+  process.exit(1);
+});
