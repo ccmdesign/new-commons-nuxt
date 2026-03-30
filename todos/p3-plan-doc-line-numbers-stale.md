@@ -1,5 +1,5 @@
 ---
-status: pending
+status: resolved
 severity: P3
 file: docs/plans/CCM-129-content-updates.md
 ---

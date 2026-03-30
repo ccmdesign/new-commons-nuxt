@@ -5,8 +5,8 @@
 **The original plan assumed CCM-107/108/127/128 work lives on `main`. This is incorrect.**
 
 The actual state:
-- **`main`** branch tip: `47dbcd6` (cookie consent, blog fixes — no CCM work)
-- **`dev`** branch tip: `77e4a4d` (includes all CCM-107, 108, 127, 128 merges)
+- **`main`** branch: cookie consent, blog fixes — no CCM work
+- **`dev`** branch: includes all CCM-107, 108, 127, 128 merges
 - **This branch** (`feature/CCM-129-content-updates-pages-components`): based on CCM-105, ahead of `main` but missing all `dev` work
 
 **Action:** Merge `origin/dev` (not `main`) into this branch before any implementation.
@@ -125,7 +125,7 @@ git merge origin/dev
 
 **Priority:** Low (may already be correct).
 
-**Current state on `dev` (`components/ncFooter.vue` lines 23-31):**
+**Current state on `dev` (`components/ncFooter.vue`):**
 ```html
 <div class="footer__col3 footer__content stack">
   <div class="partners">
@@ -137,11 +137,11 @@ git merge origin/dev
 </div>
 ```
 
-Microsoft logo is in col1 (lines 9-13) as part of "About ODPL" alongside ODPL and GovLab logos.
+Microsoft logo is in col1 as part of "About ODPL" alongside ODPL and GovLab logos.
 
 **Decision needed:** Does the client want the Microsoft logo ALSO in the Partners section alongside UNESCO?
 
-**If yes, the change is (in `components/ncFooter.vue` line 27):**
+**If yes, the change is (in `components/ncFooter.vue`, Partners logos block):**
 ```html
 <!-- Before -->
 <nc-unesco-logo />
@@ -151,7 +151,7 @@ Microsoft logo is in col1 (lines 9-13) as part of "About ODPL" alongside ODPL an
 <nc-ms-logo />
 ```
 
-**Also note:** The footer on `dev` still has an empty `<script setup>` block (lines 35-37). Should be removed for cleanliness.
+**Also note:** The footer on `dev` still has an empty `<script setup>` block. Should be removed for cleanliness.
 
 **Acceptance criteria:**
 - [ ] Footer partner logos match client expectations
@@ -164,7 +164,7 @@ Microsoft logo is in col1 (lines 9-13) as part of "About ODPL" alongside ODPL an
 
 **Priority:** Low.
 
-**Current state on `dev` (`components/ncTopbar.vue` line 11):**
+**Current state on `dev` (`components/ncTopbar.vue`):**
 ```html
 <li><nc-button to="/#initiatives" color="base" variant="link">Initiatives</nc-button></li>
 ```
@@ -175,7 +175,7 @@ Two options:
 
 **If changing to dedicated page:**
 ```html
-<!-- Change line 11 from -->
+<!-- Change from -->
 <li><nc-button to="/#initiatives" color="base" variant="link">Initiatives</nc-button></li>
 <!-- To -->
 <li><nc-button to="/initiatives" color="base" variant="link">Initiatives</nc-button></li>
@@ -195,30 +195,30 @@ Two options:
 **TODOs on `dev` that need re-tagging:**
 
 **File: `pages/index.vue` (2 TODOs)**
-- Line 33: `<!-- TODO: [CCM-127] Add Call for Proposals section (Panel 2) when application form URL is available -->`
-  - Change to: `<!-- TODO: [CCM-129] Add Call for Proposals section (Panel 2) when application form URL is available -->`
-- Line 34: `<!-- TODO: [CCM-127] Add Webinars section (Panel 3) when webinar signup URL is available -->`
-  - Change to: `<!-- TODO: [CCM-129] Add Webinars section (Panel 3) when webinar signup URL is available -->`
+- `<!-- TODO: [CCM-127] Add Call for Proposals section (Panel 2) ... -->` -> `[CCM-129]`
+- `<!-- TODO: [CCM-127] Add Webinars section (Panel 3) ... -->` -> `[CCM-129]`
 
 **File: `pages/incubator/2026.vue` (4 TODOs)**
-- Line 24: `[CCM-127]` -> `[CCM-129]` (Call for Proposals)
-- Line 25: `[CCM-127]` -> `[CCM-129]` (Webinars)
-- Line 59: `[CCM-127]` -> `[CCM-129]` (programme duration)
-- Line 65: `[CCM-127]` -> `[CCM-129]` (Call for Proposals repeat)
+- `[CCM-127]` -> `[CCM-129]` (Call for Proposals, Webinars, programme duration, Call for Proposals repeat)
 
 **File: `pages/incubator/indigenous-languages.vue` (13 TODOs)**
-- Lines 8, 13, 18, 26, 37, 58, 69, 72, 81, 95, 104, 111: `TODO(CCM-128)` -> `TODO(CCM-129)`
-- Line 145 (in `<script>`): `TODO(CCM-128)` -> `TODO(CCM-129)`
+- All `TODO(CCM-128)` -> `TODO(CCM-129)` (12 in template, 1 in `<script>`)
 
 **File: `composables/useSteeringCommittee.js` (1 TODO)**
-- Line 1: `TODO(CCM-128)` -> `TODO(CCM-129)`
+- `TODO(CCM-128)` -> `TODO(CCM-129)`
 
-**Total: 20 TODOs to re-tag (6 from CCM-127, 14 from CCM-128).**
+**File: `pages/faq.vue` (1 TODO)**
+- `[CCM-127]` -> `[CCM-129]` (placeholder content)
+
+**File: `components/ncTimeline.vue` (1 TODO)**
+- `[CCM-127]` -> `[CCM-129]` (placeholder content)
+
+**Total: 22 TODOs to re-tag (8 from CCM-127, 14 from CCM-128).**
 
 **Implementation:** Simple find-and-replace:
 ```bash
-# In pages/index.vue and pages/incubator/2026.vue
-sed -i '' 's/\[CCM-127\]/[CCM-129]/g' pages/index.vue pages/incubator/2026.vue
+# In pages/index.vue, pages/incubator/2026.vue, pages/faq.vue, and components/ncTimeline.vue
+sed -i '' 's/\[CCM-127\]/[CCM-129]/g' pages/index.vue pages/incubator/2026.vue pages/faq.vue components/ncTimeline.vue
 
 # In pages/incubator/indigenous-languages.vue and composables/useSteeringCommittee.js
 sed -i '' 's/TODO(CCM-128)/TODO(CCM-129)/g' pages/incubator/indigenous-languages.vue composables/useSteeringCommittee.js
@@ -253,7 +253,7 @@ sed -i '' 's/TODO(CCM-128)/TODO(CCM-129)/g' pages/incubator/indigenous-languages
 
 **Priority:** Low.
 
-**Status on `dev` (post CCM-128 fix commit `ef2e481`):**
+**Status on `dev` (post CCM-128 fix):**
 
 | Issue | Status on `dev` | Action Needed |
 |-------|-----------------|---------------|
@@ -261,11 +261,11 @@ sed -i '' 's/TODO(CCM-128)/TODO(CCM-129)/g' pages/incubator/indigenous-languages
 | `ncObserversGrid.vue` dead code | RESOLVED — file deleted from `dev` | None (merge will remove from this branch) |
 | Initiatives data duplication | RESOLVED — both `pages/index.vue` and `pages/initiatives.vue` use `useInitiatives()` composable | None |
 | Empty `<script setup>` in `ncTopbar.vue` | RESOLVED — removed on `dev` | None |
-| Empty `<script setup>` in `ncFooter.vue` | NOT RESOLVED — still present on `dev` (lines 35-37) | Remove empty block |
+| Empty `<script setup>` in `ncFooter.vue` | NOT RESOLVED — still present on `dev` | Remove empty block |
 
 **Implementation for footer cleanup (`components/ncFooter.vue`):**
 ```html
-<!-- Remove this empty block (lines 35-37 on dev): -->
+<!-- Remove this empty block: -->
 <script setup>
 
 </script>
@@ -284,31 +284,31 @@ sed -i '' 's/TODO(CCM-128)/TODO(CCM-129)/g' pages/incubator/indigenous-languages
 These items require content/URLs from the client and cannot proceed until provided. All page shells are in place on `dev`.
 
 ### Blocked on Application Form URL
-- **Homepage** `pages/index.vue` line 33: Panel 2 (Call for Proposals CTA)
-- **Incubator** `pages/incubator/2026.vue` lines 24, 65: Panels 2 + 7 (Call for Proposals CTAs)
-- **Indigenous Languages** `pages/incubator/indigenous-languages.vue` lines 13, 104: hero CTA + "How to Apply" section
+- **Homepage** `pages/index.vue`: Panel 2 (Call for Proposals CTA)
+- **Incubator** `pages/incubator/2026.vue`: Panels 2 + 7 (Call for Proposals CTAs)
+- **Indigenous Languages** `pages/incubator/indigenous-languages.vue`: hero CTA + "How to Apply" section
 
 ### Blocked on Webinar Signup URL
-- **Homepage** `pages/index.vue` line 34: Panel 3 (Webinar signup)
-- **Incubator** `pages/incubator/2026.vue` line 25: Panel 3
-- **Indigenous Languages** `pages/incubator/indigenous-languages.vue` lines 18, 26: hero announcement + registration button
+- **Homepage** `pages/index.vue`: Panel 3 (Webinar signup)
+- **Incubator** `pages/incubator/2026.vue`: Panel 3
+- **Indigenous Languages** `pages/incubator/indigenous-languages.vue`: hero announcement + registration button
 
 ### Blocked on Steering Committee Names
-- **Composable** `composables/useSteeringCommittee.js` line 1: placeholder entries ("Member One", "Member Two", "Member Three")
-- **Indigenous Languages** `pages/incubator/indigenous-languages.vue` line 81: Steering Committee grid renders these placeholders
+- **Composable** `composables/useSteeringCommittee.js`: placeholder entries ("Member One", "Member Two", "Member Three")
+- **Indigenous Languages** `pages/incubator/indigenous-languages.vue`: Steering Committee grid renders these placeholders
 
 ### Blocked on Programme Duration
-- **Incubator** `pages/incubator/2026.vue` line 59: "TBD" duration in Programmatic Offerings
-- **Indigenous Languages** `pages/incubator/indigenous-languages.vue` line 58: offerings duration
+- **Incubator** `pages/incubator/2026.vue`: "TBD" duration in Programmatic Offerings
+- **Indigenous Languages** `pages/incubator/indigenous-languages.vue`: offerings duration
 - **FAQ**: verify if any FAQ item references duration (checked: FAQ item "How long is the programme?" exists in "Program Details" section but the answer text would need updating)
 
 ### Blocked on Other Content
-- **Indigenous Languages** line 8: hero description (placeholder copy)
-- **Indigenous Languages** line 37: "Why" section (placeholder copy)
-- **Indigenous Languages** line 58: offerings list (placeholder programme details)
-- **Indigenous Languages** line 95: application steps (placeholder content)
-- **Indigenous Languages** line 111, 145: timeline dates (TBC)
-- **Indigenous Languages** lines 69, 72: partner logos (assets needed)
+- **Indigenous Languages** `pages/incubator/indigenous-languages.vue`: hero description (placeholder copy)
+- **Indigenous Languages** `pages/incubator/indigenous-languages.vue`: "Why" section (placeholder copy)
+- **Indigenous Languages** `pages/incubator/indigenous-languages.vue`: offerings list (placeholder programme details)
+- **Indigenous Languages** `pages/incubator/indigenous-languages.vue`: application steps (placeholder content)
+- **Indigenous Languages** `pages/incubator/indigenous-languages.vue`: timeline dates (TBC)
+- **Indigenous Languages** `pages/incubator/indigenous-languages.vue`: partner logos (assets needed)
 
 **Recommended workflow for Phase 2:** When each piece of content arrives, create a targeted commit replacing the `TODO [CCM-129]` comment with the real content. No structural changes needed — the page shells are all in place.
 
@@ -323,7 +323,7 @@ The page structure is complete on `dev` (created in CCM-128, 251 lines). All 8 p
 4. **Steering Committee grid** — structure ready, uses `useSteeringCommittee()` composable with 3 placeholder members
 5. **How to Apply** — structure ready, form URL blocked, steps are placeholder
 6. **Webinar CTA** — structure ready, signup URL blocked
-7. **Timeline** — structure ready, dates TBC (uses `ref()` with placeholder milestone data on line 145)
+7. **Timeline** — structure ready, dates TBC (uses `ref()` with placeholder milestone data in `<script>` section)
 8. **FAQ CTA** — content ready, links to `/faq`
 
 **13 TODOs** in this file, all blocked on client content.
@@ -365,7 +365,7 @@ Feeds into CCM-109. Not implementation work for this ticket, but noting the chec
 
 1. **Footer:** Should Microsoft logo appear in the "Partners" section alongside UNESCO, or is its current placement in "About ODPL" sufficient?
 2. **Topbar:** Should the Initiatives link go to `/initiatives` (dedicated page) or `/#initiatives` (homepage anchor)?
-3. **TODO re-tagging:** Confirmed 20 TODOs need re-tagging from CCM-127/CCM-128 to CCM-129.
+3. **TODO re-tagging:** Confirmed 22 TODOs need re-tagging from CCM-127/CCM-128 to CCM-129 across 6 files.
 4. **Indigenous Languages visibility:** Should the page be hidden (e.g., no nav link, `definePageMeta({ middleware: 'draft' })`) until content placeholders are replaced?
 5. **Steering Committee grid:** Should the grid section be conditionally hidden (`v-if="steeringCommittee.some(m => m.name !== 'Member One')"`) until real data is provided?
 
@@ -374,7 +374,7 @@ Feeds into CCM-109. Not implementation work for this ticket, but noting the chec
 ## Implementation Order (After Merge)
 
 1. **Merge `origin/dev`** — resolve conflicts, verify build
-2. **Re-tag TODOs** — 20 find-and-replace operations across 4 files
+2. **Re-tag TODOs** — 22 find-and-replace operations across 6 files
 3. **Remove footer empty `<script setup>`** — 3-line deletion
 4. **Verify FAQ count** — already confirmed (13 items)
 5. **Verify dead code cleanup** — already confirmed on `dev`
