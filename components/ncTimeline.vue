@@ -1,4 +1,4 @@
-<!-- TODO: [CCM-127] This component is currently unused. Re-integrate when timeline data is available. -->
+<!-- Used by indigenous-languages.vue. TODO: [CCM-127] Re-integrate into incubator/2026 when timeline data is available. -->
 <template>
   <ccm-base-section class="timeline | subgrid" background-color="gray">
     <div class="timeline__content">

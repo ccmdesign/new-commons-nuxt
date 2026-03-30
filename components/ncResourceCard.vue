@@ -20,6 +20,8 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+
 const props = defineProps({
   content: {
     type: Object,
@@ -80,7 +82,7 @@ const hasLink = computed(() => props.content && getResourceLink(props.content) !
   color: var(--primary-color);
 }
 
-.resource-card:hover {
+a.resource-card:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 </style>

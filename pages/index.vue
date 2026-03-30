@@ -60,7 +60,7 @@
     </div>
   </nc-base-section>
 
-  <nc-base-section id="resources-section" color="faded">
+  <nc-base-section v-if="resources?.length" id="resources-section" color="faded">
     <h2>Resources</h2>
     <div class="grid resource-grid">
       <nc-resource-card
@@ -77,22 +77,7 @@
 
 <script setup>
 
-const initiatives = [
-  {
-    title: 'The 2025 Challenge',
-    description: 'The inaugural New Commons Challenge awarded two $100,000 prizes to teams building data commons for responsible AI development.',
-    status: 'Completed',
-    to: '/the-2025-challenge',
-    image: '/assets/patterns/hero.jpg',
-  },
-  {
-    title: 'Indigenous Languages',
-    description: 'Supporting the development of data commons that preserve and promote indigenous languages in the age of AI.',
-    status: 'Coming Soon',
-    to: '/incubator/indigenous-languages',
-    image: '/assets/patterns/hero.jpg',
-  },
-]
+const initiatives = useInitiatives()
 
 const { data: blogposts } = await useAsyncData('blogposts', () => queryCollection('blogposts').limit(3).all())
 

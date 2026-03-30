@@ -133,8 +133,6 @@
 </template>
 
 <script setup>
-import useSteeringCommittee from '../../composables/useSteeringCommittee'
-
 useHead({
   title: 'Indigenous Languages | New Commons Incubator',
 })

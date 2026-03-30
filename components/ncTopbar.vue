@@ -16,10 +16,6 @@
   </div>
 </template>
 
-<script setup>
-
-</script>
-
 <style scoped>
 .topbar {
   padding-block: var(--space-xs);

@@ -93,8 +93,10 @@
       <nc-button
         color="primary"
         variant="ghost"
+        el="a"
         :href="rulesUrl"
         target="_blank"
+        rel="noopener noreferrer"
       >Read the Challenge Rules <nc-arrow-link-up /></nc-button>
     </p>
   </nc-base-section>
@@ -114,9 +116,6 @@
 </template>
 
 <script setup>
-import useJudges from '../composables/useJudges'
-import useObservers from '../composables/useObservers'
-
 const judges = useJudges()
 const observers = useObservers()
 const { rulesUrl } = useSiteLinks()
