@@ -5,11 +5,9 @@
         <h2 class="h1 text-align:center">Overview</h2>
         <div class="switcher">
           <div>
-            <p>On September 25, 2025, the New Commons Challenge awarded two $100,000 prizes to foster data commons for responsible AI development. 
-              The first of these awards went to the <strong>Malawi Voice Data Commons Project</strong>—developed by the New York University Peace Research and Education Program and Ushahidi—for the development of a data commons. 
-              The second award went to the <strong>Amazon Rainforest Evolution Index</strong>, developed by CERTI Amazonia, for the enhancement of an existing data commons.</p>
-              <p>The event took place as part of the broader 80<sup><small>th</small></sup> UN General Assembly events and was an affiliate session of the Digital@UNGA program. We thank our partners DirectRelief and the Harvard Institutional Data Initiative, as well as our observer UNESCO, for their support.</p>
-              <p>Information on each grantee and special distinction can be found below. For each grantee, we provide a brief description of their projects taken from their proposals and then information about how they can be contacted, should you be interested in learning more about their work or offering support.</p>
+            <p>The 2025 New Commons Challenge awarded two $100,000 prizes to foster data commons for responsible AI development. The first award went to the <strong>Malawi Voice Data Commons Project</strong>, developed by the New York University Peace Research and Education Program and Ushahidi, for the development of a new data commons. The second award went to the <strong>Amazon Rainforest Evolution Index</strong>, developed by CERTI Amazonia, for the enhancement of an existing data commons.</p>
+              <p>The awards were announced on September 25, 2025 during the 80<sup><small>th</small></sup> UN General Assembly as part of the Digital@UNGA program. The Challenge was made possible with the support of our partners and international observer UNESCO.</p>
+              <p>Below you will find details on each awardee and honorary distinction, including project descriptions and contact information for those interested in learning more or offering support.</p>
             </div>
             <div class="honors">
               <p class="honors__heading">Awardees:</p>
@@ -87,10 +85,41 @@
     </section>
   </nc-base-section>
 
+  <nc-base-section>
+    <h2 class="text-align:center">About the Challenge</h2>
+    <!-- TODO: confirm copy with client -->
+    <p>The New Commons Challenge is an initiative to foster data commons for responsible AI development. It seeks to support projects that create, enhance, or sustain shared data resources for the public good.</p>
+    <p>
+      <nc-button
+        color="primary"
+        variant="ghost"
+        el="a"
+        :href="rulesUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Read the Challenge Rules <nc-arrow-link-up /></nc-button>
+    </p>
+  </nc-base-section>
+
+  <nc-base-section color="faded">
+    <h2 class="text-align:center">Jury</h2>
+    <p class="text-align:center">The panel of experts who evaluated the New Commons Challenge submissions.</p>
+    <nc-people-grid :collection="judges" base-path="/judges" />
+  </nc-base-section>
+
+  <nc-base-section>
+    <h2 class="text-align:center">International Observer</h2>
+    <nc-people-grid :collection="observers" base-path="/observers" />
+  </nc-base-section>
+
   <nc-blog-section :posts="blogposts" />
 </template>
 
 <script setup>
+const judges = useJudges()
+const observers = useObservers()
+const { rulesUrl } = useSiteLinks()
+
 const { data: winners } = await useAsyncData('winners', () => queryCollection('winners')
   .all())
 

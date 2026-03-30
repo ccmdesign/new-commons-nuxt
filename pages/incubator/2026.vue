@@ -1,120 +1,92 @@
 <template>
-  <!-- PLACEHOLDER: This page contains content carried over from the 2025 Challenge prize page.
-       It will be replaced with 2026 Incubator-specific content in CCM-108 (Content Refresh). -->
-  <nc-base-section class="placeholder-banner" color="primary">
-    <p><strong>Coming Soon:</strong> The 2026 Incubator programme details are being finalised. The content below is a placeholder from the previous Challenge cycle.</p>
-  </nc-base-section>
-
   <nc-hero>
     <div class="hero__content">
       <div class="panel">
-        <p class="hero__brow">A Prize for a Shared Digital Future</p>
-        <h1>The Incubator — 2026 Cohort</h1>
-        <p>The New Commons Challenge is an initiative led by Microsoft and the Open Data Policy Lab, in partnership with DirectRelief, the Harvard Institutional Data Initiative, and UNESCO (international observer).</p>
-        <p>The challenge addresses a critical issue: the limited access to diverse and high-quality datasets, which is essential for AI to reach its full potential. By creating and improving data commons, which are collaboratively governed data ecosystems that pool and provide responsible access to diverse, high-quality datasets, the gap in AI development can be filled. The challenge seeks to seed new data commons to ensure that AI benefits all.</p>
+        <p class="hero__brow">The New Commons Incubator</p>
+        <h1>Building a Shared Digital Future</h1>
+        <p>The New Commons Incubator is a programme run by the Open Data Policy Lab that
+           supports teams building and sustaining data commons for responsible AI development.
+           Through funding, mentorship, and technical resources, we help turn promising ideas
+           into sustainable shared data ecosystems that serve the public good.</p>
       </div>
     </div>
     <nc-announcement color="primary" class="hero__announcement">
-      <div class="switcher" style="">
+      <div class="switcher">
         <div style="flex: 3;">
-            <h2>Learn about the 2025 Challenge winners and honorary distinctions</h2>
-            <p>See the groundbreaking data commons recognised at the 2025 New Commons Showcase.</p>
+          <h2>Explore the 2025 New Commons Challenge</h2>
+          <p>See the winning data commons and honorary distinctions from the inaugural Challenge.</p>
         </div>
         <nc-button class="hero__announcement-button" to="/the-2025-challenge" color="primary" variant="primary" style="align-self: center;">The 2025 Challenge</nc-button>
       </div>
     </nc-announcement>
   </nc-hero>
 
-  <nc-base-section class="fancy-bg" width="narrow" color="primary">
-    <h2 class="text-align:center padding-block:l white-color h2">What are we looking for?</h2>
+  <!-- TODO: [CCM-127] Add Call for Proposals section when application form URL is available -->
+  <!-- TODO: [CCM-127] Add Webinars section when webinar signup URL is available -->
+
+  <nc-base-section>
+    <h2>Why the Incubator?</h2>
     <div class="switcher">
-      <div class="prize-card">
-        <img src="/assets/icon-globe.svg" alt="Improve Localized Decision-making">
-        <h3>Improve Localized Decision-making</h3>
-        <p>Help local leaders make better policy or improve their reasoning capabilities through improved access to or insights from data</p>
-      </div>
-      <div class="prize-card">
-        <img src="/assets/icon-people.svg" alt="Humanitarian Interventions">
-        <h3>Humanitarian Interventions</h3>
-        <p>Strengthen disaster response capabilities using AI.</p>
+      <div class="stack">
+        <p>As artificial intelligence reshapes economies and societies, the data that powers
+           it must be governed responsibly. Data commons offer a way to collectively manage
+           shared data resources so that AI development serves broad public interests rather
+           than narrow ones.</p>
+        <p>The New Commons Incubator builds on the success of the 2025 New Commons Challenge,
+           which demonstrated the global demand for support in creating and sustaining data
+           commons. The Incubator takes a deeper, hands-on approach, working closely with
+           selected teams to address the technical, governance, and sustainability challenges
+           that come with building shared data infrastructure.</p>
+        <p>By supporting diverse teams around the world, the Incubator aims to grow an
+           ecosystem of data commons that can serve as the foundation for responsible AI
+           across sectors and regions.</p>
       </div>
     </div>
   </nc-base-section>
 
-  <nc-base-section class="prize-cta" id="cta" color="faded">
-    <div class="cta-panel | switcher">
-      <div class="stack" style="--_stack-space: var(--space-2xs)">
-        <h2>Prizes</h2>
-        <p>The New Commons Challenge will select two winning proposals to receive the following support package:</p>
-        <div class="cluster margin-top:auto padding-top:s">
-          <!--<div class="button" color="primary" variant="primary">Apply now</div>-->
-          <a href="https://docs.google.com/document/d/1fYmUkwTqOngtpbVT8BezgmWs14IkvGEO6q5a53jqHhA/edit?tab=t.0" target="_blank" class="button | color:white-color" color="primary" variant="secondary">View Rules</a>
-        </div>
+  <nc-base-section color="faded">
+    <h2>Programmatic Offerings</h2>
+    <div class="switcher">
+      <div class="stack">
+        <p>The Incubator provides selected teams with a comprehensive package of support
+           designed to help them move from concept to sustainable implementation. Over the
+           course of the programme, participants receive:</p>
+        <ul>
+          <li><strong>Funding</strong> — Grant funding to support the development or enhancement of data commons projects</li>
+          <li><strong>Mentorship &amp; Guidance</strong> — Regular access to experts in data governance, AI ethics, and commons management from the Open Data Policy Lab network</li>
+          <li><strong>Technical Support</strong> — Hands-on assistance with data infrastructure, interoperability standards, and platform development</li>
+          <li><strong>Network Access</strong> — Connection to the Open Data Policy Lab's global network of policymakers, technologists, and data practitioners</li>
+          <!-- TODO: [CCM-127] Update programme duration when confirmed (currently TBD) -->
+        </ul>
       </div>
-      <ul class="prize-list | stack">
-        <li class="prize-item">
-          <img src="/assets/trophy.svg" alt="Two winners">
-          <p><span>Two</span> winners</p>
-        </li>
-        <li class="prize-item">
-          <img src="/assets/money.svg" alt="USD 100,000">
-          <p><span>USD 100,000</span> in funding each</p>
-        </li>
-        <li class="prize-item">
-          <img src="/assets/mentorship.svg" alt="Mentorship">
-          <p>Mentorship on establishing and managing data commons</p>
-        </li>
-        <li class="prize-item">
-          <img src="/assets/support.svg" alt="Technical support">
-          <p>Technical support as needed</p>
-        </li>
-        <li class="prize-item">
-          <img src="/assets/globe.svg" alt="Network">
-          <p>Access to the Open Data Policy Lab's global network of experts</p>
-        </li>
-      </ul>
-    </div>
-
-    <div class="cta-panel | switcher">
-      <div>
-        <h2>Who can apply?</h2>
-      </div>
-      <div class="stack" style="--_stack-space: var(--space-2xs)">
-        <h3>Eligibility</h3>
-        <p>We welcome proposals from diverse regions, communities, and organizations working with various data types. Your proposed data commons must aim to serve at least one of our key focus areas (Improve Localized Decision-making or Humanitarian Intervention).</p>
-        <nc-button color="white" variant="link">Read here <nc-arrow-link-up /></nc-button>
-        <h3 class="margin-top:s">Evaluation</h3>
-        <p>Proposals will be reviewed by an international jury of experts from both focus areas.</p>
-        <nc-button color="white" variant="link">Read here <nc-arrow-link-up /></nc-button>
-      </div>
-
     </div>
   </nc-base-section>
 
-  <nc-base-section class="prize-tips" subgrid color="faded">
-    <h2 class="margin-bottom:s">Helpful Tips</h2>
-    <div class="stack">
-      <h3>Our Blueprint</h3>
-      <p>This Challenge aims to implement our recently published Blueprint to Unlock New Data Commons for Artificial Intelligence, which shows how organizations can launch data commons in the public interest. Organizations may find it useful to refer to this report as they develop their concept notes and proposals.</p>
+  <!-- TODO: [CCM-127] Add Call for Proposals repeat section when application form URL is available -->
 
-      <h3 class="margin-top:l">Inspirational Examples</h3>
-      <p>As this is an emerging area of practice, we understand that few organizations have developed data commons for AI. To help applicants think about how they may use data commons to support their work, we have assembled a list of instructive examples of data commons in action here.</p>
-
-      <p>Please note that these data commons cover a range of topics beyond the areas of focus for this challenge.</p>
+  <nc-base-section>
+    <div class="cta-links | stack">
+      <div class="cta-link-panel">
+        <h2>Helpful Tips</h2>
+        <p>Explore our resources for guidance on data commons, governance frameworks, and best practices for responsible AI development.</p>
+        <nc-button to="/resources" color="base" variant="primary">View Resources</nc-button>
+      </div>
+      <div class="cta-link-panel">
+        <h2>Have Questions?</h2>
+        <p>Check out our FAQ page for answers about the Incubator, eligibility, application process, and more.</p>
+        <nc-button to="/faq" color="base" variant="primary">Read the FAQ</nc-button>
+      </div>
     </div>
   </nc-base-section>
-
-  <nc-base-section color="faded" size="l" id="judges">
-    <h2 class="h2 color:base-color margin-bottom:l">Judges</h2>
-    <nc-judges-grid />
-    <h2 class="h2 color:base-color margin-block:l">International Observer</h2>
-    <nc-observers-grid />
-  </nc-base-section>
-
-  <!--<nc-blog-section id="blog" :posts="blogposts" />-->
 </template>
 
 <script setup>
+useHead({
+  title: 'New Commons Incubator 2026 | New Commons',
+})
+useSeoMeta({
+  description: 'The New Commons Incubator supports teams building data commons for responsible AI through funding, mentorship, and technical resources.',
+})
 </script>
 
 <style scoped lang="scss">
@@ -133,122 +105,20 @@
   }
 }
 
-.fancy-bg, .prize-cta { --overlap: 12rem; }
-
-.fancy-bg {
-  background-image: url('/assets/bg-prize.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-bottom: calc(var(--overlap) + var(--space-2xl));
-}
-
-.prize-cta { margin-bottom: calc(var(--overlap) * -1); }
-
-.prize-cta > :first-child {
-  position: relative;
-  top: calc(var(--overlap) * -1);
-  z-index: 1;
-}
-
 .switcher {
   --_switcher-space: var(--space-s);
 }
 
-.prize-card {
-  background-color: var(--white-color);
-  padding: 2.5rem;
-  border-radius: var(--border-radius-m);
-  color: var(--base-color);
-
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-    "icon title"
-    "icon description";
-  gap: var(--space-s);
-
-  img {
-    grid-area: icon;
-  }
-
-  h3 {
-    grid-area: title;
-    margin: 0;
-    line-height: 1.2;
-  }
-
-  p {
-    align-self: start;
-    grid-area: description;
-    margin: 0;
-  }
+.cta-links {
+  --_stack-space: var(--space-l);
 }
 
-.cta-panel {
+.cta-link-panel {
   padding: var(--space-l-2xl);
-  color: var(--white-color);
-
-  &:first-child {
-    background-color: var(--base-color);
-    border-radius: var(--border-radius-m) var(--border-radius-m) 0 0;
-  }
-
-  &:last-child {
-    border-radius: 0 0 var(--border-radius-m) var(--border-radius-m);
-    background: url('/assets/patterns/squares-left.svg') left bottom no-repeat, var(--secondary-color);
-  }
-
-  :deep(svg path) {
-    stroke: var(--white-color);
-  }
+  border: 1px solid var(--black-color-10-tint);
+  border-radius: var(--border-radius-m);
 }
 
-.prize-list {
-  li {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--space-s);
-
-    p {
-      margin: 0;
-    }
-
-    img {
-      width: 2rem;
-      height: 2rem;
-      margin-left: -1.5rem;
-    }
-
-    span {
-      font-weight: 600;
-      font-size: 150%;
-      color: var(--primary-color);
-    }
-  }
-}
-
-.prize-tips {
-  color: var(--base-color);
-  h2 { grid-column: content-start / 5; }
-  .stack {
-    grid-column: 5 / content-end;
-    --_stack-space: var(--space-xs);
-  }
-
-  h3 {
-    font-size: var(--size-0);
-    font-weight: 600;
-    color: var(--primary-color);
-    text-transform: uppercase;
-  }
-
-  h4 {
-    font-size: var(--size-0);
-  }
-}
 .hero__announcement {
   text-align: left !important;
   padding: var(--space-m) var(--space-l);
@@ -276,9 +146,5 @@
     color: var(--base-color);
     margin-block: var(--space-xs);
   }
-
-
-
 }
-
 </style>
