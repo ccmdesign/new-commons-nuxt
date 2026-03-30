@@ -21,18 +21,11 @@
       </div>
     </div>
     <div class="footer__col3 footer__content stack">
-    
       <div class="partners">
         <h3>Partners</h3>
         <div class="logos">
-          <nc-direct-relief-logo />
-          <img src="/assets/i-data.png" alt="Institutional Data Initiative" />
-        </div>
-      </div>
-      <div class="international-observer">
-        <h3>International Observer</h3>
-        <div class="logos">
           <nc-unesco-logo />
+          <nc-ms-logo />
         </div>
       </div>
     </div>
