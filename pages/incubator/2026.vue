@@ -21,8 +21,8 @@
     </nc-announcement>
   </nc-hero>
 
-  <!-- TODO: [CCM-127] Add Call for Proposals section when application form URL is available -->
-  <!-- TODO: [CCM-127] Add Webinars section when webinar signup URL is available -->
+  <!-- TODO: [CCM-129] Add Call for Proposals section when application form URL is available -->
+  <!-- TODO: [CCM-129] Add Webinars section when webinar signup URL is available -->
 
   <nc-base-section>
     <h2>Why the Incubator?</h2>
@@ -56,13 +56,13 @@
           <li><strong>Mentorship &amp; Guidance</strong> — Regular access to experts in data governance, AI ethics, and commons management from the Open Data Policy Lab network</li>
           <li><strong>Technical Support</strong> — Hands-on assistance with data infrastructure, interoperability standards, and platform development</li>
           <li><strong>Network Access</strong> — Connection to the Open Data Policy Lab's global network of policymakers, technologists, and data practitioners</li>
-          <!-- TODO: [CCM-127] Update programme duration when confirmed (currently TBD) -->
+          <!-- TODO: [CCM-129] Update programme duration when confirmed (currently TBD) -->
         </ul>
       </div>
     </div>
   </nc-base-section>
 
-  <!-- TODO: [CCM-127] Add Call for Proposals repeat section when application form URL is available -->
+  <!-- TODO: [CCM-129] Add Call for Proposals repeat section when application form URL is available -->
 
   <nc-base-section>
     <div class="cta-links | stack">
