@@ -5,11 +5,9 @@
         <h2 class="h1 text-align:center">Overview</h2>
         <div class="switcher">
           <div>
-            <p>On September 25, 2025, the New Commons Challenge awarded two $100,000 prizes to foster data commons for responsible AI development. 
-              The first of these awards went to the <strong>Malawi Voice Data Commons Project</strong>—developed by the New York University Peace Research and Education Program and Ushahidi—for the development of a data commons. 
-              The second award went to the <strong>Amazon Rainforest Evolution Index</strong>, developed by CERTI Amazonia, for the enhancement of an existing data commons.</p>
-              <p>The event took place as part of the broader 80<sup><small>th</small></sup> UN General Assembly events and was an affiliate session of the Digital@UNGA program. We thank our partners DirectRelief and the Harvard Institutional Data Initiative, as well as our observer UNESCO, for their support.</p>
-              <p>Information on each grantee and special distinction can be found below. For each grantee, we provide a brief description of their projects taken from their proposals and then information about how they can be contacted, should you be interested in learning more about their work or offering support.</p>
+            <p>The 2025 New Commons Challenge awarded two $100,000 prizes to foster data commons for responsible AI development. The first award went to the <strong>Malawi Voice Data Commons Project</strong>, developed by the New York University Peace Research and Education Program and Ushahidi, for the development of a new data commons. The second award went to the <strong>Amazon Rainforest Evolution Index</strong>, developed by CERTI Amazonia, for the enhancement of an existing data commons.</p>
+              <p>The awards were announced on September 25, 2025 during the 80<sup><small>th</small></sup> UN General Assembly as part of the Digital@UNGA program. The Challenge was made possible with the support of our partners and international observer UNESCO.</p>
+              <p>Below you will find details on each awardee and honorary distinction, including project descriptions and contact information for those interested in learning more or offering support.</p>
             </div>
             <div class="honors">
               <p class="honors__heading">Awardees:</p>
@@ -87,10 +85,37 @@
     </section>
   </nc-base-section>
 
+  <nc-base-section>
+    <h2 class="text-align:center">About the Challenge</h2>
+    <!-- TODO: confirm copy with client -->
+    <p>The New Commons Challenge is an initiative to foster data commons for responsible AI development. It seeks to support projects that create, enhance, or sustain shared data resources for the public good.</p>
+    <p>
+      <nc-button
+        color="primary"
+        variant="ghost"
+        :href="rulesUrl"
+        target="_blank"
+      >Read the Challenge Rules <nc-arrow-link-up /></nc-button>
+    </p>
+  </nc-base-section>
+
+  <nc-base-section color="faded">
+    <h2 class="text-align:center">Jury</h2>
+    <p class="text-align:center">The panel of experts who evaluated the New Commons Challenge submissions.</p>
+    <nc-judges-grid />
+  </nc-base-section>
+
+  <nc-base-section>
+    <h2 class="text-align:center">International Observer</h2>
+    <nc-observers-grid />
+  </nc-base-section>
+
   <nc-blog-section :posts="blogposts" />
 </template>
 
 <script setup>
+const { rulesUrl } = useSiteLinks()
+
 const { data: winners } = await useAsyncData('winners', () => queryCollection('winners')
   .all())
 
@@ -147,99 +172,99 @@ const { data: blogposts } = await useAsyncData('blogposts', () =>
 const highlights = [
   {
     src: '/images/092525_HL011_New-Commons_Microsoft_Malawi Voice Data Commons.webp',
-    alt: 'Replace alt text'
+    alt: 'Malawi Voice Data Commons team at the New Commons Challenge ceremony'
   },
   {
     src: '/images/092525_HL014_New-Commons_Microsoft_Amazon Rainforest Evolution Index Award Winner.webp',
-    alt: 'Replace alt text'
+    alt: 'Amazon Rainforest Evolution Index team receiving their award'
   },
   {
     src: '/images/092525_HL018_New-Commons_Microsoft_Malawi Award Presentation.webp',
-    alt: 'Replace alt text'
+    alt: 'Malawi Voice Data Commons award presentation on stage'
   },
   {
     src: '/images/092525_HL023_New-Commons_Microsoft_Malawi Award Presentation 1.webp',
-    alt: 'Replace alt text'
+    alt: 'Malawi Voice Data Commons award presentation'
   },
   {
     src: '/images/092525_HL026_New-Commons_Microsoft_Amazon Rainforest Presentation.webp',
-    alt: 'Replace alt text'
+    alt: 'Amazon Rainforest Evolution Index team presenting their project'
   },
   {
     src: '/images/hl/Copy of 092525_HL053_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'Speakers at the New Commons Challenge Showcase'
   },
   {
     src: '/images/hl/Copy of IMG_0802.webp',
-    alt: 'Replace alt text'
+    alt: 'Attendees networking at the New Commons Challenge Showcase'
   },
   {
     src: '/images/hl/Copy of IMG_0804.webp',
-    alt: 'Replace alt text'
+    alt: 'Guests at the New Commons Challenge Showcase event'
   },
   {
     src: '/images/hl/Copy of 092525_HL041_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'New Commons Challenge Showcase panel discussion'
   },
   {
     src: '/images/hl/Copy of 092525_HL039_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'New Commons Challenge Showcase presentation'
   },
   {
     src: '/images/hl/Copy of IMG_0800.webp',
-    alt: 'Replace alt text'
+    alt: 'Attendees at the New Commons Challenge Showcase during the 80th UN General Assembly'
   },
   {
     src: '/images/hl/Copy of IMG_0811.webp',
-    alt: 'Replace alt text'
+    alt: 'Guests mingling at the New Commons Challenge Showcase'
   },
   {
     src: '/images/hl/Copy of 092525_HL033_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'Stage view at the New Commons Challenge Showcase'
   },
   {
     src: '/images/hl/Copy of IMG_0812.webp',
-    alt: 'Replace alt text'
+    alt: 'Audience at the New Commons Challenge Showcase event'
   },
   {
     src: '/images/hl/Copy of 092525_HL047_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'New Commons Challenge Showcase highlight moment'
   },
   {
     src: '/images/hl/Copy of 092525_HL003_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'Opening of the New Commons Challenge Showcase'
   },
   {
     src: '/images/hl/Copy of 092525_HL007_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'Early moments at the New Commons Challenge Showcase'
   },
   {
     src: '/images/hl/Copy of 092525_HL023_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'Award ceremony at the New Commons Challenge Showcase'
   },
   {
     src: '/images/hl/Copy of 092525_HL004_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'New Commons Challenge Showcase venue setup'
   },
   {
     src: '/images/hl/Copy of 092525_HL002_New-Commons_Microsoft.webp',
-    alt: 'Replace alt text'
+    alt: 'New Commons Challenge Showcase event beginning'
   },
   {
     src: '/images/hl/Certi Amazonia-New Commons_1.webp',
-    alt: 'Replace alt text'
+    alt: 'CERTI Amazonia team at the New Commons Challenge event'
   },
   {
     src: '/images/hl/Certi Amazonia-New Commons2.webp',
-    alt: 'Replace alt text'
+    alt: 'CERTI Amazonia representatives at the New Commons Showcase'
   },
   {
     src: '/images/hl/MalawiVoice1.webp',
-    alt: 'Replace alt text'
+    alt: 'Malawi Voice Data Commons team members'
   },
   {
     src: '/images/hl/MalawiVoice2.webp',
-    alt: 'Replace alt text'
+    alt: 'Malawi Voice Data Commons team celebrating their award'
   },
 ]
 

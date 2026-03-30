@@ -2,7 +2,7 @@
   <nc-hero>
     <div class="hero__content">
       <div class="panel stack">
-        <nuxt-link to="/winners" class="h4 subtitle">← Back to Winners</nuxt-link>
+        <nuxt-link to="/the-2025-challenge" class="h4 subtitle">← Back to The 2025 Challenge</nuxt-link>
         <hgroup>
           <p class="h3 text-transform:uppercase text-color:primary">{{ winner.prize }} | {{ winner.brow }}</p>
           <h2 class="h1">{{ winner.title }}</h2>
@@ -87,7 +87,7 @@ import { computed } from 'vue'
 
 const route = useRoute()
 import { videos } from '~/composables/useVideos'
-const video = videos.find(video => video.slug === route.params?.slug)
+const video = videos.find(video => video.slug === route.params?.slug) || { src: '' }
 
 const { data: winner } = await useAsyncData('winner', () => queryCollection('winners')
   .where('slug', '=', route.params?.slug)
