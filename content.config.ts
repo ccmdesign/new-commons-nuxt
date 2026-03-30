@@ -69,6 +69,8 @@ export default defineContentConfig({
         slug: z.string(),
         description: z.string(),
         category: z.string().optional(),
+        // At least one of url or file should be provided; ncResourceCard
+        // renders a non-linked fallback card when neither is set.
         url: z.string().optional(),
         file: z.string().optional(),
         cover_image: z.string().optional(),

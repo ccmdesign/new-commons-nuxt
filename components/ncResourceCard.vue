@@ -1,10 +1,11 @@
 <template>
-  <a
-    v-if="content && getResourceLink(content) !== '#'"
+  <component
+    :is="hasLink ? 'a' : 'div'"
+    v-if="content"
     class="resource-card | stack"
-    :href="getResourceLink(content)"
-    :target="isExternalLink(content) ? '_blank' : undefined"
-    :rel="isExternalLink(content) ? 'noopener noreferrer' : undefined"
+    :href="hasLink ? getResourceLink(content) : undefined"
+    :target="hasLink && isExternalLink(content) ? '_blank' : undefined"
+    :rel="hasLink && isExternalLink(content) ? 'noopener noreferrer' : undefined"
   >
     <img
       :src="getImage(content)"
@@ -14,12 +15,14 @@
     <span class="resource-card__category">{{ content.category }}</span>
     <h3 class="resource-card__title">{{ content.title }}</h3>
     <p class="resource-card__description">{{ content.description }}</p>
-    <span class="resource-card__cta">View resource</span>
-  </a>
+    <span v-if="hasLink" class="resource-card__cta">View resource</span>
+  </component>
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue'
+
+const props = defineProps({
   content: {
     type: Object,
     required: true
@@ -27,6 +30,8 @@ defineProps({
 })
 
 const { getImage, getResourceLink, isExternalLink } = useResources()
+
+const hasLink = computed(() => props.content && getResourceLink(props.content) !== '#')
 </script>
 
 <style lang="scss" scoped>
@@ -77,7 +82,7 @@ const { getImage, getResourceLink, isExternalLink } = useResources()
   color: var(--primary-color);
 }
 
-.resource-card:hover {
+a.resource-card:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 </style>

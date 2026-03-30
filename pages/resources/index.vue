@@ -80,6 +80,12 @@ const filteredResources = computed(() => {
   font-size: var(--size-4);
 }
 
+.tagline {
+  font-size: var(--size-1);
+  color: var(--base-color-70-tint);
+  font-weight: 300;
+}
+
 .filter-pill {
   border: 1px solid var(--base-color-10-tint);
   background: white;
