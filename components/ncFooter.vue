@@ -32,10 +32,6 @@
   </div>
 </template>
 
-<script setup>
-
-</script>
-
 <style lang="scss" scoped>
 .footer {
   grid-column: full-start / full-end; /* Grid template columns are defined by the .subgrid class, and grid-column attr. */

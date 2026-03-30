@@ -1,4 +1,4 @@
-// TODO(CCM-128): Replace placeholder data with actual steering committee members
+// TODO(CCM-129): Replace placeholder data with actual steering committee members
 export const steeringCommittee = [
   {
     name: 'Member One',

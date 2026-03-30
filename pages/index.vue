@@ -30,8 +30,8 @@
     </nc-announcement>
   </nc-hero>
 
-  <!-- TODO: [CCM-127] Add Call for Proposals section (Panel 2) when application form URL is available -->
-  <!-- TODO: [CCM-127] Add Webinars section (Panel 3) when webinar signup URL is available -->
+  <!-- TODO: [CCM-129] Add Call for Proposals section (Panel 2) when application form URL is available -->
+  <!-- TODO: [CCM-129] Add Webinars section (Panel 3) when webinar signup URL is available -->
 
   <nc-cta id="cta" :single-column="true">
     <div class="cta-panel"

@@ -5,17 +5,17 @@
       <div class="panel">
         <p class="hero__brow">The New Commons Incubator</p>
         <h1>Indigenous Languages</h1>
-        <!-- TODO(CCM-128): Replace placeholder description with final copy -->
+        <!-- TODO(CCM-129): Replace placeholder description with final copy -->
         <p>Supporting the development of data commons that preserve and promote
            indigenous languages in the age of AI. This initiative brings together
            language communities, technologists, and researchers to build shared
            data resources that ensure indigenous languages thrive in digital spaces.</p>
-        <!-- TODO(CCM-128): Update Apply Now link when application form URL is available -->
+        <!-- TODO(CCM-129): Update Apply Now link when application form URL is available -->
         <nc-button to="#apply" color="base" variant="primary">Apply Now</nc-button>
       </div>
     </div>
     <!-- Panel 6: Webinar CTA (nested in hero as announcement) -->
-    <!-- TODO(CCM-128): Update webinar URL and date when available -->
+    <!-- TODO(CCM-129): Update webinar URL and date when available -->
     <nc-announcement color="primary" class="hero__announcement">
       <div class="switcher">
         <div style="flex: 3;">
@@ -23,7 +23,7 @@
           <h2>Learn About the Indigenous Languages Initiative</h2>
           <p>Join us for an informational webinar about the programme, eligibility, and how to apply.</p>
         </div>
-        <!-- TODO(CCM-128): Update webinar signup link -->
+        <!-- TODO(CCM-129): Update webinar signup link -->
         <nc-button class="hero__announcement-button" to="#" color="primary" variant="primary" style="align-self: center;">Register</nc-button>
       </div>
     </nc-announcement>
@@ -34,7 +34,7 @@
     <h2>Why Indigenous Languages?</h2>
     <div class="switcher">
       <div class="stack">
-        <!-- TODO(CCM-128): Replace placeholder copy with final content -->
+        <!-- TODO(CCM-129): Replace placeholder copy with final content -->
         <p>Indigenous languages carry centuries of knowledge, cultural identity, and unique
            perspectives on the world. Yet many of these languages are underrepresented in
            digital spaces and AI systems, risking further marginalization as technology
@@ -55,7 +55,7 @@
     <h2>Programmatic Offerings</h2>
     <div class="switcher">
       <div class="stack">
-        <!-- TODO(CCM-128): Update offerings list with final programme details -->
+        <!-- TODO(CCM-129): Update offerings list with final programme details -->
         <p>Selected teams will receive a comprehensive package of support tailored to
            the unique challenges of building indigenous language data commons:</p>
         <ul>
@@ -66,10 +66,10 @@
           <li><strong>Network Access</strong> — Connection to a global network of indigenous language advocates, technologists, and policymakers</li>
         </ul>
       </div>
-      <!-- TODO(CCM-128): Add partner logos when assets are available -->
+      <!-- TODO(CCM-129): Add partner logos when assets are available -->
       <div class="partner-logos">
         <p class="partner-logos__heading">Programme Partners</p>
-        <!-- TODO(CCM-128): Replace placeholder with actual partner logos -->
+        <!-- TODO(CCM-129): Replace placeholder with actual partner logos -->
         <p class="partner-logos__placeholder">Partner logos coming soon.</p>
       </div>
     </div>
@@ -78,7 +78,7 @@
   <!-- Panel 4: Steering Committee -->
   <nc-base-section>
     <h2 class="text-align:center">Steering Committee</h2>
-    <!-- TODO(CCM-128): Replace placeholder steering committee data with actual members -->
+    <!-- TODO(CCM-129): Replace placeholder steering committee data with actual members -->
     <p class="text-align:center">Meet the experts guiding the Indigenous Languages initiative.</p>
     <nc-people-grid
       :collection="steeringCommittee"
@@ -92,7 +92,7 @@
     <h2>How to Apply</h2>
     <div class="switcher">
       <div class="stack">
-        <!-- TODO(CCM-128): Replace placeholder application steps with final content -->
+        <!-- TODO(CCM-129): Replace placeholder application steps with final content -->
         <p>We welcome applications from teams around the world working on indigenous
            language data commons. Here is how to get started:</p>
         <ol>
@@ -101,14 +101,14 @@
           <li><strong>Submit your application</strong> — Complete the online application form before the deadline.</li>
           <li><strong>Await review</strong> — Applications will be reviewed by the Steering Committee and programme staff.</li>
         </ol>
-        <!-- TODO(CCM-128): Update Apply Now link when application form URL is available -->
+        <!-- TODO(CCM-129): Update Apply Now link when application form URL is available -->
         <nc-button to="#" color="base" variant="primary">Apply Now</nc-button>
       </div>
     </div>
   </nc-base-section>
 
   <!-- Panel 7: Timeline -->
-  <!-- TODO(CCM-128): Update timeline dates when confirmed -->
+  <!-- TODO(CCM-129): Update timeline dates when confirmed -->
   <nc-timeline
     :timeline="timelineData"
     title="Timeline"
@@ -142,7 +142,7 @@ useSeoMeta({
 
 const steeringCommittee = useSteeringCommittee()
 
-// TODO(CCM-128): Update timeline dates when confirmed
+// TODO(CCM-129): Update timeline dates when confirmed
 const timelineData = [
   { date: '2026-06-01T09:00:00-07:00', event: 'Applications Open' },
   { date: '2026-07-15T17:00:00-07:00', event: 'Application Deadline' },
