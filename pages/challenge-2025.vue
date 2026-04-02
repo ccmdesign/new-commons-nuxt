@@ -115,7 +115,7 @@
     <nc-people-grid :collection="observers" base-path="/observers" />
   </nc-base-section>
 
-  <nc-blog-section :posts="blogposts" />
+
 </template>
 
 <script setup>
@@ -171,10 +171,6 @@ const honorsCards = computed(() => {
   ]
 })
 
-const { data: blogposts } = await useAsyncData('blogposts', () =>
-  queryCollection('blogposts')
-  .order('date', 'DESC').limit(3).all()
-);
 
 const highlights = [
   {

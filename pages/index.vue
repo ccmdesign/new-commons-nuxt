@@ -2,55 +2,42 @@
   <nc-hero id="hero">
     <div class="hero__content">
       <div class="panel | stack">
-        <h1>The New Commons Incubator</h1>
-        <p>The New Commons initiative supports teams building data commons for responsible AI.
-           Through the Incubator programme, we provide funding, mentorship, and technical
-           resources to help turn promising ideas into sustainable shared data ecosystems
-           that serve the public good.</p>
+        <h1>New Commons Incubator</h1>
+        <p>The New Commons Incubator seeks to strengthen the pipeline of data commons for the AI era. Through structured programming, we aim to unlock the next generation of data commons and make the data ecosystem more sustainable and scalable.</p>
         <nc-button to="/incubator/2026" color="base" variant="primary">About the Incubator</nc-button>
       </div>
       <div class="hero__image-div">
-
         <img
           src="/assets/patterns/hero.jpg"
           alt="Abstract geometric pattern representing collaborative data commons" />
-          <nc-minimal-logo />
+        <nc-minimal-logo />
       </div>
     </div>
-    <nc-announcement color="primary" class="hero__announcement">
-      <div class="switcher" style="">
-        <div style="flex: 3;">
-          <h3>New Commons Incubator</h3>
-          <h2>Supporting Data Commons for Responsible AI</h2>
-          <p>Learn about the Incubator programme and how to get involved in building shared data ecosystems.</p>
-          <NuxtLink to="/challenge-2025" style="font-size: var(--size-0); font-weight: 300; text-decoration: underline;">View the 2025 Challenge &rarr;</NuxtLink>
-        </div>
-        <nc-button class="hero__announcement-button" to="/incubator/2026" color="primary" variant="primary" style="align-self: center;">Learn More</nc-button>
-      </div>
-    </nc-announcement>
   </nc-hero>
 
-  <!-- TODO: [CCM-129] Add Call for Proposals section (Panel 2) when application form URL is available -->
-  <!-- TODO: [CCM-129] Add Webinars section (Panel 3) when webinar signup URL is available -->
+  <nc-base-section id="call-for-proposals">
+    <h2>Call for Proposals: Data Commons for Indigenous Languages and Cultures</h2>
+    <p>The Open Data Policy Lab invites changemakers around the world to join us in developing data commons for Indigenous languages and cultures.</p>
+    <nc-button to="/incubator/2026/application" color="base" variant="primary">Apply Now</nc-button>
+  </nc-base-section>
 
-  <nc-cta id="cta" :single-column="true">
-    <div class="cta-panel"
-      width="narrow">
-      <div class="panel-header">
-        <h2 class="padding-bottom:s">FAQs</h2>
-        <div class="stack">
-          <div>
-            <p>Have questions about the New Commons Incubator?</p>
-            <p>Check out our FAQ page for answers about the programme, eligibility, and how to apply.</p>
-          </div>
-          <NuxtLink to="/faq" class="button" color="white" variant="link">Read More <nc-arrow-link-up /></NuxtLink>
-        </div>
+  <nc-base-section color="faded">
+    <div class="two-column">
+      <div class="stack">
+        <h2>Join Our Informational Webinars</h2>
+        <p>Interested in applying for the Incubator for Indigenous Languages and Cultures? Join our informational webinars for more information about the application process and an open Q&A.</p>
+        <nc-button to="/incubator/2026/webinar" color="base" variant="primary">Sign Up</nc-button>
+      </div>
+      <div class="stack">
+        <h2>FAQ</h2>
+        <p>Have questions about the Incubator? Check out our FAQ page for all the answers you need to get started!</p>
+        <nc-button to="/faq" color="base" variant="primary">Read More</nc-button>
       </div>
     </div>
-  </nc-cta>
+  </nc-base-section>
 
   <nc-base-section id="initiatives">
-    <h2>Initiatives</h2>
+    <h2>New Commons Initiatives</h2>
     <div class="initiatives-cards">
       <nc-initiative-card
         v-for="initiative in initiatives"
@@ -62,6 +49,7 @@
 
   <nc-base-section v-if="resources?.length" id="resources-section" color="faded">
     <h2>Resources</h2>
+    <p>Tools, methods, and examples of data commons in the AI era.</p>
     <div class="grid resource-grid">
       <nc-resource-card
         v-for="resource in resources"
@@ -72,23 +60,21 @@
   </nc-base-section>
 
   <nc-blog-section id="blog" :posts="blogposts" />
-
 </template>
 
 <script setup>
-
 const initiatives = useInitiatives()
 
-const { data: blogposts } = await useAsyncData('blogposts', () => queryCollection('blogposts').limit(3).all())
+const { data: blogposts } = await useAsyncData('blogposts', () =>
+  queryCollection('blogposts').order('date', 'DESC').limit(3).all()
+)
 
 const { data: resources } = await useAsyncData('homepage-resources', () =>
   queryCollection('resources').limit(3).all()
 )
-
 </script>
 
 <style scoped lang="scss">
-
 .hero__image-div {
   @media (max-width: 1120px) {
     display: none;
@@ -112,63 +98,14 @@ const { data: resources } = await useAsyncData('homepage-resources', () =>
   }
 }
 
-.hero__announcement {
-  text-align: left !important;
-  padding: var(--space-m) var(--space-l);
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
 
-  * {
-    margin-block: 0;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
   }
-
-  h3 {
-    font-size: var(--size-0);
-    font-weight: 800;
-    color: var(--base-color);
-    text-transform: uppercase;
-  }
-
-  h2 {
-    font-size: var(--size-2);
-    font-weight: 300;
-    color: var(--base-color);
-  }
-
-  p {
-    font-size: var(--size-0);
-    font-weight: 300;
-    color: var(--base-color);
-    margin-block: var(--space-xs);
-  }
-}
-
-#cta .cta-panel {
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-#cta .cta-panel .panel-header {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  color: var(--white-color);
-  background: url('/assets/patterns/squares.svg') left top no-repeat, #0E2F40;
-  background-size: contain;
-  border-radius: 8px;
-  padding: var(--space-2xl-3xl);
-  :deep(svg path) {
-    stroke: var(--white-color);
-  }
-  @media (min-width: 1120px) {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
-#cta .cta-panel .panel-header > * {
-  flex: 1;
 }
 
 .initiatives-cards {
@@ -181,25 +118,11 @@ const { data: resources } = await useAsyncData('homepage-resources', () =>
   --_grid-min-width: 300px;
 }
 
-@keyframes horizontal{
-  0% {
-    translate: 0%;
-  }
-
-  25%{
-    translate: 2%;
-  }
-
-  50%{
-    translate: 0%;
-  }
-
-  75%{
-    translate: -2%;
-  }
-
-  100% {
-    translate: 0%;
-  }
+@keyframes horizontal {
+  0% { translate: 0%; }
+  25% { translate: 2%; }
+  50% { translate: 0%; }
+  75% { translate: -2%; }
+  100% { translate: 0%; }
 }
 </style>

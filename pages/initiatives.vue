@@ -1,8 +1,6 @@
 <template>
-  <nc-base-section id="initiatives-header">
-    <h4 class="subtitle">Our Initiatives</h4>
-    <h1 class="title">Initiatives</h1>
-    <p class="tagline">Explore New Commons initiatives supporting data commons for responsible AI.</p>
+  <nc-base-section id="initiatives-header" background-color="transparent">
+    <h1 class="title">New Commons Initiatives</h1>
   </nc-base-section>
 
   <nc-base-section>
@@ -24,24 +22,10 @@ const initiatives = useInitiatives()
 </script>
 
 <style scoped>
-.subtitle {
-  font-size: var(--size-0);
-  color: var(--primary-color);
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: var(--space-xs-s);
-}
-
 .title {
   margin-bottom: var(--space-l-xl);
   font-weight: 600;
   font-size: var(--size-4);
-}
-
-.tagline {
-  font-size: var(--size-1);
-  color: var(--base-color-70-tint);
-  font-weight: 300;
 }
 
 .initiatives-grid {
