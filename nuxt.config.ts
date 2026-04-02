@@ -74,7 +74,7 @@ export default defineNuxtConfig({
     '/the-prize': { redirect: '/incubator/2026' },
     '/the-incubator': { redirect: '/incubator/2026' },
     '/incubator': { redirect: '/incubator/2026' },
-    '/winners': { redirect: '/the-2025-challenge' },
+    '/winners': { redirect: '/challenge-2025' },
   },
   experimental: {
     clientFallback: true

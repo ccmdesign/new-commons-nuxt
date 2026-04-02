@@ -3,7 +3,7 @@ export const initiatives = [
     title: 'The 2025 Challenge',
     description: 'The inaugural New Commons Challenge awarded two $100,000 prizes to teams building data commons for responsible AI development.',
     status: 'Completed',
-    to: '/the-2025-challenge',
+    to: '/challenge-2025',
     image: '/assets/patterns/hero.jpg',
   },
   {

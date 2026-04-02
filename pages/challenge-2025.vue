@@ -5,9 +5,12 @@
         <h2 class="h1 text-align:center">Overview</h2>
         <div class="switcher">
           <div>
-            <p>The 2025 New Commons Challenge awarded two $100,000 prizes to foster data commons for responsible AI development. The first award went to the <strong>Malawi Voice Data Commons Project</strong>, developed by the New York University Peace Research and Education Program and Ushahidi, for the development of a new data commons. The second award went to the <strong>Amazon Rainforest Evolution Index</strong>, developed by CERTI Amazonia, for the enhancement of an existing data commons.</p>
-              <p>The awards were announced on September 25, 2025 during the 80<sup><small>th</small></sup> UN General Assembly as part of the Digital@UNGA program. The Challenge was made possible with the support of our partners and international observer UNESCO.</p>
-              <p>Below you will find details on each awardee and honorary distinction, including project descriptions and contact information for those interested in learning more or offering support.</p>
+            <p>The New Commons Challenge was a global initiative led by Microsoft and the Open Data Policy Lab, in partnership with DirectRelief, the Harvard Institutional Data Initiative, and UNESCO (international observer).</p>
+              <p>The Challenge sought to support universities, libraries, civil society, and technologists to build data ecosystems that fuel public-interest AI. It focused on supporting new and existing data commons across two critical domains: localized decision-making and humanitarian response.</p>
+              <p>On September 25, 2025, the Challenge awarded two $100,000 prizes. The first of these awards went to the <strong>Malawi Voice Data Commons Project</strong>&mdash;developed by the New York University Peace Research and Education Program and Ushahidi&mdash;for the development of a data commons. The second award went to the <strong>Amazon Rainforest Evolution Index</strong>, developed by CERTI Amazonia, for the enhancement of an existing data commons.</p>
+              <p>The award ceremony took place as part of the broader 80<sup><small>th</small></sup> UN General Assembly events and was an affiliate session of the Digital@UNGA program.</p>
+              <p>Information on each grantee and special distinction can be found below. For each grantee, we provide a brief description of their projects taken from their proposals and then information about how they can be contacted, should you be interested in learning more about their work or offering support.</p>
+              <p>We thank our partners DirectRelief and the Harvard Institutional Data Initiative, as well as our observer UNESCO, for their support.</p>
             </div>
             <div class="honors">
               <p class="honors__heading">Awardees:</p>

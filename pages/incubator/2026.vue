@@ -16,7 +16,7 @@
           <h2>Explore the 2025 New Commons Challenge</h2>
           <p>See the winning data commons and honorary distinctions from the inaugural Challenge.</p>
         </div>
-        <nc-button class="hero__announcement-button" to="/the-2025-challenge" color="primary" variant="primary" style="align-self: center;">The 2025 Challenge</nc-button>
+        <nc-button class="hero__announcement-button" to="/challenge-2025" color="primary" variant="primary" style="align-self: center;">The 2025 Challenge</nc-button>
       </div>
     </nc-announcement>
   </nc-hero>

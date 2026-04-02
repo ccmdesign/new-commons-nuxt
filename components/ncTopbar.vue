@@ -6,7 +6,7 @@
     <nav split>
       <ul class="topbar__nav | cluster">
         <li><nc-button to="/incubator/2026" color="base" variant="link">The Incubator</nc-button></li>
-        <li><nc-button to="/the-2025-challenge" color="base" variant="link">The 2025 Challenge</nc-button></li>
+        <li><nc-button to="/challenge-2025" color="base" variant="link">The 2025 Challenge</nc-button></li>
         <li><nc-button to="/#initiatives" color="base" variant="link">Initiatives</nc-button></li>
         <li><nc-button to="/resources" color="base" variant="link">Resources</nc-button></li>
         <li><nc-button to="/blog" color="base" variant="link">Blog</nc-button></li>

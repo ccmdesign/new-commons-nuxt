@@ -23,7 +23,7 @@
           <h3>New Commons Incubator</h3>
           <h2>Supporting Data Commons for Responsible AI</h2>
           <p>Learn about the Incubator programme and how to get involved in building shared data ecosystems.</p>
-          <NuxtLink to="/the-2025-challenge" style="font-size: var(--size-0); font-weight: 300; text-decoration: underline;">View the 2025 Challenge &rarr;</NuxtLink>
+          <NuxtLink to="/challenge-2025" style="font-size: var(--size-0); font-weight: 300; text-decoration: underline;">View the 2025 Challenge &rarr;</NuxtLink>
         </div>
         <nc-button class="hero__announcement-button" to="/incubator/2026" color="primary" variant="primary" style="align-self: center;">Learn More</nc-button>
       </div>

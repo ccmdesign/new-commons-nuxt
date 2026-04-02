@@ -3,7 +3,7 @@
     <nc-base-section id="blog-header" background-color="transparent">
       <h4 class="subtitle">News, Insights, and Impact</h4>  
       <h1 class="title">Blog</h1>
-      <p class="tagline">News and updates on the New Commons Challenge and its partners.</p>
+      <p class="tagline">News and updates on the New Commons.</p>
     </nc-base-section>
 
     <nc-base-section background-color="transparent">
