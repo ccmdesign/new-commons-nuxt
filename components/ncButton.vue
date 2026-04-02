@@ -20,8 +20,10 @@
 </template>
 
 <script setup>
-  import { toRefs, computed, defineProps, useAttrs } from 'vue';
-  
+  import { toRefs, computed, defineProps, useAttrs, resolveComponent } from 'vue';
+
+  const NuxtLink = resolveComponent('NuxtLink')
+
   const props = defineProps({
     label: {
       type: String,
@@ -82,7 +84,7 @@ const attrs = useAttrs()
 const defaultEl = computed(() => {
   if (attrs.href) return 'a'
   if (attrs.disabled) return 'span'
-  if (attrs.to) return 'NuxtLink'
+  if (attrs.to) return NuxtLink
   return 'button'
 })
 
