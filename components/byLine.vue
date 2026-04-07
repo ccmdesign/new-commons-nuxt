@@ -20,7 +20,7 @@ const { openCookieModal } = useCookieControl();
   display: grid;
   grid-template-columns: subgrid;
   grid-column: full-start / full-end;
-  font-size: var(--size--2);
+  font-size: var(--size--1);
   padding-block: var(--space-l) var(--space-s);
 }
 

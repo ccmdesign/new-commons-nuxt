@@ -24,18 +24,11 @@
   </nc-call-for-proposals>
 
   <nc-base-section color="faded" size="l">
-    <div class="two-column">
-      <div class="stack">
-        <h2>Join Our Informational Webinars</h2>
-        <p>Interested in applying for the Incubator for Indigenous Languages and Cultures? Join our informational webinars for more information about the application process and an open Q&A.</p>
-        <nc-button to="/incubator/2026/webinar" color="base" variant="primary">Sign Up</nc-button>
-      </div>
-      <div class="stack">
-        <h2>FAQ</h2>
-        <p>Have questions about the Incubator? Check out our FAQ page for all the answers you need to get started!</p>
-        <nc-button to="/faq" color="base" variant="primary">Read More</nc-button>
-      </div>
-    </div>
+    <nc-banner
+      title="FAQ"
+      description="Have questions about the Incubator? Check out our FAQ page for all the answers you need to get started!"
+      to="/faq"
+    />
   </nc-base-section>
 
   <nc-base-section id="initiatives" size="l">
@@ -51,19 +44,12 @@
     </div>
   </nc-base-section>
 
-  <nc-base-section v-if="resources?.length" id="resources-section" color="faded" size="l">
-    <div class="stack">
-      <h2>Resources</h2>
-      <p>Tools, methods, and examples of data commons in the AI era.</p>
-      <div class="grid resource-grid">
-        <nc-resource-card
-          v-for="resource in resources"
-          :key="resource.slug"
-          :content="resource"
-        />
-      </div>
-    </div>
-  </nc-base-section>
+  <nc-resource-grid
+    id="resources-section"
+    :resources="resources"
+    tagline="Tools, methods, and examples of data commons in the AI era."
+    color="faded"
+  />
 
   <nc-blog-section id="blog" :posts="blogposts" />
 </template>
@@ -104,24 +90,10 @@ const { data: resources } = await useAsyncData('homepage-resources', () =>
   }
 }
 
-.two-column {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-}
-
 .initiatives-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--base-gutter);
-}
-
-.resource-grid {
-  --_grid-min-width: 300px;
 }
 
 @keyframes horizontal {

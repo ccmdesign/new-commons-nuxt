@@ -7,7 +7,7 @@ const claritySnippet = `!function(c,l,a,r,i,t,y){function sync(){(new Image).src
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/robots', 'nuxt-gtag', '@weareheavy/nuxt-cookie-consent'],
+  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/robots', 'nuxt-gtag', '@weareheavy/nuxt-cookie-consent', 'nuxt-icon'],
   gtag: {
     id: 'G-DDSZL43JDX'
   },
