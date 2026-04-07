@@ -3,7 +3,7 @@
       <div class="stack">
         <template v-if="showTitles">
           <h2>Blog</h2>
-          <p>News and updates on the New Commons Challenge and its partners</p>
+          <p>News and updates on the New Commons.</p>
         </template>
         <div class="blog__content-cards">
           <nc-blog-card v-for="i in posts" :key="i.id" :content="i" />

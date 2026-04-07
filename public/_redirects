@@ -2,7 +2,8 @@
 /the-prize      /incubator/2026        301
 /the-incubator  /incubator/2026        301
 /incubator      /incubator/2026        301
-/winners        /the-2025-challenge    301
+/winners              /challenge-2025    301
+/the-2025-challenge   /challenge-2025    301
 
 # SPA fallback — must be last
 /*              /index.html            200

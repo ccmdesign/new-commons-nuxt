@@ -26,9 +26,7 @@
         />
         <p v-else class="winner-card__description">No description available.</p>
 
-        <div class="winner-card__actions | padding-top:m">
-          <span class="winner-card__cta">View details</span>
-        </div>
+        <ncButton el="span" label="View details" class="winner-card__cta | margin-top:s" />
       </NuxtLink>
     </div>
 </template>
@@ -59,37 +57,27 @@ const props = defineProps({
 
 .winner-card {
   background: #fff;
-  border-radius: 12px;
+  border-radius: var(--border-radius-l);
   border: 1px solid var(--base-color-05-tint);
-  // box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  padding: var(--space-xs);
   height: 100%;
   position: relative;
   text-decoration: none;
   color: inherit;
   transition: box-shadow 150ms ease, transform 150ms ease;
+  gap: var(--space-xs);
 }
 
 .winner-card__image {
-  border-radius: var(--border-radius-s, 8px);
+  border-radius: var(--border-radius-s);
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: contain;
-  margin-bottom: 1rem;
 }
 
-.winner-card__header {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 0.5rem;
+.winner-card__description {
+  font-size: var(--size-0);
 }
-
-  .winner-card__description {
-    font-size: var(--size-0);
-  }
 
 .winner-card__country {
   background: var(--primary-color);
@@ -105,12 +93,9 @@ const props = defineProps({
 
 .winner-card__cta {
   margin-top: auto;
-  font-weight: 600;
-  color: var(--primary-color);
 }
 
 .winner-card:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-  transform: translateY(-4px);
 }
 </style>

@@ -16,8 +16,8 @@
     <nc-collapse name="program" v-for="item in faq.program" :key="item.summary" :data="item" />
   </nc-faq-section>
   <nc-faq-section class="last-item">
-    <h3 class="h3">Data Commons &amp; Governance</h3>
-    <nc-collapse name="governance" v-for="item in faq.governance" :key="item.summary" :data="item" />
+    <h3 class="h3">Submissions</h3>
+    <nc-collapse name="submissions" v-for="item in faq.submissions" :key="item.summary" :data="item" />
   </nc-faq-section>
 </template>
 
@@ -25,125 +25,146 @@
 const faq = {
   about: [
     {
-      summary: 'What is the New Commons Incubator?',
+      summary: 'Why should I apply for the Incubator?',
       content: `
-        <p>The New Commons Incubator is a programme run by the
-           <a href="https://opendatapolicylab.org/" target="_blank" rel="noopener">Open Data Policy Lab</a>,
-           a collaboration between The GovLab at New York University and Microsoft. It supports
-           teams building and sustaining data commons for responsible AI development through
-           funding, mentorship, and technical resources.</p>
-      `
-    },
-    {
-      summary: 'How is the Incubator different from the New Commons Challenge?',
-      content: `
-        <p>The New Commons Challenge was a competitive prize programme that awarded two $100,000
-           prizes to outstanding data commons projects. The Incubator builds on that foundation
-           by taking a cohort-based approach, providing sustained support to multiple teams as
-           they develop or strengthen their data commons over time.</p>
-      `
-    },
-    {
-      summary: 'What do Incubator participants receive?',
-      content: `
-        <p>Each selected team receives:</p>
         <ul>
-          <li>Grant funding to support the development or enhancement of their data commons</li>
-          <li>Mentorship from experts in data governance, AI ethics, and commons management</li>
-          <li>Technical support for data infrastructure, interoperability, and platform development</li>
-          <li>Access to the Open Data Policy Lab's global network of policymakers, technologists, and data practitioners</li>
+          <li>Join a first-of-its-kind incubator for the next generation of data commons</li>
+          <li>Become part of an international community of linguistic and cultural data commons leaders</li>
+          <li>Learn emerging governance models and gain access to technical infrastructure and expertise</li>
+          <li>Receive mentorship from international experts</li>
+          <li>Share your work with global funders through the final showcase</li>
         </ul>
+      `
+    },
+    {
+      summary: 'What are the key deadlines and program milestones?',
+      content: `
+        <p>The Incubator will follow the schedule outlined below:</p>
+        <ul>
+          <li><strong>Applications Open:</strong> May (TBC)</li>
+          <li><strong>Informational Webinars:</strong> w/o 25 May 2026 and 1 June 2026</li>
+          <li><strong>Applications Close:</strong> 10 July 2026</li>
+          <li><strong>Cohort Selection:</strong> Late August</li>
+          <li><strong>Cohort Onboarding:</strong> Early September</li>
+          <li><strong>In-Person Kickoff:</strong> w/o 14 September 2026</li>
+          <li><strong>Virtual Incubation Programming:</strong> September 2026 &ndash; January 2027</li>
+          <li><strong>Final Showcase:</strong> February 2027</li>
+        </ul>
+      `
+    },
+    {
+      summary: 'How will you evaluate submissions?',
+      content: `
+        <p>Our jury will evaluate submissions based on the following criteria:</p>
+        <ul>
+          <li><strong>Opportunity (30%):</strong> What's the opportunity?</li>
+          <li><strong>Relevance (20%):</strong> How does the data commons support an Indigenous community?</li>
+          <li><strong>Capacity (20%):</strong> What assets do you have available to manage this project?</li>
+          <li><strong>Governance (20%):</strong> How will this effort be commonly governed?</li>
+          <li><strong>Team (10%):</strong> Who is available to participate in the Incubator?</li>
+        </ul>
+        <p>More details can be found in the application form.</p>
       `
     },
   ],
   eligibility: [
     {
-      summary: 'Who can apply to the Incubator?',
+      summary: 'How far along does my data commons concept need to be?',
       content: `
-        <p>We welcome applications from nonprofits, academic institutions, startups, and
-           development organisations working to build or strengthen data commons for responsible
-           AI. Applicants must be affiliated with an established institution capable of managing funds.</p>
+        <p>Concepts submitted to the Incubator can be in the early stages but must be thought out
+           enough so that a proposal can be completed and far enough along that there is a commitment
+           from your organization for its implementation.</p>
+        <p>Some concepts may be brand new initiatives whereas others may be extensions of existing
+           products or programs.</p>
+      `
+    },
+    {
+      summary: 'How much data literacy is required of incubator participants?',
+      content: `
+        <p>Participants in this program are not expected to be data scientists or have a background
+           in data science. Applicants should know enough about data that they can articulate and
+           understand the theory of change of their data innovation.</p>
+      `
+    },
+    {
+      summary: 'What types of organizations can participate?',
+      content: `
+        <p>We feel this initiative may be most applicable to nonprofit organizations, government
+           organizations, academic institutions, start-ups, and development organizations. For-profit
+           entities submitting applications may be asked to undergo extra review to ensure their
+           concept note aids Indigenous communities.</p>
       `
     },
     {
       summary: 'Are there geographic restrictions?',
       content: `
-        <p>The Incubator is a global programme. We welcome applications from organisations
-           worldwide, though we may be unable to deliver support to entities subject to
-           sanctions under U.S. law.</p>
-      `
-    },
-    {
-      summary: 'Can government agencies apply?',
-      content: `
-        <p>Government entities may not apply as lead applicants but may participate as
-           collaborators or partners on a project.</p>
-      `
-    },
-    {
-      summary: 'How do I apply?',
-      content: `
-        <!-- TODO: [CCM-129] Add application form URL when available -->
-        <p>Applications are submitted through our online form. You will need to provide
-           information about your organisation, your proposed data commons project, and
-           a letter of institutional support. Check the
-           <a href="/incubator/2026">Incubator page</a> for the latest application details.</p>
+        <p>The Incubator is a global initiative that welcomes entries from organizations across
+           continents. We hope to receive applicants from diverse regions and contexts.</p>
+        <p>We welcome any entry, though we may be unable to deliver programming to certain entities
+           and individuals who are subject to sanctions and other restrictions under U.S. law, such
+           as those based in Cuba, Iran, North Korea, Russia, Syria, and the Crimea, Donetsk, and
+           Luhansk regions of Ukraine.</p>
       `
     },
   ],
   program: [
     {
-      summary: 'How long is the Incubator programme?',
+      summary: 'Do Incubator participants receive funding?',
       content: `
-        <p>The Incubator programme provides sustained support to selected teams. Teams are
-           expected to make significant progress on their data commons within the programme
-           timeframe, with regular check-ins and milestones along the way.</p>
+        <p>Incubator participants will have access to a variety of resources and the opportunity to
+           present their project to global funders. Funding to implement the project is not part of
+           the Incubator's offerings.</p>
       `
     },
     {
-      summary: 'What kind of mentorship is provided?',
+      summary: 'What is the expected time commitment?',
       content: `
-        <p>Selected teams are paired with mentors from the Open Data Policy Lab network who
-           have expertise in data governance, AI ethics, and commons management. Mentorship
-           sessions are held regularly throughout the programme to help teams navigate
-           technical, governance, and sustainability challenges.</p>
+        <p>The Incubator will include an in-person kickoff followed by weekly 2-hour programming
+           for 4 months. At its conclusion, participants will present their work at our showcase.</p>
       `
     },
     {
-      summary: 'What technical support is available?',
+      summary: 'What language will the programming be delivered in?',
       content: `
-        <p>Teams receive hands-on technical assistance with data infrastructure,
-           interoperability standards, and platform development. The specifics are tailored
-           to each team's needs and stage of development.</p>
+        <p>All programming will be delivered in English. There will be a public writing component
+           of the programming, and if program participants would like they can publish this in their
+           local language.</p>
+      `
+    },
+    {
+      summary: 'When will programming take place?',
+      content: `
+        <p>We plan to schedule all live engagements on a rotational schedule to accommodate the
+           various timezones of program participants and will work with all participants to ensure
+           that no one is consistently joining engagements during an inconvenient date or time.</p>
       `
     },
   ],
-  governance: [
+  submissions: [
     {
-      summary: 'What is a data commons?',
+      summary: 'What is a "letter of support"?',
       content: `
-        <p>A data commons is a shared resource where data is collectively managed and made
-           accessible for the public good. Data commons for AI provide the foundational datasets
-           and governance structures needed to develop artificial intelligence responsibly,
-           ensuring that AI systems serve broad societal interests.</p>
+        <p>A letter of support is any letter, on institutional letterhead, from a representative of
+           an institution indicating that they are aware of the concept and their institution will
+           support a representative's participation in the Incubator. It is our way of ensuring that
+           a representative is able to participate in the full Incubator programming.</p>
       `
     },
     {
-      summary: 'What governance structures are expected for data commons?',
+      summary: 'What if I am unable to submit or access the application form?',
       content: `
-        <p>Applicants should articulate how their data commons will be responsibly governed,
-           including who will be involved in oversight and strategic decisions about data
-           access and use. Strong governance ensures that data is managed transparently
-           and equitably.</p>
+        <p>If, for any reason, you are unable to submit the form, you may download a text version
+           of the form here and submit your responses to the questions as a Word doc or PDF file to
+           <a href="mailto:newcommons@opendatapolicylab.org">newcommons@opendatapolicylab.org</a>.</p>
       `
     },
     {
-      summary: 'Are there specific data governance frameworks we should follow?',
+      summary: 'Can my organization submit multiple applications?',
       content: `
-        <p>While we do not mandate a specific framework, applicants may find it useful to
-           refer to the Open Data Policy Lab's
-           <a href="https://incubator.opendatapolicylab.org/files/data-commons-for-ai-blueprint.pdf" target="_blank" rel="noopener">
-           Blueprint to Unlock New Data Commons for AI</a> for guidance on governance approaches.</p>
+        <p>Your organization may only submit one application. If you mistakenly submitted an
+           application early and need to delete your submission before submitting a revision,
+           please contact us at
+           <a href="mailto:newcommons@opendatapolicylab.org">newcommons@opendatapolicylab.org</a>.</p>
       `
     },
   ],

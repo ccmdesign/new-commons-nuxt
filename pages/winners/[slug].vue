@@ -2,7 +2,7 @@
   <nc-hero>
     <div class="hero__content">
       <div class="panel stack">
-        <nuxt-link to="/the-2025-challenge" class="h4 subtitle">← Back to The 2025 Challenge</nuxt-link>
+        <nuxt-link to="/challenge-2025" class="h4 subtitle">← Back to The 2025 Challenge</nuxt-link>
         <hgroup>
           <p class="h3 text-transform:uppercase text-color:primary">{{ winner.prize }} | {{ winner.brow }}</p>
           <h2 class="h1">{{ winner.title }}</h2>

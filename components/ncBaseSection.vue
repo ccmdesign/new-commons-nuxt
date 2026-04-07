@@ -51,7 +51,7 @@ const props = defineProps({
 }
 
 .nc-base-section[color="faded"] {
-  --_section-background-color: var(--base-color-07-tint);
+  --_section-background-color: var(--base-color-02-tint);
   --_section-color: var(--base-color);
 }
 

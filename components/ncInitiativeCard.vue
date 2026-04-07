@@ -1,7 +1,7 @@
 <template>
   <component
     :is="to ? resolveComponent('NuxtLink') : 'div'"
-    class="initiative-card | stack"
+    class="initiative-card"
     :to="to || undefined"
   >
     <div class="initiative-card__image-wrapper">
@@ -18,7 +18,7 @@
     </div>
     <h3 class="initiative-card__title">{{ title }}</h3>
     <p class="initiative-card__description">{{ description }}</p>
-    <span v-if="to" class="initiative-card__cta">Learn more</span>
+    <ncButton v-if="to" el="span" label="Learn more" class="initiative-card__cta | margin-top:s" />
   </component>
 </template>
 
@@ -51,10 +51,10 @@ const statusSlug = computed(() => {
   text-decoration: none;
   color: inherit;
   transition: box-shadow 150ms ease;
-  --_stack-space: var(--space-xs);
+  gap: var(--space-xs);
 }
 
-a.initiative-card:hover {
+.initiative-card:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
@@ -97,7 +97,7 @@ a.initiative-card:hover {
 }
 
 .initiative-card__description {
-  font-size: var(--size--1);
+  font-size: var(--size-0);
   color: var(--base-color-70-tint);
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -107,7 +107,5 @@ a.initiative-card:hover {
 
 .initiative-card__cta {
   margin-top: auto;
-  font-weight: 600;
-  color: var(--primary-color);
 }
 </style>

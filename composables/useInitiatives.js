@@ -1,17 +1,17 @@
 export const initiatives = [
   {
-    title: 'The 2025 Challenge',
-    description: 'The inaugural New Commons Challenge awarded two $100,000 prizes to teams building data commons for responsible AI development.',
-    status: 'Completed',
-    to: '/the-2025-challenge',
+    title: 'The New Commons Incubator for Indigenous Languages and Cultures',
+    description: 'Strengthening the pipeline of data commons for Indigenous Languages and Cultures in the AI era.',
+    status: 'Active',
+    to: '/incubator/indigenous-languages',
     image: '/assets/patterns/hero.jpg',
   },
   {
-    title: 'Indigenous Languages',
-    description: 'Supporting the development of data commons that preserve and promote indigenous languages in the age of AI.',
-    status: 'Coming Soon',
-    to: '/incubator/indigenous-languages',
-    image: '/assets/patterns/hero.jpg',
+    title: 'The 2025 New Commons Challenge',
+    description: 'Supporting new and existing data commons for humanitarian response and localized decision making.',
+    status: 'Completed',
+    to: '/challenge-2025',
+    image: '/images/092525_HL011_New-Commons_Microsoft_Malawi Voice Data Commons.webp',
   },
 ]
 

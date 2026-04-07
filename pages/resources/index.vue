@@ -2,7 +2,7 @@
   <nc-base-section id="resources-header">
     <h4 class="subtitle">Reports, Toolkits, and More</h4>
     <h1 class="title">Resources</h1>
-    <p class="tagline">Explore resources from the New Commons initiative.</p>
+    <p class="tagline">The Open Data Policy Lab's resources on data commons in the AI era.</p>
   </nc-base-section>
 
   <nc-base-section>
@@ -42,7 +42,7 @@ useHead({
   title: 'Resources | New Commons',
 })
 useSeoMeta({
-  description: 'Explore reports, toolkits, and resources from the New Commons initiative.',
+  description: 'The Open Data Policy Lab\'s resources on data commons in the AI era.',
 })
 
 const { data: resources } = await useAsyncData('resources', () =>

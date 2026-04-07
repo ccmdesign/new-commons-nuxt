@@ -1,80 +1,58 @@
 <template>
   <nc-hero>
     <div class="hero__content">
-      <div class="panel">
-        <p class="hero__brow">The New Commons Incubator</p>
-        <h1>Building a Shared Digital Future</h1>
-        <p>The New Commons Incubator is a programme run by the Open Data Policy Lab that
-           supports teams building and sustaining data commons for responsible AI development.
-           Through funding, mentorship, and technical resources, we help turn promising ideas
-           into sustainable shared data ecosystems that serve the public good.</p>
+      <div class="panel | stack">
+        <p class="hero__brow">BUILDING A SHARED DIGITAL FUTURE</p>
+        <h1>The New Commons Incubator</h1>
+        <p>The Incubator is a global effort led by the Open Data Policy Lab that aims to unlock data commons for public-interest AI.</p>
+        <p>The Incubator addresses a critical issue: the limited access to diverse and high-quality datasets, which is essential for AI to reach its full potential. By creating and improving data commons, which are collaboratively governed data ecosystems that pool and provide responsible access to diverse, high-quality datasets, the gap in AI development can be filled.</p>
+        <p>Through structured programming, the Incubator will develop a pipeline of trusted, community-governed data commons that enable responsible AI development while safeguarding data rights, context, and community agency.</p>
       </div>
     </div>
-    <nc-announcement color="primary" class="hero__announcement">
-      <div class="switcher">
-        <div style="flex: 3;">
-          <h2>Explore the 2025 New Commons Challenge</h2>
-          <p>See the winning data commons and honorary distinctions from the inaugural Challenge.</p>
-        </div>
-        <nc-button class="hero__announcement-button" to="/the-2025-challenge" color="primary" variant="primary" style="align-self: center;">The 2025 Challenge</nc-button>
-      </div>
-    </nc-announcement>
   </nc-hero>
 
-  <!-- TODO: [CCM-129] Add Call for Proposals section when application form URL is available -->
-  <!-- TODO: [CCM-129] Add Webinars section when webinar signup URL is available -->
+  <nc-call-for-proposals>
+    <template #secondary>
+      <h3>Join Our Informational Webinars</h3>
+      <p>Interested in applying for the Incubator? Join one of our informational webinars for more information about the application process and an open Q&amp;A.</p>
+      <nc-button to="/incubator/2026/webinar" color="primary" variant="primary">Sign Up</nc-button>
+    </template>
+  </nc-call-for-proposals>
 
-  <nc-base-section>
-    <h2>Why the Incubator?</h2>
-    <div class="switcher">
-      <div class="stack">
-        <p>As artificial intelligence reshapes economies and societies, the data that powers
-           it must be governed responsibly. Data commons offer a way to collectively manage
-           shared data resources so that AI development serves broad public interests rather
-           than narrow ones.</p>
-        <p>The New Commons Incubator builds on the success of the 2025 New Commons Challenge,
-           which demonstrated the global demand for support in creating and sustaining data
-           commons. The Incubator takes a deeper, hands-on approach, working closely with
-           selected teams to address the technical, governance, and sustainability challenges
-           that come with building shared data infrastructure.</p>
-        <p>By supporting diverse teams around the world, the Incubator aims to grow an
-           ecosystem of data commons that can serve as the foundation for responsible AI
-           across sectors and regions.</p>
-      </div>
+  <nc-base-section size="l">
+    <div class="stack">
+      <h2>Why the Incubator?</h2>
+      <p>AI models need access to diverse, high-quality datasets so they do not reinforce bias, deepen inequality, and return less accurate, more imprecise results. Yet, access to data remains fragmented and siloed.</p>
+      <p>Data commons offer a solution by providing the critical infrastructure needed for responsible AI development. They pool diverse, high quality datasets from multiple sectors that are then managed through participatory governance.</p>
+      <p>The Incubator will help transform concepts into viable, sustainable models. It will support data commons proposals by delivering training, mentorship, and direct connections with funders.</p>
     </div>
   </nc-base-section>
 
-  <nc-base-section color="faded">
-    <h2>Programmatic Offerings</h2>
-    <div class="switcher">
-      <div class="stack">
-        <p>The Incubator provides selected teams with a comprehensive package of support
-           designed to help them move from concept to sustainable implementation. Over the
-           course of the programme, participants receive:</p>
-        <ul>
-          <li><strong>Funding</strong> — Grant funding to support the development or enhancement of data commons projects</li>
-          <li><strong>Mentorship &amp; Guidance</strong> — Regular access to experts in data governance, AI ethics, and commons management from the Open Data Policy Lab network</li>
-          <li><strong>Technical Support</strong> — Hands-on assistance with data infrastructure, interoperability standards, and platform development</li>
-          <li><strong>Network Access</strong> — Connection to the Open Data Policy Lab's global network of policymakers, technologists, and data practitioners</li>
-          <!-- TODO: [CCM-129] Update programme duration when confirmed (currently TBD) -->
-        </ul>
-      </div>
+  <nc-base-section color="faded" size="l">
+    <div class="stack">
+      <h2>Programmatic Offerings</h2>
+      <p>The Incubator is a structured program designed to support data leaders in setting up a data commons. It will include an in-person kickoff event to set stage, virtual programming and mentorship, and a final showcase.</p>
+      <p>Throughout the programming, participants will:</p>
+      <ul>
+        <li>Design and implement accountable and context-specific data governance frameworks</li>
+        <li>Build AI-ready datasets grounded in community consent and social license</li>
+        <li>Access technical infrastructure and expertise</li>
+        <li>Connect with sustainable funding pathways</li>
+      </ul>
     </div>
   </nc-base-section>
 
-  <!-- TODO: [CCM-129] Add Call for Proposals repeat section when application form URL is available -->
-
-  <nc-base-section>
-    <div class="cta-links | stack">
-      <div class="cta-link-panel">
+  <nc-base-section color="faded" size="l">
+    <div class="two-column">
+      <div class="cta-link-panel | stack">
         <h2>Helpful Tips</h2>
-        <p>Explore our resources for guidance on data commons, governance frameworks, and best practices for responsible AI development.</p>
+        <p>The Open Data Policy Lab has several resources and examples that can be used to support the development of your concept note.</p>
         <nc-button to="/resources" color="base" variant="primary">View Resources</nc-button>
       </div>
-      <div class="cta-link-panel">
-        <h2>Have Questions?</h2>
-        <p>Check out our FAQ page for answers about the Incubator, eligibility, application process, and more.</p>
-        <nc-button to="/faq" color="base" variant="primary">Read the FAQ</nc-button>
+      <div class="cta-link-panel | stack">
+        <h2>FAQ</h2>
+        <p>Have questions about the Incubator? Check out our FAQ page for all the answers you need to get started!</p>
+        <nc-button to="/faq" color="base" variant="primary">Read More</nc-button>
       </div>
     </div>
   </nc-base-section>
@@ -85,7 +63,7 @@ useHead({
   title: 'New Commons Incubator 2026 | New Commons',
 })
 useSeoMeta({
-  description: 'The New Commons Incubator supports teams building data commons for responsible AI through funding, mentorship, and technical resources.',
+  description: 'The New Commons Incubator is a global effort led by the Open Data Policy Lab that aims to unlock data commons for public-interest AI.',
 })
 </script>
 
@@ -105,46 +83,19 @@ useSeoMeta({
   }
 }
 
-.switcher {
-  --_switcher-space: var(--space-s);
-}
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
 
-.cta-links {
-  --_stack-space: var(--space-l);
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .cta-link-panel {
   padding: var(--space-l-2xl);
   border: 1px solid var(--black-color-10-tint);
   border-radius: var(--border-radius-m);
-}
-
-.hero__announcement {
-  text-align: left !important;
-  padding: var(--space-m) var(--space-l);
-
-  * {
-    margin-block: 0;
-  }
-
-  h3 {
-    font-size: var(--size-0);
-    font-weight: 800;
-    color: var(--base-color);
-    text-transform: uppercase;
-  }
-
-  h2 {
-    font-size: var(--size-2);
-    font-weight: 300;
-    color: var(--base-color);
-  }
-
-  p {
-    font-size: var(--size-0);
-    font-weight: 300;
-    color: var(--base-color);
-    margin-block: var(--space-xs);
-  }
 }
 </style>
