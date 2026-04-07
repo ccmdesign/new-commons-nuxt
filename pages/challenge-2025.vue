@@ -53,17 +53,21 @@
     <nc-winners :winners="awardees" />
   </nc-base-section>
 
-  <nc-base-section v-if="honoraryDistinctions.length">
-    <h2 class="text-align:center">Honorary Distinctions</h2>
-    <nc-winners :winners="honoraryDistinctions" />
+  <nc-base-section v-if="honoraryDistinctions.length" size="l">
+    <div class="stack">
+      <h2 class="text-align:center">Honorary Distinctions</h2>
+      <nc-winners :winners="honoraryDistinctions" />
+    </div>
   </nc-base-section>
 
-  <nc-base-section color="faded">
-    <h2>The New Commons Challenge Showcase</h2>
-    <p>The winners were announced on September 25, 2025 at the New Commons Challenge Showcase. The Showcase was held in New York City during the 80th United Nations General Assembly. The event brought together leading voices in AI and data governance for an evening filled with learning and meaningful connections to shape the future of public-interest AI.</p>
+  <nc-base-section color="faded" size="l">
+    <div class="stack">
+      <h2>The New Commons Challenge Showcase</h2>
+      <p>The winners were announced on September 25, 2025 at the New Commons Challenge Showcase. The Showcase was held in New York City during the 80th United Nations General Assembly. The event brought together leading voices in AI and data governance for an evening filled with learning and meaningful connections to shape the future of public-interest AI.</p>
+    </div>
   </nc-base-section>
 
-  <nc-base-section>
+  <nc-base-section size="l">
     <section class="winners-gallery stack">
       <h2 class="text-align:center">Celebration Highlights</h2>
       <p class="text-align:center">Scenes from the New Commons Challenge ceremony and community gatherings.</p>
@@ -88,31 +92,37 @@
     </section>
   </nc-base-section>
 
-  <nc-base-section>
-    <h2 class="text-align:center">About the Challenge</h2>
-    <!-- TODO: confirm copy with client -->
-    <p>The New Commons Challenge is an initiative to foster data commons for responsible AI development. It seeks to support projects that create, enhance, or sustain shared data resources for the public good.</p>
-    <p>
-      <nc-button
-        color="primary"
-        variant="ghost"
-        el="a"
-        :href="rulesUrl"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Read the Challenge Rules <nc-arrow-link-up /></nc-button>
-    </p>
+  <nc-base-section size="l">
+    <div class="stack">
+      <h2 class="text-align:center">About the Challenge</h2>
+      <!-- TODO: confirm copy with client -->
+      <p>The New Commons Challenge is an initiative to foster data commons for responsible AI development. It seeks to support projects that create, enhance, or sustain shared data resources for the public good.</p>
+      <p>
+        <nc-button
+          color="primary"
+          variant="ghost"
+          el="a"
+          :href="rulesUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Read the Challenge Rules <nc-arrow-link-up /></nc-button>
+      </p>
+    </div>
   </nc-base-section>
 
-  <nc-base-section color="faded">
-    <h2 class="text-align:center">Jury</h2>
-    <p class="text-align:center">The panel of experts who evaluated the New Commons Challenge submissions.</p>
-    <nc-people-grid :collection="judges" base-path="/judges" />
+  <nc-base-section color="faded" size="l">
+    <div class="stack">
+      <h2 class="text-align:center">Jury</h2>
+      <p class="text-align:center">The panel of experts who evaluated the New Commons Challenge submissions.</p>
+      <nc-people-grid :collection="judges" base-path="/judges" />
+    </div>
   </nc-base-section>
 
-  <nc-base-section>
-    <h2 class="text-align:center">International Observer</h2>
-    <nc-people-grid :collection="observers" base-path="/observers" />
+  <nc-base-section size="l">
+    <div class="stack">
+      <h2 class="text-align:center">International Observer</h2>
+      <nc-people-grid :collection="observers" base-path="/observers" />
+    </div>
   </nc-base-section>
 
 

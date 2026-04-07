@@ -11,30 +11,26 @@
     </div>
   </nc-hero>
 
-  <nc-base-section>
-    <h2>Call for Proposals: Data Commons for Indigenous Languages and Cultures</h2>
-    <p>The Open Data Policy Lab invites changemakers around the world to join us in developing data commons for Indigenous languages and cultural preservation in the AI era.</p>
-    <nc-button to="/incubator/2026/application" color="base" variant="primary">Apply Now</nc-button>
-  </nc-base-section>
+  <nc-call-for-proposals>
+    <template #secondary>
+      <h3>Join Our Informational Webinars</h3>
+      <p>Interested in applying for the Incubator? Join one of our informational webinars for more information about the application process and an open Q&amp;A.</p>
+      <nc-button to="/incubator/2026/webinar" color="primary" variant="primary">Sign Up</nc-button>
+    </template>
+  </nc-call-for-proposals>
 
-  <nc-base-section color="faded">
-    <h2>Join Our Informational Webinars</h2>
-    <p>Interested in applying for the Incubator? Join one of our informational webinars for more information about the application process and an open Q&A.</p>
-    <nc-button to="/incubator/2026/webinar" color="base" variant="primary">Sign Up</nc-button>
-  </nc-base-section>
-
-  <nc-base-section>
-    <h2>Why the Incubator?</h2>
+  <nc-base-section size="l">
     <div class="stack">
+      <h2>Why the Incubator?</h2>
       <p>AI models need access to diverse, high-quality datasets so they do not reinforce bias, deepen inequality, and return less accurate, more imprecise results. Yet, access to data remains fragmented and siloed.</p>
       <p>Data commons offer a solution by providing the critical infrastructure needed for responsible AI development. They pool diverse, high quality datasets from multiple sectors that are then managed through participatory governance.</p>
       <p>The Incubator will help transform concepts into viable, sustainable models. It will support data commons proposals by delivering training, mentorship, and direct connections with funders.</p>
     </div>
   </nc-base-section>
 
-  <nc-base-section color="faded">
-    <h2>Programmatic Offerings</h2>
+  <nc-base-section color="faded" size="l">
     <div class="stack">
+      <h2>Programmatic Offerings</h2>
       <p>The Incubator is a structured program designed to support data leaders in setting up a data commons. It will include an in-person kickoff event to set stage, virtual programming and mentorship, and a final showcase.</p>
       <p>Throughout the programming, participants will:</p>
       <ul>
@@ -46,13 +42,7 @@
     </div>
   </nc-base-section>
 
-  <nc-base-section>
-    <h2>Call for Proposals: Data Commons for Indigenous Languages and Cultures</h2>
-    <p>The Open Data Policy Lab invites changemakers around the world to join us in developing data commons for Indigenous languages and cultures.</p>
-    <nc-button to="/incubator/2026/application" color="base" variant="primary">Apply Now</nc-button>
-  </nc-base-section>
-
-  <nc-base-section color="faded">
+  <nc-base-section color="faded" size="l">
     <div class="two-column">
       <div class="cta-link-panel | stack">
         <h2>Helpful Tips</h2>

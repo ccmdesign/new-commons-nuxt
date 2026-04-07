@@ -2,7 +2,7 @@
   <component
     :is="hasLink ? 'a' : 'div'"
     v-if="content"
-    class="resource-card | stack"
+    class="resource-card"
     :href="hasLink ? getResourceLink(content) : undefined"
     :target="hasLink && isExternalLink(content) ? '_blank' : undefined"
     :rel="hasLink && isExternalLink(content) ? 'noopener noreferrer' : undefined"
@@ -15,7 +15,7 @@
     <span class="resource-card__category">{{ content.category }}</span>
     <h3 class="resource-card__title">{{ content.title }}</h3>
     <p class="resource-card__description">{{ content.description }}</p>
-    <span v-if="hasLink" class="resource-card__cta">View resource</span>
+    <ncButton v-if="hasLink" el="span" label="View resource" class="resource-card__cta | margin-top:s" />
   </component>
 </template>
 
@@ -45,7 +45,7 @@ const hasLink = computed(() => props.content && getResourceLink(props.content) !
   flex-direction: column;
   text-decoration: none;
   color: inherit;
-  --_stack-space: var(--space-xs);
+  gap: var(--space-xs);
 }
 
 .resource-card__image {
@@ -67,7 +67,7 @@ const hasLink = computed(() => props.content && getResourceLink(props.content) !
 .resource-card__title { line-height: 1.35; }
 
 .resource-card__description {
-  font-size: var(--size--1);
+  font-size: var(--size-0);
   color: var(--base-color-70-tint);
   /* Clamp to 3 lines */
   display: -webkit-box;
@@ -78,11 +78,9 @@ const hasLink = computed(() => props.content && getResourceLink(props.content) !
 
 .resource-card__cta {
   margin-top: auto;
-  font-weight: 600;
-  color: var(--primary-color);
 }
 
-a.resource-card:hover {
+.resource-card:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 </style>

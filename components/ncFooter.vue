@@ -25,6 +25,7 @@
         <h3>Partners</h3>
         <div class="logos">
           <nc-unesco-logo />
+          <nc-ms-logo />
         </div>
       </div>
     </div>
@@ -55,7 +56,7 @@
 
   p {
     margin-top: var(--space-xs-s);
-    font-size: var(--size--1);
+    font-size: var(--size-0);
     margin-bottom: var(--space-l-xl);
   }
 

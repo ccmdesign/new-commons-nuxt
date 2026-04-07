@@ -1,9 +1,9 @@
 <template>
-  <nc-base-section id="initiatives-header" background-color="transparent">
+  <nc-base-section id="initiatives-header" background-color="transparent" size="l">
     <h1 class="title">New Commons Initiatives</h1>
   </nc-base-section>
 
-  <nc-base-section>
+  <nc-base-section size="l">
     <div class="initiatives-grid">
       <nc-initiative-card
         v-for="initiative in initiatives"
@@ -12,6 +12,14 @@
       />
     </div>
   </nc-base-section>
+
+  <nc-call-for-proposals>
+    <template #secondary>
+      <h3>Join Our Informational Webinars</h3>
+      <p>Interested in applying for the Incubator? Join one of our informational webinars for more information about the application process and an open Q&amp;A.</p>
+      <nc-button to="/incubator/2026/webinar" color="primary" variant="primary">Sign Up</nc-button>
+    </template>
+  </nc-call-for-proposals>
 </template>
 
 <script setup>

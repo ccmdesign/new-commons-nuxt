@@ -15,13 +15,15 @@
     </div>
   </nc-hero>
 
-  <nc-base-section id="call-for-proposals">
-    <h2>Call for Proposals: Data Commons for Indigenous Languages and Cultures</h2>
-    <p>The Open Data Policy Lab invites changemakers around the world to join us in developing data commons for Indigenous languages and cultures.</p>
-    <nc-button to="/incubator/2026/application" color="base" variant="primary">Apply Now</nc-button>
-  </nc-base-section>
+  <nc-call-for-proposals id="call-for-proposals">
+    <template #secondary>
+      <h3>Join Our Informational Webinars</h3>
+      <p>Interested in applying for the Incubator? Join one of our informational webinars for more information about the application process and an open Q&amp;A.</p>
+      <nc-button to="/incubator/2026/webinar" color="primary" variant="primary">Sign Up</nc-button>
+    </template>
+  </nc-call-for-proposals>
 
-  <nc-base-section color="faded">
+  <nc-base-section color="faded" size="l">
     <div class="two-column">
       <div class="stack">
         <h2>Join Our Informational Webinars</h2>
@@ -36,26 +38,30 @@
     </div>
   </nc-base-section>
 
-  <nc-base-section id="initiatives">
-    <h2>New Commons Initiatives</h2>
-    <div class="initiatives-cards">
-      <nc-initiative-card
-        v-for="initiative in initiatives"
-        :key="initiative.title"
-        v-bind="initiative"
-      />
+  <nc-base-section id="initiatives" size="l">
+    <div class="stack">
+      <h2>New Commons Initiatives</h2>
+      <div class="initiatives-cards">
+        <nc-initiative-card
+          v-for="initiative in initiatives"
+          :key="initiative.title"
+          v-bind="initiative"
+        />
+      </div>
     </div>
   </nc-base-section>
 
-  <nc-base-section v-if="resources?.length" id="resources-section" color="faded">
-    <h2>Resources</h2>
-    <p>Tools, methods, and examples of data commons in the AI era.</p>
-    <div class="grid resource-grid">
-      <nc-resource-card
-        v-for="resource in resources"
-        :key="resource.slug"
-        :content="resource"
-      />
+  <nc-base-section v-if="resources?.length" id="resources-section" color="faded" size="l">
+    <div class="stack">
+      <h2>Resources</h2>
+      <p>Tools, methods, and examples of data commons in the AI era.</p>
+      <div class="grid resource-grid">
+        <nc-resource-card
+          v-for="resource in resources"
+          :key="resource.slug"
+          :content="resource"
+        />
+      </div>
     </div>
   </nc-base-section>
 

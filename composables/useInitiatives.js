@@ -11,7 +11,7 @@ export const initiatives = [
     description: 'Supporting new and existing data commons for humanitarian response and localized decision making.',
     status: 'Completed',
     to: '/challenge-2025',
-    image: '/assets/patterns/hero.jpg',
+    image: '/images/092525_HL011_New-Commons_Microsoft_Malawi Voice Data Commons.webp',
   },
 ]
 

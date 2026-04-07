@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     v-if="content"
-    class="blog-card | stack"
+    class="blog-card"
     :content="content"
     :aside-card="asideCard"
     :to="`/blog/${content.slug}`"
@@ -10,7 +10,7 @@
     <p class="blog-card__brow">{{formatDate(content.date)}}</p>
     <h3 class="blog-card__heading">{{ content.heading }}</h3>
     <p class="blog-card__excerpt">{{ content.excerpt }}</p>
-    <span class="blog-card__cta">Read more</span>
+    <ncButton el="span" label="Read more" class="blog-card__cta | margin-top:s" />
   </NuxtLink>
 </template>
 
@@ -51,7 +51,7 @@ const formatDate = (dateString) => {
   text-decoration: none;
   color: inherit;
 
-  --_stack-space: var(--space-xs);
+  gap: var(--space-xs);
 
 }
 
@@ -71,8 +71,6 @@ const formatDate = (dateString) => {
 
   .blog-card__cta {
     margin-top: auto;
-    font-weight: 600;
-    color: var(--primary-color);
   }
 
   .blog-card:hover {

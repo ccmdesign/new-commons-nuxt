@@ -1,9 +1,9 @@
 <template>
-  <div class="nc-bio-card | stack" >
+  <div class="nc-bio-card" >
     <img :src="`${imageBasePath}${judge.img}`" :alt="judge.name">
     <h4 class="h4 margin-top:s">{{ judge.name }}</h4>
     <p>{{ judge.description }}</p>
-    <nuxt-link :to="url" class="button" color="primary" variant="ghost">Read More</nuxt-link>
+    <ncButton :to="url" label="Read More" class="nc-bio-card__cta | margin-top:s" />
   </div>
 </template>
 
@@ -24,7 +24,7 @@ defineProps({
   box-shadow: var(--box-shadow-s);
   align-items: center;
   text-align: center;
-  --_stack-space: var(--space-2xs);
+  gap: var(--space-2xs);
 
 
   img {
@@ -44,10 +44,13 @@ defineProps({
     margin-bottom: var(--size-0);
   }
 
-  .button {
+  .nc-bio-card__cta {
     margin-top: auto;
     align-self: center;
-    width: 100%;
+  }
+
+  &:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
   }
 }
 </style> 

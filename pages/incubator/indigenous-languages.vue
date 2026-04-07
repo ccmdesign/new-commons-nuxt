@@ -10,9 +10,9 @@
     </div>
   </nc-hero>
 
-  <nc-base-section>
-    <h2>Why?</h2>
+  <nc-base-section size="l">
     <div class="stack">
+      <h2>Why?</h2>
       <p>Indigenous languages face many pressures in the age of AI:</p>
       <ul>
         <li>When left out, existing digital marginalization and inequities deepen.</li>
@@ -24,9 +24,9 @@
     </div>
   </nc-base-section>
 
-  <nc-base-section color="faded">
-    <h2>Programmatic Offerings</h2>
+  <nc-base-section color="faded" size="l">
     <div class="stack">
+      <h2>Programmatic Offerings</h2>
       <p>Through a structured program, we will support selected initiatives in transforming their concepts into operational models. It will include an in-person kickoff event to set stage, virtual programming and mentorship, and a final showcase where participants will present their data commons to funders.</p>
       <ul>
         <li>Design governance frameworks grounded in Indigenous data sovereignty and social license</li>
@@ -38,22 +38,28 @@
     </div>
   </nc-base-section>
 
-  <nc-base-section>
-    <h2 class="text-align:center">Steering Committee</h2>
-    <p class="text-align:center">This initiative is supported by a Steering Committee of Indigenous experts and representatives to ensure this work is productive and complementary to existing Indigenous-led efforts. The Steering Committee offers input on all major decisions and the partner organizations aim to ensure their guidance is reflected in all activities.</p>
-    <nc-people-grid :collection="steeringCommittee" base-path="/incubator/indigenous-languages" />
+  <nc-base-section size="l">
+    <div class="stack">
+      <h2 class="text-align:center">Steering Committee</h2>
+      <p class="text-align:center">This initiative is supported by a Steering Committee of Indigenous experts and representatives to ensure this work is productive and complementary to existing Indigenous-led efforts. The Steering Committee offers input on all major decisions and the partner organizations aim to ensure their guidance is reflected in all activities.</p>
+      <nc-people-grid :collection="steeringCommittee" base-path="/incubator/indigenous-languages" />
+    </div>
   </nc-base-section>
 
-  <nc-base-section color="faded">
-    <h2>How to apply?</h2>
-    <p>Applicants can submit a 2-page concept note using our application form.</p>
-    <nc-button to="/incubator/2026/application" color="base" variant="primary">Apply Now</nc-button>
+  <nc-base-section color="faded" size="l">
+    <div class="stack">
+      <h2>How to apply?</h2>
+      <p>Applicants can submit a 2-page concept note using our application form.</p>
+      <nc-button to="/incubator/2026/application" color="base" variant="primary">Apply Now</nc-button>
+    </div>
   </nc-base-section>
 
-  <nc-base-section>
-    <h2>Join Our Informational Webinars</h2>
-    <p>Interested in applying for the Incubator? Join our webinars for more information about the application process and an open Q&A.</p>
-    <nc-button to="/incubator/2026/webinar" color="base" variant="primary">Sign Up</nc-button>
+  <nc-base-section size="l">
+    <div class="stack">
+      <h2>Join Our Informational Webinars</h2>
+      <p>Interested in applying for the Incubator? Join our webinars for more information about the application process and an open Q&A.</p>
+      <nc-button to="/incubator/2026/webinar" color="base" variant="primary">Sign Up</nc-button>
+    </div>
   </nc-base-section>
 
   <nc-timeline
