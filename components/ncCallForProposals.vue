@@ -38,8 +38,14 @@ const hasSecondary = computed(() => !!slots.secondary)
   max-width: 50%;
 }
 
+@media (max-width: 920px) {
+  .cfp-tagline {
+    max-width: 100%;
+  }
+}
+
 .secondary-box {
-  background: rgba(255, 255, 255, 0.20);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: var(--box-shadow-l);

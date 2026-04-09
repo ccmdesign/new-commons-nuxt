@@ -1,0 +1,98 @@
+plugins = []
+headers = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "/Users/claudiomendonca/Documents/GitHub/govlab/new-commons/dist"
+publishOrigin = "ui"
+commandOrigin = "ui"
+command = "npm run build"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[[redirects]]
+from = "/prize"
+to = "/incubator/2026"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/the-prize"
+to = "/incubator/2026"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/the-incubator"
+to = "/incubator/2026"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/incubator"
+to = "/incubator/2026"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/winners"
+to = "/challenge-2025"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]

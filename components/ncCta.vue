@@ -74,4 +74,26 @@ const props = defineProps({
 .cta__content:only-of-type {
   grid-column: content-start / content-end;
 }
+
+@media (max-width: 920px) {
+  .cta__content:first-child,
+  .cta__content:last-child {
+    grid-column: content-start / content-end;
+  }
+
+  .cta {
+    background-image:
+      radial-gradient(circle at 95% 40%, hsla(298, 0%, 25%, 1) 0%, transparent 45%),
+      radial-gradient(circle at 85% 20%, hsla(298, 0%, 25%, 1) 0%, transparent 40%),
+      radial-gradient(circle at 100% 50%, hsla(298, 100%, 16.5%, 0.34) 0%, transparent 46%),
+      radial-gradient(circle at 80% 10%, hsla(163, 100%, 16.5%, 0.34) 0%, transparent 46%),
+      radial-gradient(circle at 90% 30%, hsla(224, 100%, 16.5%, 1) 0%, transparent 60%);
+  }
+
+  .cta::before {
+    background-image:
+      radial-gradient(circle at 50% 50%, hsla(298, 0%, 25%, 0.6) 0%, transparent 60%),
+      radial-gradient(circle at 60% 40%, hsla(224, 100%, 16.5%, 0.5) 0%, transparent 50%);
+  }
+}
 </style>

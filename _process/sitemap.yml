@@ -1,0 +1,350 @@
+# Homepage
+
+## section: hero
+  title: New Commons Incubator
+  tagline: The New Commons Incubator seeks to strengthen the pipeline of data commons for the AI era. Through structured programming, we aim to unlock the next generation of data commons and make the data ecosystem more sustainable and scalable.
+  cta: About the Incubator
+
+## section: call-for-proposals
+  title: "Call for Proposals: Data Commons for Indigenous Languages and Cultures"
+  tagline: The Open Data Policy Lab invites changemakers around the world to join us in developing data commons for Indigenous languages and cultures.
+  cta: Apply Now
+
+## section: webinars
+  title: Join Our Informational Webinars
+  tagline: Interested in applying for the Incubator for Indigenous Languages and Cultures? Join our informational webinars for more information about the application process and an open Q&A.
+  cta: Sign Up
+
+## section: faq-teaser
+  title: FAQ
+  tagline: Have questions about the Incubator? Check out our FAQ page for all the answers you need to get started!
+  cta: Read More
+
+## section: initiatives-slider
+  title: New Commons Initiatives
+  note: To become a slider once we have more initiatives
+  items:
+    - title: The New Commons Incubator for Indigenous Languages and Cultures
+      tagline: Learn more about our call for proposals for the creation of data commons for Indigenous languages and cultures.
+      cta: View Details
+    - title: The 2025 New Commons Challenge
+      tagline: Explore the groundbreaking data commons recognized at the 2025 New Commons Showcase.
+      cta: View the Awardees
+
+## section: resources-teaser
+  title: Resources
+  tagline: Tools, methods, and examples of data commons in the AI era.
+  note: insert grid of tools - same format as blog section
+
+## section: blog-teaser
+  title: Blog
+  tagline: News and updates on the New Commons Challenge and its partners.
+
+---
+
+# The Incubator (Formerly the Prize)
+
+## section: hero
+  brow: BUILDING A SHARED DIGITAL FUTURE
+  title: The New Commons Incubator
+  body: |
+    The Incubator is a global effort led by the Open Data Policy Lab that aims to unlock data commons for public-interest AI.
+
+    The Incubator addresses a critical issue: the limited access to diverse and high-quality datasets, which is essential for AI to reach its full potential. By creating and improving data commons, which are collaboratively governed data ecosystems that pool and provide responsible access to diverse, high-quality datasets, the gap in AI development can be filled.
+
+    Through structured programming, the Incubator will develop a pipeline of trusted, community-governed data commons that enable responsible AI development while safeguarding data rights, context, and community agency.
+
+## section: call-for-proposals
+  title: "Call for Proposals: Data Commons for Indigenous Languages and Cultures"
+  tagline: The Open Data Policy Lab invites changemakers around the world to join us in developing data commons for Indigenous languages and cultural preservation in the AI era.
+  cta: Apply Now
+
+## section: webinars
+  title: Join Our Informational Webinars
+  tagline: Interested in applying for the Incubator? Join one of our informational webinars for more information about the application process and an open Q&A.
+  cta: Sign Up
+
+## section: why
+  title: Why the Incubator?
+  body: |
+    AI models need access to diverse, high-quality datasets so they do not reinforce bias, deepen inequality, and return less accurate, more imprecise results. Yet, access to data remains fragmented and siloed.
+
+    Data commons offer a solution by providing the critical infrastructure needed for responsible AI development. They pool diverse, high quality datasets from multiple sectors that are then managed through participatory governance.
+
+    The Incubator will help transform concepts into viable, sustainable models. It will support data commons proposals by delivering training, mentorship, and direct connections with funders.
+
+## section: programmatic-offerings
+  title: Programmatic Offerings
+  tagline: The Incubator is a X-week structured program designed to support data leaders in setting up a data commons. It will include an in-person kickoff event to set stage, virtual programming and mentorship, and a final showcase.
+  items:
+    - Design and implement accountable and context-specific data governance frameworks
+    - Build AI-ready datasets grounded in community consent and social license
+    - Access technical infrastructure and expertise
+    - Connect with sustainable funding pathways
+  cta: View Sample Program
+
+## section: call-for-proposals-repeat
+  title: "Call for Proposals: Data Commons for Indigenous Languages and Cultures"
+  tagline: The Open Data Policy Lab invites changemakers around the world to join us in developing data commons for Indigenous languages and cultures.
+  cta: Apply Now
+
+## section: helpful-tips
+  title: Helpful Tips
+  tagline: The Open Data Policy Lab has several resources and examples that can be used to support the development of your concept note.
+  cta: View Resources
+
+## section: faq-teaser
+  title: FAQ
+  tagline: Have questions about the Incubator? Check out our FAQ page for all the answers you need to get started!
+  cta: Read More
+
+---
+
+# Initiatives (new page)
+
+## section: hero
+  title: New Commons Initiatives
+
+## section: initiatives-grid
+  note: A grid with initiatives
+  items:
+    - tag: NEW
+      brow: "OPEN CALL"
+      title: The New Commons Incubator for Indigenous Languages and Cultures
+      tagline: Strengthening the pipeline of data commons for Indigenous Languages and Cultures in the AI era.
+      cta: View Details
+    - tag: "2025"
+      title: The New Commons Challenge
+      tagline: Supporting new and existing data commons for humanitarian response and localized decision making
+      cta: View Details
+
+---
+
+# New Commons for Indigenous Languages and Cultures (new page)
+
+## section: hero
+  brow: New Commons Incubator
+  title: Indigenous Languages and Cultures
+  tagline: A structured program for developing data commons for Indigenous languages and cultures
+  cta: Apply Now
+
+## section: why
+  title: Why?
+  body: |
+    Indigenous languages face many pressures in the age of AI:
+    - When left out, existing digital marginalization and inequities deepen.
+    - When included, data is often extracted without consent or benefit.
+    - And even well-intentioned efforts frequently strip away the cultural context that gives these languages meaning.
+
+    This represents both a technical and governance breakdown. What's needed is a new institutional approach.
+
+    The New Commons Incubator for Indigenous Languages and Cultures advances a data commons model that enables responsible access to high-quality data while ensuring any access and use remains aligned with Indigenous values and expectations. It shifts the framework from extraction by outside parties to collective stewardship led by Indigenous communities themselves, ensuring that data is governed, shared, and used on community-defined terms.
+
+## section: programmatic-offerings
+  title: Programmatic Offerings
+  tagline: Through a X week program, we will support selected initiatives in transforming their concepts into operational models. It will include an in-person kickoff event to set stage, virtual programming and mentorship, and a final showcase where participants will present their data commons to funders.
+  items:
+    - Design governance frameworks grounded in Indigenous data sovereignty and social license
+    - Build AI-ready datasets rooted in consent, context, and community priorities
+    - Access technical infrastructure and expertise
+    - Connect to funding and global ecosystems
+  partners: The GovLab (Open Data Policy Lab), Microsoft, UNESCO
+  alignment: International Decade of Indigenous Languages (IDIL)
+  cta: View Sample Program
+
+## section: steering-committee
+  title: Steering Committee
+  body: This initiative is supported by a Steering Committee of Indigenous experts and representatives to ensure this work is productive and complementary to existing Indigenous-led efforts. The Steering Committee offers input on all major decisions and the partner organizations aim to ensure their guidance is reflected in all activities.
+  note: Insert panel of names - same format as current judges section
+
+## section: how-to-apply
+  title: How to apply?
+  tagline: Applicants can submit a 2-page concept note using our application form by X DATE.
+  cta: Apply Now
+
+## section: webinars
+  title: Join Our Informational Webinars
+  tagline: Interested in applying for the Incubator? Join our webinars for more information about the application process and an open Q&A.
+  cta: Sign Up
+
+## section: timeline
+  title: Timeline
+  items:
+    - label: Applications Open
+      date: May (TBC)
+    - label: Informational Webinars
+      date: w/o 25 May 2026 and 1 June 2026
+    - label: Applications Close
+      date: 10 July 2026
+    - label: Cohort Selection
+      date: Late August
+    - label: Cohort Onboarding
+      date: Early September
+    - label: In-Person Kickoff
+      date: w/o 14 September 2026 (in coordination with UNGA?)
+    - label: Virtual Incubation Programming
+      date: September 2026 -- January 2027
+    - label: Final Showcase
+      date: February 2027
+
+## section: faq-teaser
+  title: FAQ
+  tagline: Have questions about the Incubator for Indigenous Languages and Cultures? Check out our FAQ page for all the answers you need to get started!
+  cta: Read More
+
+---
+
+# The New Commons Challenge (Formerly the Winners)
+
+note: The text on the first panel should be updated. All other content remains the same.
+
+## section: hero
+  brow: The 2025
+  title: New Commons Challenge
+  body: |
+    The New Commons Challenge was a global initiative led by Microsoft and the Open Data Policy Lab, in partnership with DirectRelief, the Harvard Institutional Data Initiative, and UNESCO (international observer).
+
+    The Challenge sought to support universities, libraries, civil society, and technologists to build data ecosystems that fuel public-interest AI. It focused on supporting new and existing data commons across two critical domains: localized decision-making and humanitarian response.
+
+    On September 25, 2025, the Challenge awarded two $100,000 prizes. The first of these awards went to the Malawi Voice Data Commons Project -- developed by the New York University Peace Research and Education Program and Ushahidi -- for the development of a data commons. The second award went to the Amazon Rainforest Evolution Index, developed by CERTI Amazonia, for the enhancement of an existing data commons.
+
+    The award ceremony took place as part of the broader 80th UN General Assembly events and was an affiliate session of the Digital@UNGA program.
+
+    Information on each grantee and special distinction can be found below. For each grantee, we provide a brief description of their projects taken from their proposals and then information about how they can be contacted, should you be interested in learning more about their work or offering support.
+
+    We thank our partners DirectRelief and the Harvard Institutional Data Initiative, as well as our observer UNESCO, for their support.
+
+    note: The list of awardees and distinctions on the right side of the panel remains the same
+
+---
+
+# Resources (new page)
+
+## section: hero
+  title: Resources
+  tagline: The Open Data Policy Lab's resources on data commons in the AI era.
+  note: List of resources using the same format of the blogs page
+  items:
+    - https://incubator.opendatapolicylab.org/files/data-commons-for-ai-blueprint.pdf
+    - https://incubator.opendatapolicylab.org/files/appendix%20a_fillable.pdf
+    - https://incubator.opendatapolicylab.org/files/appendix%20b.pdf
+    - https://docs.google.com/spreadsheets/d/1GPzU4Pspi-XOmJU13LvOUUPxtfTuRXcZMBw7lxkQRyY/edit?gid=0#gid=0
+    - https://www.dsa.opendatapolicylab.org/
+    - https://tools.opendatapolicylab.org/files/Data-Re-Use-Worksheet.pdf
+
+---
+
+# Blog
+
+## section: hero
+  title: Blog
+  tagline: News and updates on the New Commons.
+  note: List of blog posts remains the same
+
+---
+
+# FAQ
+
+## section: why-apply
+  title: Why should I apply for the Incubator?
+  items:
+    - Join a first-of-its kind incubator for the next generation of data commons
+    - Become part of an international community of linguistic and cultural data commons leaders
+    - Learn emerging governance models and gain access to technical infrastructure and expertise
+    - Receive mentorship from international experts
+    - Share your work with global funders through the final showcase
+
+## section: deadlines
+  title: What are the key deadlines and program milestones?
+  tagline: The Incubator will follow the schedule outlined below.
+  items:
+    - label: Applications Open
+      date: May (TBC)
+    - label: Informational Webinars
+      date: w/o 25 May 2026 and 1 June 2026
+    - label: Applications Close
+      date: 10 July 2026
+    - label: Cohort Selection
+      date: Late August
+    - label: Cohort Onboarding
+      date: Early September
+    - label: In-Person Kickoff
+      date: w/o 14 September 2026 (in coordination with UNGA?)
+    - label: Virtual Incubation Programming
+      date: September 2026 -- January 2027
+    - label: Final Showcase
+      date: February 2027
+
+## section: evaluation
+  title: How will you evaluate submissions?
+  tagline: Our jury will evaluate submissions based on the following criteria.
+  items:
+    - Opportunity (30%): What's the opportunity?
+    - Relevance (20%): How does the data commons support an Indigenous community?
+    - Capacity (20%): What assets do you have available to manage this project?
+    - Governance (20%): How will this effort be commonly governed?
+    - Team (10%): Who is available to participate in the Incubator?
+  note: More details can be found in the application form.
+
+## section: concept-readiness
+  title: How far along does my data commons concept need to be?
+  body: |
+    Concepts submitted to the Incubator can be in the early stages but must be thought out enough so that a proposal can be completed and far enough along that there is a commitment from your organization for its implementation.
+
+    Some concepts may be brand new initiatives whereas others may be extensions of existing products or programs.
+
+## section: data-literacy
+  title: How much data literacy is required of incubator participants?
+  body: Participants in this program are not expected to be data scientists or have a background in data science. Applicants should know enough about data that they can articulate and understand the theory of change of their data innovation.
+
+## section: funding
+  title: Do Incubator participants receive funding?
+  body: Incubator participants will have access to a variety of resources such as XYZ and the opportunity to present their project to global funders. Funding to implement the project is not part of the Incubator's offerings.
+
+## section: time-commitment
+  title: What is the expected time commitment?
+  body: The Incubator will run programming for X weeks. It will include an X day in-person kickoff followed by weekly 2-hour programming for 4 months. At its conclusion, participants will present their work at our showcase. Participants should expect to complete approximately X hours of work outside of the formal programming hours.
+
+## section: language
+  title: What language will the programming be delivered in?
+  body: All programming will be delivered in English. There will be a public writing component of the programming, and if program participants would like they can publish this in their local language.
+
+## section: scheduling
+  title: When will programming take place?
+  body: We plan to schedule all live engagements on a rotational schedule to accommodate the various timezones of program participants and will work with all participants to ensure that no one is consistently joining engagements during an inconvenient date or time.
+
+## section: geographic-restrictions
+  title: Are there geographic restrictions?
+  body: |
+    The Incubator is a global initiative that welcomes entries from organizations across continents. We hope to receive applicants from diverse regions and contexts.
+
+    We welcome any entry, though we may be unable to deliver programming to certain entities and individuals who are subject to sanctions and other restrictions under U.S. law, such as those based in Cuba, Iran, North Korea, Russia, Syria, and the Crimea, Donestsk, and Luhansk regions of Ukraine.
+
+## section: organization-types
+  title: What types of organizations can participate?
+  body: We feel this initiative may be most applicable to nonprofit organizations, government organizations, academic institutions, start-ups, and development organizations. For-profit entities submitting applications may be asked to undergo extra review to ensure their concept note aids Indigenous communities.
+
+## section: letter-of-support
+  title: What is a "letter of support"?
+  body: A letter of support is any letter, on institutional letterhead, from a representative of an institution indicating that they are aware of the concept and their institution will support a representative's participation in the Incubator. It is our way of ensuring that a representative is able to participate in the full Incubator programming.
+
+## section: submission-issues
+  title: What if I am unable to submit or access the application form?
+  body: If, for any reason, you are unable to submit the form, you may download a text version of the form here and submit your responses to the questions as a Word doc or PDF file to newcommons@opendatapolicylab.org.
+
+## section: multiple-applications
+  title: Can my organization submit multiple applications?
+  body: Your organization may only submit one application. If you mistakenly submitted an application early and need to delete your submission before submitting a revision, please contact us at newcommons@opendatapolicylab.org.
+
+---
+
+# Other Updates
+
+## branding
+  Removing "challenge" from logo
+
+## footer
+  Remove "Partners" and "International Observer" and replace with:
+  partners:
+    - UNESCO
+    - Microsoft
