@@ -11,10 +11,12 @@
     </div>
   </nc-hero>
 
-  <nc-call-for-proposals>
+  <nc-call-for-proposals
+    tagline="The Open Data Policy Lab invites advocates for Indigenous communities from around the world to join us in developing data commons for Indigenous languages and cultures."
+  >
     <template #secondary>
       <h3>Join Our Informational Webinars</h3>
-      <p>Interested in applying for the Incubator? Join one of our informational webinars for more information about the application process and an open Q&amp;A.</p>
+      <p>Interested in applying for the Incubator for Indigenous Languages and Cultures? Join our informational webinars for more information about the application process and an open Q&amp;A.</p>
       <nc-button to="/incubator/2026/webinar" color="primary" variant="primary">Sign Up</nc-button>
     </template>
   </nc-call-for-proposals>
@@ -29,7 +31,7 @@
       <div class="stack">
         <h2>Why the Incubator?</h2>
         <p>AI models need access to diverse, high-quality datasets so they do not reinforce bias, deepen inequality, and return less accurate, more imprecise results. Yet, access to data remains fragmented and siloed.</p>
-        <p>Data commons offer a solution by providing the critical infrastructure needed for responsible AI development. They pool diverse, high quality datasets from multiple sectors that are then managed through participatory governance.</p>
+        <p>Data commons offer a solution by providing the <a href="https://www.linkedin.com/pulse/data-commons-missing-infrastructure-public-interest-verhulst-phd-k8eec" target="_blank" rel="noopener">critical infrastructure</a> needed for responsible AI development. They pool diverse, high quality datasets from multiple sectors that are then managed through participatory governance.</p>
         <p>The Incubator will help transform concepts into viable, sustainable models. It will support data commons proposals by delivering training, mentorship, and direct connections with funders.</p>
       </div>
     </div>
@@ -42,7 +44,7 @@
         <p>The Incubator is a structured program designed to support data leaders in setting up a data commons. It will include an in-person kickoff event to set stage, virtual programming and mentorship, and a final showcase.</p>
       </div>
       <div class="programmatic-offerings__list | stack">
-        <h3>What Participants Will Gain</h3>
+        <h3>Throughout the programming, participants will:</h3>
         <ul>
           <li>
             <Icon name="ph:scales" />
@@ -65,12 +67,6 @@
     </div>
   </nc-base-section>
 
-  <nc-resource-grid
-    :resources="resources"
-    tagline="Tools, methods, and examples of data commons in the AI era."
-    color="faded"
-  />
-
   <nc-base-section size="l">
     <nc-banner
       title="FAQ"
@@ -87,10 +83,6 @@ useHead({
 useSeoMeta({
   description: 'The New Commons Incubator is a global effort led by the Open Data Policy Lab that aims to unlock data commons for public-interest AI.',
 })
-
-const { data: resources } = await useAsyncData('incubator-resources', () =>
-  queryCollection('resources').limit(3).all()
-)
 </script>
 
 <style scoped lang="scss">

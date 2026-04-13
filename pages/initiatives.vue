@@ -13,10 +13,12 @@
     </div>
   </nc-base-section>
 
-  <nc-call-for-proposals>
+  <nc-call-for-proposals
+    tagline="The Open Data Policy Lab invites changemakers around the world to join us and our steering committee of Indigenous data experts in developing data commons for Indigenous languages and cultures."
+  >
     <template #secondary>
       <h3>Join Our Informational Webinars</h3>
-      <p>Interested in applying for the Incubator? Join one of our informational webinars for more information about the application process and an open Q&amp;A.</p>
+      <p>Interested in applying for the Incubator for Indigenous Languages and Cultures? Join our informational webinars for more information about the application process and an open Q&amp;A.</p>
       <nc-button to="/incubator/2026/webinar" color="primary" variant="primary">Sign Up</nc-button>
     </template>
   </nc-call-for-proposals>

@@ -32,6 +32,8 @@ const faq = {
           <li>Become part of an international community of linguistic and cultural data commons leaders</li>
           <li>Learn emerging governance models and gain access to technical infrastructure and expertise</li>
           <li>Receive mentorship from international experts</li>
+          <li>Join a community of your peers from around the world</li>
+          <li>Engage with 3&ndash;5 other participants in addressing needs around Indigenous languages and cultures</li>
           <li>Share your work with global funders through the final showcase</li>
         </ul>
       `
@@ -89,10 +91,10 @@ const faq = {
     {
       summary: 'What types of organizations can participate?',
       content: `
-        <p>We feel this initiative may be most applicable to nonprofit organizations, government
-           organizations, academic institutions, start-ups, and development organizations. For-profit
-           entities submitting applications may be asked to undergo extra review to ensure their
-           concept note aids Indigenous communities.</p>
+        <p>This initiative is most applicable to nonprofit organizations, government
+           organizations, academic institutions, start-ups, non-governmental organizations, and
+           development organizations. For-profit entities submitting applications may be asked to
+           undergo extra review to ensure their concept note aids Indigenous communities.</p>
       `
     },
     {
@@ -100,7 +102,7 @@ const faq = {
       content: `
         <p>The Incubator is a global initiative that welcomes entries from organizations across
            continents. We hope to receive applicants from diverse regions and contexts.</p>
-        <p>We welcome any entry, though we may be unable to deliver programming to certain entities
+        <p>We welcome any entry, though are unable to deliver programming to certain entities
            and individuals who are subject to sanctions and other restrictions under U.S. law, such
            as those based in Cuba, Iran, North Korea, Russia, Syria, and the Crimea, Donetsk, and
            Luhansk regions of Ukraine.</p>

@@ -2,7 +2,7 @@
   <nc-hero>
     <div class="hero__content">
       <div class="panel stack">
-        <h2 class="h1 text-align:center">Overview</h2>
+        <h2 class="h1 text-align:center">The 2025 New Commons Challenge</h2>
         <div class="switcher">
           <div>
             <p>The New Commons Challenge was a global initiative led by Microsoft and the Open Data Policy Lab, in partnership with DirectRelief, the Harvard Institutional Data Initiative, and UNESCO (international observer).</p>
@@ -11,6 +11,7 @@
               <p>The award ceremony took place as part of the broader 80<sup><small>th</small></sup> UN General Assembly events and was an affiliate session of the Digital@UNGA program.</p>
               <p>Information on each grantee and special distinction can be found below. For each grantee, we provide a brief description of their projects taken from their proposals and then information about how they can be contacted, should you be interested in learning more about their work or offering support.</p>
               <p>We thank our partners DirectRelief and the Harvard Institutional Data Initiative, as well as our observer UNESCO, for their support.</p>
+              <p><em>The list of awardees and distinctions on the right side of the panel remains the same.</em></p>
             </div>
             <div class="honors">
               <p class="honors__heading">Awardees:</p>
