@@ -26,6 +26,21 @@
     </template>
   </nc-call-for-proposals>
 
+  <nc-base-section id="definition" size="l">
+    <div class="definition">
+      <div class="definition__entry">
+        <h2 class="definition__word">New Commons</h2>
+        <p class="definition__meta">
+          <span class="definition__pronunciation">/noo ˈkɒmənz/</span>
+          <span class="definition__pos">noun</span>
+        </p>
+      </div>
+      <blockquote class="definition__meaning">
+        <p>“Collaboratively governed data ecosystems designed to pool and provide responsible access to diverse, high-quality datasets from one or multiple sectors to enable the development and deployment of generative AI applications that address public interest challenges”</p>
+      </blockquote>
+    </div>
+  </nc-base-section>
+
   <nc-base-section color="faded" size="l">
     <nc-banner
       title="FAQ"
@@ -97,6 +112,65 @@ const { data: resources } = await useAsyncData('homepage-resources', () =>
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--base-gutter);
+}
+
+.definition {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 2fr;
+  gap: var(--space-xl);
+  align-items: start;
+  border-top: 1px solid var(--base-color-10-tint);
+  border-bottom: 1px solid var(--base-color-10-tint);
+  padding-block: var(--space-xl);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: var(--space-m);
+  }
+}
+
+.definition__word {
+  font-size: var(--size-3);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+.definition__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-xs);
+  margin-top: var(--space-2xs);
+  color: var(--base-color-70-tint);
+  font-size: var(--size-0);
+}
+
+.definition__pronunciation {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.definition__pos {
+  font-style: italic;
+}
+
+.definition__pos::before {
+  content: '·';
+  margin-right: var(--space-xs);
+  font-style: normal;
+}
+
+.definition__meaning {
+  margin: 0;
+  border: none;
+  padding: 0;
+
+  p {
+    font-size: var(--size-1);
+    line-height: 1.4;
+    font-weight: 300;
+    margin: 0;
+  }
 }
 
 @keyframes horizontal {

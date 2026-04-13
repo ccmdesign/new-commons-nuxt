@@ -4,13 +4,14 @@
     <div class="timeline__content">
       <h2>{{ title }}</h2>
       <p>{{ subtitle }}</p>
-      <div class="timeline__content-cards">
-        <div class="card" :class="{'active': isActive(item), 'full': isFull(item, i)}" v-for="(item, i) in timeline" :key="item.date">
-          <h3>{{ formatDate(item.date) }}</h3>
-          <span>
+      <div class="timeline__content-cards" ref="cardsContainer">
+        <div class="card" :class="{'active': isActive(item, i), 'full': isFull(item, i)}" v-for="(item, i) in timeline" :key="item.date">
+          <span class="card__date">{{ formatDate(item.date) }}</span>
+          <span class="card__marker" aria-hidden="true"></span>
+          <h3 class="card__event">{{ item.event }}</h3>
+          <span class="card__time">
             {{ formatTime(item.date) }}
           </span>
-          <p>{{ item.event }}</p>
         </div>
       </div>
     </div>
@@ -19,7 +20,7 @@
 
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 
 const props = defineProps({
   timeline: {
@@ -28,16 +29,34 @@ const props = defineProps({
     validator: (val) => val.every(item => 'date' in item && 'event' in item)
   },
   title: { type: String, default: 'Timeline' },
-  subtitle: { type: String, default: '' }
+  subtitle: { type: String, default: '' },
+  firstActive: { type: Boolean, default: false }
 })
 
 const now = ref(new Date())
-onMounted(() => {
+const cardsContainer = ref(null)
+
+onMounted(async () => {
   now.value = new Date()
+  await nextTick()
+  scrollToActive()
 })
 
-function isActive(item) {
+function isActive(item, index) {
+  if (props.firstActive && index === 0) return true
   return now.value >= new Date(item.date)
+}
+
+function scrollToActive() {
+  const container = cardsContainer.value
+  if (!container) return
+  const activeCards = container.querySelectorAll('.card.active')
+  const target = activeCards[activeCards.length - 1]
+  if (!target) return
+  container.scrollTo({
+    left: target.offsetLeft - container.offsetLeft,
+    behavior: 'instant',
+  })
 }
 
 function isFull(item, index) {
@@ -80,33 +99,56 @@ function formatTime(dateStr) {
 
 .timeline__content-cards {
   margin-top: var(--space-xl-2xl);
-  display: grid;
+  display: flex;
+  flex-wrap: nowrap;
   grid-column: content-start / content-end;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: var(--space-s);
 }
 
 .timeline__content-cards .card {
   position: relative;
-  padding-top: var(--space-xl-2xl);
+  padding-right: var(--space-m);
   display: flex;
   flex-direction: column;
+  gap: var(--space-2xs);
+  flex: 0 0 240px;
+  min-width: 240px;
+  scroll-snap-align: start;
 }
 
-.timeline__content-cards .card h3, .timeline__content-cards .card span:first-of-type {
+.timeline__content-cards .card__date {
   font-weight: 600;
 }
 
-.timeline__content-cards .card.active h3, .timeline__content-cards .card.active span:first-of-type {
+.timeline__content-cards .card.active .card__date {
   color: var(--primary-color);
+}
+
+.timeline__content-cards .card__event {
   font-weight: 600;
+  margin-top: var(--space-xs);
 }
 
-.timeline__content-cards .card span:last-of-type {
+.timeline__content-cards .card.active .card__event {
+  color: var(--primary-color);
+}
+
+.timeline__content-cards .card__time {
   font-weight: 300;
-  margin-top: var(--space-s);
 }
 
-.timeline__content-cards .card::before {
+.timeline__content-cards .card__marker {
+  display: block;
+  position: relative;
+  height: 15px;
+  margin-block: var(--space-xs);
+}
+
+.timeline__content-cards .card__marker::before {
   content: '';
   position: absolute;
   border-radius: 100%;
@@ -114,30 +156,26 @@ function formatTime(dateStr) {
   width: 15px;
   height: 15px;
   background: #eaeaea;
-  inset: 0;
+  top: 0;
+  left: 0;
 }
 
-.timeline__content-cards .card::after {
-content: '';
+.timeline__content-cards .card__marker::after {
+  content: '';
   position: absolute;
-  border-radius: 100%;
   z-index: 10;
   width: 100%;
   height: 1px;
   background: #eaeaea;
-  inset: 0;
   top: 7px;
+  left: 0;
 }
 
-.timeline__content-cards .card.active::before {
+.timeline__content-cards .card.active .card__marker::before {
   background: var(--primary-color);
 }
 
-.timeline__content-cards .card.active::after {
-  background: #eaeaea;
-}
-
-.timeline__content-cards .card.active.full::after {
+.timeline__content-cards .card.active.full .card__marker::after {
   background: var(--primary-color);
 }
 </style>

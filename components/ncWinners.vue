@@ -26,7 +26,7 @@
         />
         <p v-else class="winner-card__description">No description available.</p>
 
-        <ncButton el="span" label="View details" class="winner-card__cta | margin-top:s" />
+        <ncButton el="span" variant="link" label="View details" class="winner-card__cta | margin-top:s" />
       </NuxtLink>
     </div>
 </template>
@@ -65,6 +65,8 @@ const props = defineProps({
   text-decoration: none;
   color: inherit;
   transition: box-shadow 150ms ease, transform 150ms ease;
+  display: flex;
+  flex-direction: column;
   gap: var(--space-xs);
 }
 
@@ -73,10 +75,12 @@ const props = defineProps({
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .winner-card__description {
   font-size: var(--size-0);
+  flex: 1;
 }
 
 .winner-card__country {

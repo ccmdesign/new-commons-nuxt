@@ -3,7 +3,7 @@
     <img :src="`${imageBasePath}${judge.img}`" :alt="judge.name">
     <h4 class="h4 margin-top:s">{{ judge.name }}</h4>
     <p>{{ judge.description }}</p>
-    <ncButton :to="url" label="Read More" class="nc-bio-card__cta | margin-top:s" />
+    <ncButton :to="url" variant="link" label="Read More" class="nc-bio-card__cta | margin-top:s" />
   </div>
 </template>
 
@@ -22,9 +22,12 @@ defineProps({
   overflow: hidden;
   padding: var(--space-2xs);
   box-shadow: var(--box-shadow-s);
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
   gap: var(--space-2xs);
+  height: 100%;
 
 
   img {
@@ -34,14 +37,16 @@ defineProps({
     aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: top;
+    flex-shrink: 0;
   }
 
   h4 { font-weight: 600; }
-  
-  p { 
+
+  p {
     line-height: 120%;
     font-style: italic;
     margin-bottom: var(--size-0);
+    flex: 1;
   }
 
   .nc-bio-card__cta {
