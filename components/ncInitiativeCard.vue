@@ -18,7 +18,7 @@
     </div>
     <h3 class="initiative-card__title">{{ title }}</h3>
     <p class="initiative-card__description">{{ description }}</p>
-    <ncButton v-if="to" el="span" label="Learn more" class="initiative-card__cta | margin-top:s" />
+    <ncButton v-if="to" el="span" :label="ctaLabel" class="initiative-card__cta | margin-top:s" />
   </component>
 </template>
 
@@ -31,6 +31,7 @@ const props = defineProps({
   status: { type: String, default: '' },
   to: { type: String, default: '' },
   image: { type: String, default: '' },
+  ctaLabel: { type: String, default: 'Learn more' },
 })
 
 const statusSlug = computed(() => {
