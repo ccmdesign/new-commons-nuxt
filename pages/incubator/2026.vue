@@ -52,7 +52,7 @@
           </li>
           <li>
             <Icon name="ph:handshake" />
-            <span>Build AI-ready datasets grounded in community consent and social license</span>
+            <span>Build AI-ready datasets grounded in community consent and <a href="https://ssir.org/articles/entry/the_urgent_need_to_reimagine_data_consent" target="_blank" rel="noopener noreferrer">social license</a></span>
           </li>
           <li>
             <Icon name="ph:wrench" />
@@ -111,6 +111,10 @@ useSeoMeta({
     grid-template-columns: 1fr;
   }
 
+  a {
+    text-decoration: underline;
+  }
+
   &__image {
     border-radius: var(--border-radius-l);
     overflow: hidden;
@@ -159,6 +163,11 @@ useSeoMeta({
       font-size: 1.5rem;
       color: var(--primary-color);
       margin-top: 0.1em;
+    }
+
+    li a {
+      font-weight: inherit;
+      color: var(--primary-color);
     }
   }
 }

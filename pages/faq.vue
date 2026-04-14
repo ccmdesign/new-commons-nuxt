@@ -104,8 +104,15 @@ const faq = {
            continents. We hope to receive applicants from diverse regions and contexts.</p>
         <p>We welcome any entry, though are unable to deliver programming to certain entities
            and individuals who are subject to sanctions and other restrictions under U.S. law, such
-           as those based in Cuba, Iran, North Korea, Russia, Syria, and the Crimea, Donetsk, and
-           Luhansk regions of Ukraine.</p>
+           as those based in <a href="https://ofac.treasury.gov/sanctions-programs-and-country-information/cuba-sanctions" target="_blank" rel="noopener">Cuba</a>,
+           <a href="https://ofac.treasury.gov/sanctions-programs-and-country-information/iran-sanctions" target="_blank" rel="noopener">Iran</a>,
+           <a href="https://ofac.treasury.gov/sanctions-programs-and-country-information/north-korea-sanctions" target="_blank" rel="noopener">North Korea</a>,
+           <a href="https://home.treasury.gov/policy-issues/financial-sanctions/sanctions-programs-and-country-information/ukraine-russia-related-sanctions" target="_blank" rel="noopener">Russia</a>,
+           <a href="https://ofac.treasury.gov/sanctions-programs-and-country-information/syria-sanctions" target="_blank" rel="noopener">Syria</a>,
+           and the <a href="https://home.treasury.gov/policy-issues/financial-sanctions/sanctions-programs-and-country-information/ukraine-russia-related-sanctions" target="_blank" rel="noopener">Crimea</a>,
+           <a href="https://home.treasury.gov/policy-issues/financial-sanctions/sanctions-programs-and-country-information/ukraine-russia-related-sanctions" target="_blank" rel="noopener">Donetsk</a>,
+           and <a href="https://home.treasury.gov/policy-issues/financial-sanctions/sanctions-programs-and-country-information/ukraine-russia-related-sanctions" target="_blank" rel="noopener">Luhansk</a>
+           regions of Ukraine.</p>
       `
     },
   ],

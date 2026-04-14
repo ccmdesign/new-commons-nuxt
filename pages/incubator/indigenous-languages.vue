@@ -30,7 +30,7 @@
           <li>And even well-intentioned efforts frequently strip away the cultural context that gives these languages meaning.</li>
         </ul>
         <p>This represents both a technical and governance breakdown. What's needed is a new institutional approach.</p>
-        <p>The New Commons Incubator for Indigenous Languages and Cultures advances a data commons model that enables responsible access to high-quality data while ensuring any access and use remains aligned with Indigenous values and expectations. It shifts the framework from extraction by outside parties to collective stewardship led by Indigenous communities themselves, ensuring that data is governed, shared, and used on community-defined terms.</p>
+        <p>The <strong><em>New Commons Incubator for Indigenous Languages and Cultures</em></strong> advances a <a href="https://incubator.opendatapolicylab.org/files/data-commons-for-ai-blueprint.pdf" target="_blank" rel="noopener noreferrer">data commons model</a> that enables responsible access to high-quality data while ensuring any access and use remains aligned with Indigenous values and expectations. It shifts the framework from extraction by outside parties to collective stewardship led by Indigenous communities themselves, ensuring that data is governed, shared, and used on community-defined terms.</p>
       </div>
       <div class="why-section__image">
         <img
@@ -45,8 +45,9 @@
     <div class="programmatic-offerings">
       <div class="programmatic-offerings__text | stack">
         <h2>Programmatic Offerings</h2>
-        <p>Through a structured program, we will support selected initiatives in transforming their concepts into operational models. It includes an in-person kickoff event, virtual programming and mentorship, and a final showcase where participants present their data commons to funders.</p>
+        <p>Through a structured program, we will support selected initiatives in transforming their concepts into an implementable plan. It will include an in-person kickoff event to set stage, virtual programming and mentorship, and a final showcase where participants will present their data commons to funders.</p>
         <p>This initiative is powered by The GovLab through its Open Data Policy Lab, Microsoft, and UNESCO in alignment with the <a href="https://www.unesco.org/en/decades/indigenous-languages" target="_blank" rel="noopener noreferrer">International Decade of Indigenous Languages (IDIL)</a>.</p>
+        <nc-button to="#" color="primary" variant="secondary">View Sample Program</nc-button>
       </div>
       <div class="programmatic-offerings__list | stack">
         <h3>Throughout the programming, participants will:</h3>
@@ -80,6 +81,14 @@
     </div>
   </nc-base-section>
 
+  <nc-base-section color="faded" size="l">
+    <div class="stack how-to-apply">
+      <h2>How to apply?</h2>
+      <p>Interested applicants need to submit a 2-page concept note using our application form by <strong>10 July 2026</strong>.</p>
+      <nc-button to="/incubator/2026/application" color="primary" variant="primary">Apply Now</nc-button>
+    </div>
+  </nc-base-section>
+
   <nc-timeline
     :timeline="timelineData"
     title="Timeline"
@@ -93,12 +102,6 @@
       to="/faq"
     />
   </nc-base-section>
-
-  <nc-resource-grid
-    :resources="resources"
-    tagline="Tools, methods, and examples of data commons in the AI era."
-    color="faded"
-  />
 </template>
 
 <script setup>
@@ -111,10 +114,6 @@ useSeoMeta({
 
 const steeringCommittee = useSteeringCommittee()
 
-const { data: resources } = await useAsyncData('indigenous-languages-resources', () =>
-  queryCollection('resources').limit(3).all()
-)
-
 const timelineData = [
   { date: '2026-05-15T09:00:00-04:00', event: 'Applications Open' },
   { date: '2026-05-25T09:00:00-04:00', event: 'Informational Webinar 1' },
@@ -123,6 +122,7 @@ const timelineData = [
   { date: '2026-08-25T09:00:00-04:00', event: 'Cohort Selection' },
   { date: '2026-09-07T09:00:00-04:00', event: 'Cohort Onboarding' },
   { date: '2026-09-14T09:00:00-04:00', event: 'In-Person Kickoff' },
+  { date: '2026-09-15T09:00:00-04:00', event: 'Virtual Incubation Programming (September 2026 – January 2027)' },
   { date: '2027-02-01T09:00:00-05:00', event: 'Final Showcase' },
 ]
 </script>
