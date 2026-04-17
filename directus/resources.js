@@ -18,8 +18,8 @@ const objectContructor = async (dir, fs) => {
     let i = {};
     i.title = item.title;
     i.slug = common.slugify(item.title);
+    i.sort = item.sort ?? null;
     i.description = item.description || '';
-    i.category = item.category || '';
     i.url = item.url || '';
     i.file = item.file ? common.getImage(item.file.id) : '';
     i.cover_image = item.cover_image ? common.getImage(item.cover_image.id) : '';

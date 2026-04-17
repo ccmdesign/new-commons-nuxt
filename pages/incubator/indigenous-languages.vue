@@ -73,22 +73,13 @@
     </div>
   </nc-base-section>
 
-  <nc-base-section size="l">
+  <nc-base-section id="steering-committee" size="l">
     <div class="stack steering-committee">
       <h2 class="text-align:center">Steering Committee</h2>
       <p class="text-align:center">This initiative is supported by a Steering Committee of Indigenous experts and representatives to ensure this work is productive and complementary to existing Indigenous-led efforts. The Steering Committee offers input on all major decisions and the partner organizations aim to ensure their guidance is reflected in all activities.</p>
       <nc-people-grid :collection="steeringCommittee" base-path="/incubator/indigenous-languages" image-base-path="" />
     </div>
   </nc-base-section>
-
-  <nc-cta single-column>
-    <div class="stack how-to-apply">
-      <p class="brow">How to Apply</p>
-      <h2 class="how-to-apply__heading">Submit your concept note</h2>
-      <p class="how-to-apply__tagline">Interested applicants need to submit a 2-page concept note using our application form by <strong>10 July 2026</strong>.</p>
-      <nc-button to="/incubator/2026/application" color="primary" variant="primary">Apply Now</nc-button>
-    </div>
-  </nc-cta>
 
   <nc-timeline
     :timeline="timelineData"
@@ -174,32 +165,6 @@ const timelineData = [
 .steering-committee :deep(.grid) {
   max-width: 48rem;
   margin-inline: auto;
-}
-
-.how-to-apply {
-  .brow {
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 800;
-    font-size: var(--size-0);
-    letter-spacing: 0.05em;
-  }
-
-  &__heading {
-    margin-top: 0;
-    font-size: var(--size-3);
-    color: var(--white-color);
-  }
-
-  &__tagline {
-    max-width: 50ch;
-  }
-
-  @media (max-width: 920px) {
-    &__tagline {
-      max-width: 100%;
-    }
-  }
 }
 
 .programmatic-offerings {

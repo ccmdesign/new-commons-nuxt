@@ -67,8 +67,8 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string(),
         slug: z.string(),
+        sort: z.number().nullable().optional(),
         description: z.string(),
-        category: z.string().optional(),
         // At least one of url or file should be provided; ncResourceCard
         // renders a non-linked fallback card when neither is set.
         url: z.string().optional(),

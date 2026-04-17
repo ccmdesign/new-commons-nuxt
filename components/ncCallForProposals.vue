@@ -3,7 +3,7 @@
     <div class="stack">
       <p class="brow">Call for Proposals</p>
       <h2 class="cfp-heading">Data Commons for Indigenous Languages and Cultures</h2>
-      <p class="cfp-tagline">{{ tagline }}</p>
+      <p class="cfp-tagline" v-html="tagline"></p>
       <nc-button to="/incubator/2026/application" color="primary" variant="primary">Apply Now</nc-button>
     </div>
     <template v-if="hasSecondary" #right>
@@ -43,6 +43,17 @@ const hasSecondary = computed(() => !!slots.secondary)
 
 .cfp-tagline {
   max-width: 50ch;
+}
+
+.cfp-tagline :deep(a) {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  font-weight: 600;
+}
+
+.cfp-tagline :deep(a:hover) {
+  text-decoration-thickness: 2px;
 }
 
 @media (max-width: 920px) {

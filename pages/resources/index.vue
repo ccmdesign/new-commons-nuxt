@@ -6,32 +6,14 @@
   </nc-base-section>
 
   <nc-base-section>
-    <!-- Category filter buttons -->
-    <div class="resource-filters | cluster">
-      <button
-        class="filter-pill"
-        :class="{ 'filter-pill--active': !activeCategory }"
-        @click="activeCategory = null"
-      >All</button>
-      <button
-        v-for="cat in categoryList"
-        :key="cat"
-        class="filter-pill"
-        :class="{ 'filter-pill--active': activeCategory === cat }"
-        @click="activeCategory = cat"
-      >{{ cat }}</button>
-    </div>
-  </nc-base-section>
-
-  <nc-base-section>
     <div class="grid resource-grid">
       <nc-resource-card
-        v-for="resource in filteredResources"
+        v-for="resource in resources"
         :key="resource.slug"
         :content="resource"
       />
     </div>
-    <p v-if="!filteredResources?.length" class="text-align:center">
+    <p v-if="!resources?.length" class="text-align:center">
       No resources found.
     </p>
   </nc-base-section>
@@ -46,19 +28,8 @@ useSeoMeta({
 })
 
 const { data: resources } = await useAsyncData('resources', () =>
-  queryCollection('resources').all()
+  queryCollection('resources').order('sort', 'ASC').all()
 )
-
-const { categories } = useResources()
-
-const activeCategory = ref(null)
-
-const categoryList = computed(() => categories(resources.value))
-
-const filteredResources = computed(() => {
-  if (!activeCategory.value) return resources.value ?? []
-  return (resources.value ?? []).filter(r => r.category === activeCategory.value)
-})
 </script>
 
 <style scoped>
@@ -84,27 +55,5 @@ const filteredResources = computed(() => {
   font-size: var(--size-1);
   color: var(--base-color-70-tint);
   font-weight: 300;
-}
-
-.filter-pill {
-  border: 1px solid var(--base-color-10-tint);
-  background: white;
-  padding: var(--space-3xs) var(--space-s);
-  border-radius: 999px;
-  font-size: var(--size--1);
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 150ms ease, color 150ms ease;
-  text-transform: capitalize;
-}
-
-.filter-pill--active {
-  background: var(--primary-color);
-  color: white;
-  border-color: var(--primary-color);
-}
-
-.filter-pill:hover:not(.filter-pill--active) {
-  background: var(--base-color-07-tint);
 }
 </style>

@@ -17,7 +17,7 @@
 
   <nc-call-for-proposals
     id="call-for-proposals"
-    tagline="The Open Data Policy Lab invites changemakers around the world to join us and our steering committee of Indigenous data experts in developing data commons for Indigenous languages and cultures."
+    tagline='The Open Data Policy Lab invites changemakers around the world to join us and <a href="/incubator/indigenous-languages#steering-committee">our steering committee of Indigenous data experts</a> in developing data commons for Indigenous languages and cultures.'
   >
     <template #secondary>
       <h3>Join Our Informational Webinars</h3>
@@ -80,7 +80,7 @@ const { data: blogposts } = await useAsyncData('blogposts', () =>
 )
 
 const { data: resources } = await useAsyncData('homepage-resources', () =>
-  queryCollection('resources').limit(3).all()
+  queryCollection('resources').order('sort', 'ASC').limit(3).all()
 )
 </script>
 
@@ -119,13 +119,15 @@ const { data: resources } = await useAsyncData('homepage-resources', () =>
   grid-template-columns: minmax(200px, 1fr) 2fr;
   gap: var(--space-xl);
   align-items: start;
-  border-top: 1px solid var(--base-color-10-tint);
-  border-bottom: 1px solid var(--base-color-10-tint);
-  padding-block: var(--space-xl);
+  background-color: var(--base-color-05-tint);
+  border: 1px solid var(--base-color-10-tint);
+  border-radius: var(--border-radius-l);
+  padding: var(--space-xl);
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: var(--space-m);
+    padding: var(--space-l);
   }
 }
 
