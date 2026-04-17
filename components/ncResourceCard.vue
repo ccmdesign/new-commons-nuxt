@@ -12,7 +12,6 @@
       :alt="content.title || 'Resource image'"
       class="resource-card__image"
     >
-    <span class="resource-card__category">{{ content.category }}</span>
     <h3 class="resource-card__title">{{ content.title }}</h3>
     <p class="resource-card__description">{{ content.description }}</p>
     <ncButton v-if="hasLink" el="span" label="View resource" class="resource-card__cta | margin-top:s" />
@@ -53,15 +52,6 @@ const hasLink = computed(() => props.content && getResourceLink(props.content) !
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-}
-
-.resource-card__category {
-  display: inline-block;
-  font-size: var(--size--1);
-  font-weight: 600;
-  text-transform: uppercase;
-  color: var(--primary-color);
-  letter-spacing: 0.05em;
 }
 
 .resource-card__title { line-height: 1.35; }

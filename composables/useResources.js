@@ -12,16 +12,9 @@ export default function useResources() {
     return link.startsWith('http') || link.startsWith('//')
   }
 
-  const categories = (resources) => {
-    if (!resources?.length) return []
-    const cats = [...new Set(resources.map(r => r.category).filter(Boolean))]
-    return cats.sort()
-  }
-
   return {
     getImage,
     getResourceLink,
     isExternalLink,
-    categories,
   }
 }

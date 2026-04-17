@@ -4,7 +4,7 @@
       <div class="panel | stack">
         <p class="hero__brow">BUILDING A SHARED DIGITAL FUTURE</p>
         <h1>The New Commons Incubator</h1>
-        <p>The Incubator is a global effort led by the Open Data Policy Lab that aims to unlock data commons for public-interest AI.</p>
+        <p>The Incubator is a global effort led by the <a href="https://opendatapolicylab.org" target="_blank" rel="noopener">Open Data Policy Lab</a> that aims to unlock data commons for public-interest AI.</p>
         <p>The Incubator addresses a critical issue: the limited access to diverse and high-quality datasets, which is essential for AI to reach its full potential. By creating and improving data commons, which are collaboratively governed data ecosystems that pool and provide responsible access to diverse, high-quality datasets, the gap in AI development can be filled.</p>
         <p>Through structured programming, the Incubator will develop a pipeline of trusted, community-governed data commons that enable responsible AI development while safeguarding data rights, context, and community agency.</p>
       </div>
@@ -41,7 +41,7 @@
     <div class="programmatic-offerings">
       <div class="programmatic-offerings__text | stack">
         <h2>Programmatic Offerings</h2>
-        <p>The Incubator is a structured program designed to support data leaders in setting up a data commons. It will include an in-person kickoff event to set stage, virtual programming and mentorship, and a final showcase.</p>
+        <p>The Incubator is a structured program designed to support data leaders in setting up a data commons. It will include an in-person kickoff event to set the stage as well as virtual programming and mentorship, and a final showcase.</p>
       </div>
       <div class="programmatic-offerings__list | stack">
         <h3>Throughout the programming, participants will:</h3>
