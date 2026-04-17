@@ -41,7 +41,7 @@
     <div class="programmatic-offerings">
       <div class="programmatic-offerings__text | stack">
         <h2>Programmatic Offerings</h2>
-        <p>The Incubator is a structured program designed to support data leaders in setting up a data commons. It will include an in-person kickoff event to set stage, virtual programming and mentorship, and a final showcase.</p>
+        <p>The Incubator is a structured program designed to support data leaders in setting up a data commons. It will include an in-person kickoff event to set the stage as well as virtual programming and mentorship, and a final showcase.</p>
       </div>
       <div class="programmatic-offerings__list | stack">
         <h3>Throughout the programming, participants will:</h3>

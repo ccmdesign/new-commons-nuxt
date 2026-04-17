@@ -44,7 +44,7 @@ body: |
 ## programmatic-offerings
 
 title: Programmatic Offerings
-tagline: The Incubator is a X-week structured program designed to support data leaders in setting up a data commons. It will include an in-person kickoff event to set stage, virtual programming and mentorship, and a final showcase.
+tagline: The Incubator is a structured program designed to support data leaders in setting up a data commons. It will include an in-person kickoff event to set the stage as well as virtual programming and mentorship, and a final showcase.
 items:
 
 - Design and implement accountable and context-specific data governance frameworks
