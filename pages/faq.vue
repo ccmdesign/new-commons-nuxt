@@ -43,7 +43,7 @@ const faq = {
       content: `
         <p>The Incubator will follow the schedule outlined below:</p>
         <ul>
-          <li><strong>Applications Open:</strong> May (TBC)</li>
+          <li><strong>Applications Open:</strong> May</li>
           <li><strong>Informational Webinars:</strong> w/o 25 May 2026 and 1 June 2026</li>
           <li><strong>Applications Close:</strong> 10 July 2026</li>
           <li><strong>Cohort Selection:</strong> Late August</li>
