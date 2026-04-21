@@ -17,14 +17,9 @@
         <button type="button" class="cookie-consent__secondary" @click="handleReject">
           Necessary cookies
         </button>
-        <div class="cookie-consent__cta">
-          <button type="button" class="cookie-consent__secondary" @click="handleSavePreferences">
-            Save preferences
-          </button>
-          <button type="button" class="cookie-consent__primary" @click="handleAcceptAll">
-            Accept all
-          </button>
-        </div>
+        <button type="button" class="cookie-consent__primary" @click="handleAcceptAll">
+          Accept all
+        </button>
       </div>
     </div>
   </div>
@@ -210,11 +205,13 @@ onMounted(() => {
   box-shadow: var(--box-shadow-l);
   border: 1px solid hsla(var(--white-hsl), 0.15);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   gap: var(--space-m);
 }
 
 .cookie-consent__intro {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
@@ -222,7 +219,7 @@ onMounted(() => {
 
 .cookie-consent__lead {
   font-size: var(--size-0);
-  font-weight: 600;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -272,7 +269,7 @@ onMounted(() => {
 
 .cookie-consent__actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: end;
   gap: var(--space-s);
@@ -302,6 +299,7 @@ onMounted(() => {
 .cookie-consent__secondary,
 .cookie-consent__manage-button {
   font: inherit;
+  white-space: nowrap;
   border-radius: var(--border-radius-m);
   border: 1px solid transparent;
   cursor: pointer;
@@ -364,6 +362,8 @@ onMounted(() => {
 
 @media (max-width: 640px) {
   .cookie-consent__panel {
+    flex-direction: column;
+    align-items: stretch;
     padding: var(--space-s);
   }
 
