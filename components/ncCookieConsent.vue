@@ -199,11 +199,11 @@ onMounted(() => {
 .cookie-consent__panel {
   width: min(1200px, calc(100% - var(--space-s-m)));
   border-radius: var(--border-radius-l);
-  background-color: var(--base-color);
-  color: var(--white-color);
+  background-color: var(--primary-color-05-tint);
+  color: var(--primary-color-60-shade);
   padding: var(--space-m);
   box-shadow: var(--box-shadow-l);
-  border: 1px solid hsla(var(--white-hsl), 0.15);
+  border: 1px solid var(--primary-color-15-alpha);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -309,8 +309,8 @@ onMounted(() => {
 
 .cookie-consent__secondary {
   background-color: transparent;
-  border-color: hsla(var(--white-hsl), 0.4);
-  color: var(--white-color);
+  border-color: var(--primary-color-40-alpha);
+  color: var(--primary-color-60-shade);
 }
 
 .cookie-consent__secondary:hover,
@@ -319,8 +319,8 @@ onMounted(() => {
 }
 
 .cookie-consent__primary {
-  background-color: var(--white-color);
-  color: var(--base-color);
+  background-color: var(--primary-color);
+  color: var(--white-color);
   font-weight: 600;
 }
 
@@ -337,9 +337,9 @@ onMounted(() => {
 }
 
 .cookie-consent__manage-button {
-  border-color: hsla(var(--white-hsl), 0.4);
-  background-color: var(--base-color);
-  color: var(--white-color);
+  border-color: var(--primary-color-40-alpha);
+  background-color: var(--primary-color-05-tint);
+  color: var(--primary-color-60-shade);
   display: inline-flex;
   align-items: center;
   justify-content: center;
