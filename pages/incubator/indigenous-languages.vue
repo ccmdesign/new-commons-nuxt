@@ -30,7 +30,7 @@
           <li>When included, data is often extracted without consent or benefit.</li>
           <li>And even well-intentioned efforts frequently strip away the cultural context that gives these languages meaning.</li>
         </ul>
-        <blockquote class="our-approach__quote">
+        <blockquote class="callout-quote">
           <p>This represents both a technical and governance breakdown. What's needed is a <strong>new institutional approach</strong>.</p>
         </blockquote>
       </div>
@@ -44,8 +44,16 @@
   </nc-base-section>
 
   <nc-base-section size="l">
-    <div class="our-approach | stack">
-      <h2>Our Approach</h2>
+    <div class="our-approach">
+      <div class="our-approach__intro | stack">
+        <h2>Our Approach</h2>
+        <div class="our-approach__image">
+          <img
+            src="/images/indigenous-language-incubator.jpg"
+            alt="An inukshuk of balanced stones against a calm blue lake horizon"
+          />
+        </div>
+      </div>
       <p class="our-approach__body">The <strong><em>New Commons Incubator for Indigenous Languages and Cultures</em></strong> advances a <a href="https://incubator.opendatapolicylab.org/files/data-commons-for-ai-blueprint.pdf" target="_blank" rel="noopener noreferrer">data commons model</a> that enables responsible access to high-quality data while ensuring any access and use remains aligned with Indigenous values and expectations. It shifts the framework from extraction by outside parties to <strong>collective stewardship led by Indigenous communities themselves</strong>, ensuring that data is governed, shared, and used on community-defined terms.</p>
     </div>
   </nc-base-section>
@@ -158,23 +166,48 @@ const timelineData = [
 }
 
 .our-approach {
-  max-width: 72ch;
-  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 
   a {
     text-decoration: underline;
   }
+
+  &__intro {
+    --_stack-space: var(--space-m);
+  }
+
+  &__image {
+    border-radius: var(--border-radius-l);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
 }
 
-.our-approach__quote {
+.callout-quote {
   margin: 0;
-  padding: var(--space-s) 0 var(--space-s) var(--space-l);
-  border-left: 4px solid var(--primary-color);
+  padding: var(--space-m) var(--space-m-l);
+  background: var(--primary-color-05-tint);
+  border-radius: var(--border-radius-l);
+  border: 1px solid var(--primary-color-11-tint);
 
   p {
-    font-size: var(--size-2);
-    line-height: 1.3;
-    font-weight: 400;
+    font-size: var(--size-1);
+    line-height: 1.4;
+    font-weight: 500;
     margin: 0;
     color: var(--base-color);
   }
@@ -185,11 +218,7 @@ const timelineData = [
   }
 
   @media (max-width: 640px) {
-    padding-left: var(--space-m);
-
-    p {
-      font-size: var(--size-1);
-    }
+    padding: var(--space-s-m) var(--space-m);
   }
 }
 
