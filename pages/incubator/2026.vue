@@ -143,6 +143,8 @@ useSeoMeta({
   }
 
   &__list {
+    --_stack-space: var(--space-s);
+
     ul {
       list-style: none;
       padding: 0;

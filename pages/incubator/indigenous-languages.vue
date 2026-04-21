@@ -30,6 +30,9 @@
           <li>When included, data is often extracted without consent or benefit.</li>
           <li>And even well-intentioned efforts frequently strip away the cultural context that gives these languages meaning.</li>
         </ul>
+        <blockquote class="our-approach__quote">
+          <p>This represents both a technical and governance breakdown. What's needed is a <strong>new institutional approach</strong>.</p>
+        </blockquote>
       </div>
       <div class="why-section__image">
         <img
@@ -43,9 +46,6 @@
   <nc-base-section size="l">
     <div class="our-approach | stack">
       <h2>Our Approach</h2>
-      <blockquote class="our-approach__quote">
-        <p>This represents both a technical and governance breakdown. What's needed is a <strong>new institutional approach</strong>.</p>
-      </blockquote>
       <p class="our-approach__body">The <strong><em>New Commons Incubator for Indigenous Languages and Cultures</em></strong> advances a <a href="https://incubator.opendatapolicylab.org/files/data-commons-for-ai-blueprint.pdf" target="_blank" rel="noopener noreferrer">data commons model</a> that enables responsible access to high-quality data while ensuring any access and use remains aligned with Indigenous values and expectations. It shifts the framework from extraction by outside parties to <strong>collective stewardship led by Indigenous communities themselves</strong>, ensuring that data is governed, shared, and used on community-defined terms.</p>
     </div>
   </nc-base-section>
@@ -272,6 +272,8 @@ const timelineData = [
   }
 
   &__list {
+    --_stack-space: var(--space-s);
+
     ul {
       list-style: none;
       padding: 0;
