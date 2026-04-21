@@ -1,5 +1,5 @@
 <template>
-  <nc-hero>
+  <nc-hero :show-cfp-banner="false">
     <div class="hero__content">
       <div class="panel | stack">
         <p class="hero__brow">New Commons Incubator</p>
@@ -10,6 +10,7 @@
   </nc-hero>
 
   <nc-call-for-proposals
+    :show-learn-more="false"
     tagline="The Open Data Policy Lab invites advocates for Indigenous communities from around the world to join us in developing data commons for Indigenous languages and cultures."
   >
     <template #secondary>
@@ -29,8 +30,6 @@
           <li>When included, data is often extracted without consent or benefit.</li>
           <li>And even well-intentioned efforts frequently strip away the cultural context that gives these languages meaning.</li>
         </ul>
-        <p>This represents both a technical and governance breakdown. What's needed is a new institutional approach.</p>
-        <p>The <strong><em>New Commons Incubator for Indigenous Languages and Cultures</em></strong> advances a <a href="https://incubator.opendatapolicylab.org/files/data-commons-for-ai-blueprint.pdf" target="_blank" rel="noopener noreferrer">data commons model</a> that enables responsible access to high-quality data while ensuring any access and use remains aligned with Indigenous values and expectations. It shifts the framework from extraction by outside parties to collective stewardship led by Indigenous communities themselves, ensuring that data is governed, shared, and used on community-defined terms.</p>
       </div>
       <div class="why-section__image">
         <img
@@ -38,6 +37,16 @@
           alt="An inukshuk of balanced stones against a calm blue lake horizon"
         />
       </div>
+    </div>
+  </nc-base-section>
+
+  <nc-base-section size="l">
+    <div class="our-approach | stack">
+      <h2>Our Approach</h2>
+      <blockquote class="our-approach__quote">
+        <p>This represents both a technical and governance breakdown. What's needed is a <strong>new institutional approach</strong>.</p>
+      </blockquote>
+      <p class="our-approach__body">The <strong><em>New Commons Incubator for Indigenous Languages and Cultures</em></strong> advances a <a href="https://incubator.opendatapolicylab.org/files/data-commons-for-ai-blueprint.pdf" target="_blank" rel="noopener noreferrer">data commons model</a> that enables responsible access to high-quality data while ensuring any access and use remains aligned with Indigenous values and expectations. It shifts the framework from extraction by outside parties to <strong>collective stewardship led by Indigenous communities themselves</strong>, ensuring that data is governed, shared, and used on community-defined terms.</p>
     </div>
   </nc-base-section>
 
@@ -146,6 +155,47 @@ const timelineData = [
 
 .prose {
   max-width: 80ch;
+}
+
+.our-approach {
+  max-width: 72ch;
+  margin-inline: auto;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.our-approach__quote {
+  margin: 0;
+  padding: var(--space-s) 0 var(--space-s) var(--space-l);
+  border-left: 4px solid var(--primary-color);
+
+  p {
+    font-size: var(--size-2);
+    line-height: 1.3;
+    font-weight: 400;
+    margin: 0;
+    color: var(--base-color);
+  }
+
+  strong {
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+
+  @media (max-width: 640px) {
+    padding-left: var(--space-m);
+
+    p {
+      font-size: var(--size-1);
+    }
+  }
+}
+
+.our-approach__body {
+  font-size: calc(var(--size-0) + 1px);
+  line-height: 1.55;
 }
 
 .why-section {

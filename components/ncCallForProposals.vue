@@ -3,8 +3,11 @@
     <div class="stack">
       <p class="brow">Call for Proposals</p>
       <h2 class="cfp-heading">Data Commons for Indigenous Languages and Cultures</h2>
-      <p class="cfp-tagline">{{ tagline }}</p>
-      <nc-button to="/incubator/2026/application" color="primary" variant="primary">Apply Now</nc-button>
+      <p class="cfp-tagline" v-html="tagline"></p>
+      <div class="cfp-actions">
+        <nc-button to="/incubator/2026/application" color="primary" variant="primary">Apply Now</nc-button>
+        <nc-button v-if="showLearnMore" to="/incubator/indigenous-languages" color="primary" variant="secondary">Learn More</nc-button>
+      </div>
     </div>
     <template v-if="hasSecondary" #right>
       <div class="secondary-box | stack">
@@ -19,6 +22,10 @@ defineProps({
   tagline: {
     type: String,
     default: 'The Open Data Policy Lab invites changemakers around the world to join us in developing data commons for Indigenous languages and cultures.'
+  },
+  showLearnMore: {
+    type: Boolean,
+    default: true
   }
 })
 
@@ -27,6 +34,13 @@ const hasSecondary = computed(() => !!slots.secondary)
 </script>
 
 <style scoped>
+.cfp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  align-items: center;
+}
+
 .brow {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.8);

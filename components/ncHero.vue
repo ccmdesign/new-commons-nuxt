@@ -1,11 +1,17 @@
 <template>
   <div class="hero | subgrid">
+    <nc-cfp-banner v-if="showCfpBanner" />
     <slot></slot>
   </div>
 </template>
 
 <script setup>
-
+defineProps({
+  showCfpBanner: {
+    type: Boolean,
+    default: true
+  }
+})
 </script>
 
 <style scoped lang="scss">
