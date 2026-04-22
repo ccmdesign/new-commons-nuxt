@@ -6,7 +6,7 @@
       <p class="cfp-tagline" v-html="tagline"></p>
       <div class="cfp-actions">
         <nc-button to="/incubator/2026/application" color="primary" variant="primary">Apply Now</nc-button>
-        <nc-button v-if="showLearnMore" to="/incubator/indigenous-languages" color="primary" variant="secondary">Learn More</nc-button>
+        <nc-button v-if="showLearnMore" to="/incubator/indigenous-languages" color="white" variant="secondary">Learn More</nc-button>
       </div>
     </div>
     <template v-if="hasSecondary" #right>

@@ -205,15 +205,11 @@ const timelineData = [
   border: 1px solid var(--primary-color-11-tint);
 
   p {
-    font-size: var(--size-1);
-    line-height: 1.4;
-    font-weight: 500;
     margin: 0;
     color: var(--base-color);
   }
 
   strong {
-    font-weight: 700;
     color: var(--primary-color);
   }
 
@@ -235,6 +231,11 @@ const timelineData = [
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+  }
+
+  ul,
+  li {
+    font-weight: inherit;
   }
 
   &__image {
