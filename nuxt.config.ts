@@ -40,6 +40,12 @@ export default defineNuxtConfig({
       ],
       script: [
         { src: 'https://player.vimeo.com/api/player.js', async: true },
+        {
+          src: 'https://ccm-feedback-582.netlify.app/w.js',
+          'data-project': 'New Commons',
+          'data-force-show': 'true',
+          defer: true,
+        },
       ],
     }
   },
