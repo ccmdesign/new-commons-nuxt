@@ -6,11 +6,6 @@
     <div class="footer__col1 footer__content">
       <h3>About ODPL</h3>
       <p>The Open Data Policy Lab supports decision-makers at the local, state and national levels as they accelerate the responsible re-use and opening of data for the benefit of society and the equitable spread of economic opportunity.</p>
-      <div class="logos">
-        <nc-odpl-logo />
-        <nc-ms-logo />
-        <nc-gov-lab-logo />
-      </div>
     </div>
     <div class="footer__col2 footer__content">
       <h3>Follow Us</h3>
@@ -27,6 +22,13 @@
           <nc-unesco-logo />
           <nc-ms-logo />
         </div>
+      </div>
+    </div>
+    <div class="footer__odpl-logos footer__content">
+      <div class="logos">
+        <nc-odpl-logo />
+        <nc-ms-logo />
+        <nc-gov-lab-logo />
       </div>
     </div>
     <by-line />
@@ -78,13 +80,15 @@
 .footer__logo,
 .footer__col1,
 .footer__col2,
-.footer__col3 {
+.footer__col3,
+.footer__odpl-logos {
   grid-column: content-start / content-end;
   grid-template-rows: auto;
 }
 
 .footer__col2,
-.footer__col3 {
+.footer__col3,
+.footer__odpl-logos {
   margin-top: var(--space-xl);
 }
 
@@ -107,9 +111,14 @@
     margin-top: 0;
   }
 
+  .footer__odpl-logos {
+    grid-column: col6 / content-end;
+    margin-top: var(--space-l-xl);
+  }
+
   .footer {
     /* Aux styles */
-    
+
   }
 }
 </style>
