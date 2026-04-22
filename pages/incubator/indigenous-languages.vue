@@ -304,6 +304,10 @@ const timelineData = [
   &__list {
     --_stack-space: var(--space-s);
 
+    h3 {
+      line-height: 1.1;
+    }
+
     ul {
       list-style: none;
       padding: 0;
