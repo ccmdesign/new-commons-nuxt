@@ -70,7 +70,7 @@ function formatDate(dateStr) {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
-    timeZone: 'Canada/Pacific'
+    timeZone: 'Canada/Eastern'
   })
 }
 
@@ -80,7 +80,7 @@ function formatTime(dateStr) {
       hour: '2-digit',
       minute: '2-digit',
       timeZoneName: 'shortGeneric',
-      timeZone: 'Canada/Pacific'
+      timeZone: 'Canada/Eastern'
     })
     .replace(/AM/, 'a.m.')
     .replace(/PM/, 'p.m.')

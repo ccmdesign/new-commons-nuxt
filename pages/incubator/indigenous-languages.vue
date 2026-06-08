@@ -133,15 +133,12 @@ useSeoMeta({
 const steeringCommittee = useSteeringCommittee()
 
 const timelineData = [
-  { date: '2026-05-15T09:00:00-04:00', event: 'Applications Open' },
-  { date: '2026-05-25T09:00:00-04:00', event: 'Informational Webinar 1' },
-  { date: '2026-06-01T09:00:00-04:00', event: 'Informational Webinar 2' },
-  { date: '2026-07-10T17:00:00-04:00', event: 'Applications Close' },
-  { date: '2026-08-25T09:00:00-04:00', event: 'Cohort Selection' },
-  { date: '2026-09-07T09:00:00-04:00', event: 'Cohort Onboarding' },
-  { date: '2026-09-14T09:00:00-04:00', event: 'In-Person Kickoff' },
-  { date: '2026-09-15T09:00:00-04:00', event: 'Virtual Incubation Programming (September 2026 – January 2027)' },
-  { date: '2027-02-01T09:00:00-05:00', event: 'Final Showcase' },
+  { date: '2026-06-11T09:00:00-04:00', event: 'Applications Open' },
+  { date: '2026-08-14T12:00:00-04:00', event: 'Applications Close' },
+  { date: '2026-08-25T09:00:00-04:00', event: 'Cohort Selection (Late August 2026)' },
+  { date: '2026-09-15T09:00:00-04:00', event: 'In-Person Kickoff (Mid-September)' },
+  { date: '2026-10-01T09:00:00-04:00', event: 'Virtual Programming (October 2026 – April 2027)' },
+  { date: '2027-04-01T09:00:00-04:00', event: 'Showcase' },
 ]
 </script>
 

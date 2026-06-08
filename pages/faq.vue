@@ -43,14 +43,12 @@ const faq = {
       content: `
         <p>The Incubator will follow the schedule outlined below:</p>
         <ul>
-          <li><strong>Applications Open:</strong> May</li>
-          <li><strong>Informational Webinars:</strong> w/o 25 May 2026 and 1 June 2026</li>
-          <li><strong>Applications Close:</strong> 10 July 2026</li>
-          <li><strong>Cohort Selection:</strong> Late August</li>
-          <li><strong>Cohort Onboarding:</strong> Early September</li>
-          <li><strong>In-Person Kickoff:</strong> w/o 14 September 2026</li>
-          <li><strong>Virtual Incubation Programming:</strong> September 2026 &ndash; January 2027</li>
-          <li><strong>Final Showcase:</strong> February 2027</li>
+          <li><strong>Applications Open:</strong> 11 June 2026</li>
+          <li><strong>Applications Close:</strong> 14 August 2026 at 12:00PM ET</li>
+          <li><strong>Cohort Selection:</strong> Late August 2026</li>
+          <li><strong>In-Person Kickoff:</strong> Mid-September</li>
+          <li><strong>Virtual Programming:</strong> October 2026 &ndash; April 2027</li>
+          <li><strong>Showcase:</strong> April 2027</li>
         </ul>
       `
     },
