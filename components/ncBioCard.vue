@@ -3,7 +3,14 @@
     <img :src="`${imageBasePath}${judge.img}`" :alt="judge.name">
     <h4 class="h4 margin-top:s">{{ judge.name }}</h4>
     <p>{{ judge.description }}</p>
-    <ncButton :to="url" variant="link" label="Read More" class="nc-bio-card__cta | margin-top:s" />
+    <ncButton
+      :to="judge.profile_url || url"
+      :target="judge.profile_url ? '_blank' : undefined"
+      :rel="judge.profile_url ? 'noopener noreferrer' : undefined"
+      variant="link"
+      label="Read More"
+      class="nc-bio-card__cta | margin-top:s"
+    />
   </div>
 </template>
 

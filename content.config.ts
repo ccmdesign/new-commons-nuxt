@@ -76,5 +76,18 @@ export default defineContentConfig({
         cover_image: z.string().optional(),
       })
     }),
+    people: defineCollection({
+      source: 'people/*.json',
+      type: 'data',
+      schema: z.object({
+        name: z.string(),
+        slug: z.string(),
+        description: z.string().optional(),
+        type: z.string().optional(),
+        bio: z.string().optional(),
+        img: z.string().optional(),
+        profile_url: z.string().optional(),
+      })
+    }),
   }
 })

@@ -94,7 +94,7 @@
     <div class="stack steering-committee">
       <h2 class="text-align:center">Steering Committee</h2>
       <p class="text-align:center">This initiative is supported by a Steering Committee of Indigenous experts and representatives to ensure this work is productive and complementary to existing Indigenous-led efforts. The Steering Committee offers input on all major decisions and the partner organizations aim to ensure their guidance is reflected in all activities.</p>
-      <nc-people-grid :collection="steeringCommittee" base-path="/incubator/indigenous-languages" image-base-path="" />
+      <nc-people-grid :collection="steeringCommittee ?? []" base-path="/incubator/indigenous-languages" image-base-path="" />
     </div>
   </nc-base-section>
 
@@ -130,7 +130,7 @@ useSeoMeta({
   description: 'A structured program for developing data commons for Indigenous languages and cultures in the AI era.',
 })
 
-const steeringCommittee = useSteeringCommittee()
+const { data: steeringCommittee } = await useSteeringCommittee()
 
 const timelineData = [
   { date: '2026-06-11T09:00:00-04:00', event: 'Applications Open' },

@@ -4,7 +4,7 @@
       v-for="person in collection"
       :key="person.slug"
       :judge="person"
-      :url="`${basePath}#${person.slug}`"
+      :url="person.profile_url || `${basePath}#${person.slug}`"
       :image-base-path="imageBasePath"
     />
   </div>
