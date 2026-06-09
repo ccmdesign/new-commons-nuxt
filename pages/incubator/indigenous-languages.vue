@@ -90,6 +90,8 @@
     </div>
   </nc-base-section>
 
+  <nc-voices />
+
   <nc-base-section size="l">
     <div class="stack steering-committee">
       <h2 class="text-align:center">Steering Committee</h2>
